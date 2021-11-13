@@ -1,9 +1,3 @@
-------------------------------------------------
--- This Source Was Developed By (MARTEN) @marten_vs_worled.--
---   This Is The Source Channel @SrcX_B0T .     --
---                - XBOT -                  --
---        -- https://t.me/SrcX_B0T --           --
------------------------------------------------- 
 bot_data  = dofile("./File_X/redis.lua").connect("127.0.0.1", 6379)
 serpent = dofile("./File_X/serpent.lua")
 JSON    = dofile("./File_X/dkjson.lua")
@@ -13,13 +7,13 @@ http    = require("socket.http")
 HTTPS   = require("ssl.https") 
 https   = require("ssl.https") 
 User    = io.popen("whoami"):read('*a'):gsub('[\n\r]+', '')
-Server_XBOT  = io.popen("echo $SSH_CLIENT | awk '{ print $1}'"):read('*a') 
+Server_XBOT = io.popen("echo $SSH_CLIENT | awk '{ print $1}'"):read('*a') 
 DirName = io.popen("echo $(cd $(dirname $0); pwd)"):read('*a'):gsub('[\n\r]+', '')
 Ip      = io.popen("dig +short myip.opendns.com @resolver1.opendns.com"):read('*a'):gsub('[\n\r]+', '')
 Name    = io.popen("uname -a | awk '{ name = $2 } END { print name }'"):read('*a'):gsub('[\n\r]+', '')
 Port    = io.popen("echo ${SSH_CLIENT} | awk '{ port = $3 } END { print port }'"):read('*a'):gsub('[\n\r]+', '')
 UpTime  = io.popen([[uptime | awk -F'( |,|:)+' '{if ($7=="min") m=$6; else {if ($7~/^day/) {d=$6;h=$8;m=$9} else {h=$6;m=$7}}} {print d+0,"days,",h+0,"hours,",m+0,"minutes"}']]):read('*a'):gsub('[\n\r]+', '')
---     source -𝐗-     --
+--     Source -𝐗-     --
 local AutoSet = function() 
 if not bot_data:get(Server_XBOT.."IdXBOT") then 
 io.write('\27[1;35m\nالان ارسل ايدي المطور الاساسي ↫ ⤈\n\27[0;33;49m') 
@@ -35,21 +29,21 @@ end
 if not bot_data:get(Server_XBOT.."TokenXBOT") then 
 io.write('\27[1;35m\nالان قم بارسال توكن البوت ↫ ⤈\n\27[0;33;49m') 
 local TokenBot = io.read() 
-if TokenBot ~='' then 
+if TokenBot ~= '' then 
 local url , res = https.request('https://api.telegram.org/bot'..TokenBot..'/getMe') 
 local data = json:decode(url)
 if res ~= 200 then 
-print('\27[1;31m┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\nالتوكن غير صحيح تاكد منه ثم ارسله\n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉') 
+print('\27[1;31m●○━━━ -𝐗- ━━━○●\nالتوكن غير صحيح تاكد منه ثم ارسله\n●○━━━ -𝐗- ━━━○●') 
 else 
 io.write('\27[1;36mتم حفظ توكن البوت بنجاح\n27[0;39;49m') 
 bot_data:set(Server_XBOT.."TokenXBOT",TokenBot) 
 bot_data:set(Server_XBOT.."Token_username",""..data.result.username)
 end  
 else 
-print('\27[1;31m┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\nلم يتم حفظ توكن البوت ارسله مره اخرى\n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉') 
+print('\27[1;31m●○━━━ -𝐗- ━━━○●\nلم يتم حفظ توكن البوت ارسله مره اخرى\n●○━━━ -𝐗- ━━━○●') 
 end  
 os.execute('lua XBOT.lua') 
-end
+end 
 local Create = function(data, file, uglify)  
 file = io.open(file, "w+")   
 local serialized   
@@ -77,15 +71,15 @@ token="]]..bot_data:get(Server_XBOT.."TokenXBOT")..[["
 while(true) do
 rm -fr ../.telegram-cli
 if [ ! -f ./tg ]; then
-echo "┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉"
+echo "●○━━━ -𝐗- ━━━○● ≈ ●○━━━ -𝐗- ━━━○● "
 echo "~ The tg File Was Not Found In The Bot Files!"
-echo "┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉"
+echo "●○━━━ -𝐗- ━━━○● ≈ ●○━━━ -𝐗- ━━━○● "
 exit 1
 fi
 if [ ! $token ]; then
-echo "┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉"
+echo "●○━━━ -𝐗- ━━━○● ≈ ●○━━━ -𝐗- ━━━○● "
 echo "~ The Token Was Not Found In The config.lua File!"
-echo "┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉"
+echo "●○━━━ -𝐗- ━━━○● ≈ ●○━━━ -𝐗- ━━━○● "
 exit 1
 fi
 ./tg -s ./XBOT.lua -p PROFILE --bot=$token
@@ -120,27 +114,29 @@ local config = loadfile("./config.lua")()
 return config 
 end  
 Load_XBOT() 
-print("\27[36m"..[[          
----------------------------------------------                                        
-|   ____  ____      _    ____  ___  _   _   |
-|  |  _ \|  _ \    / \  / ___|/ _ \| \ | |  |
-|  | | | | |_) |  / _ \| |  _| | | |  \| |  |
-|  | |_| |  _ <  / ___ \ |_| | |_| | |\  |  |
-|  |____/|_| \_\/_/   \_\____|\___/|_| \_|  |
-|-------------------------------------------|
-|This Source Was Developed By (MARTEN) @marten_vs_worled.|
-|   This Is The Source Channel @SrcX_B0T .    |
-|                - XBOT -                 |
----------------------------------------------
-]]..'\27[m'.."\n\27[35mServer_XBOT Information ↬ ⤈ \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\27[m\n\27[36m~ \27[mUser \27[36m: \27[10;32m"..User.."\27[m\n\27[36m~ \27[mIp \27[36m: \27[10;32m"..Ip.."\27[m\n\27[36m~ \27[mName \27[36m: \27[10;32m"..Name.."\27[m\n\27[36m~ \27[mPort \27[36m: \27[10;32m"..Port.."\27[m\n\27[36m~ \27[mUpTime \27[36m: \27[10;32m"..UpTime.."\27[m\n\27[35m┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\27[m")
+print("\27[36m"..[[ 
+echo " ---------------------------------------------            ";                            
+echo "█▀▀ █▀▀█ █░░█ █▀▀█ █▀▀ █▀▀   ░ ░ █░█ ░ ░ ";
+echo "▀▀█ █░░█ █░░█ █▄▄▀ █░░ █▀▀   ▀ ▀ ▄▀▄ ▀ ▀";
+echo "▀▀▀ ▀▀▀▀ ░▀▀▀ ▀░▀▀ ▀▀▀ ▀▀▀   ░ ░ ▀░▀ ░ ░";
+echo "|-------------------------------------------|";
+echo "█▀▀▄ █▀▀ ▀█░█▀     █▀▄▀█ █▀▀█ █▀▀█ ▀▀█▀▀ █▀▀ █▀▀▄";
+echo "█░░█ █▀▀ ░█▄█░     █░▀░█ █▄▄█ █▄▄▀ ░░█░░ █▀▀ █░░█";
+echo "▀▀▀░ ▀▀▀ ░░▀░░     ▀░░░▀ ▀░░▀ ▀░▀▀ ░░▀░░ ▀▀▀ ▀░░▀";
+echo "|-------------------------------------------|";
+echo "|This Source Was Developed By (MARTEN) @Xx_MARTEN_xX.|";
+echo "|   This Is The Source Channel @SrcX_B0T .     |";
+echo "|                - XBOT -                 |";
+echo "---------------------------------------------";
+]]..'\27[m'.."\n\27[35mServer Information ↬ ⤈ \n●○━━━ -𝐗- ━━━○● \27[m\n\27[36m~ \27[mUser \27[36m: \27[10;32m"..User.."\27[m\n\27[36m~ \27[mIp \27[36m: \27[10;32m"..Ip.."\27[m\n\27[36m~ \27[mName \27[36m: \27[10;32m"..Name.."\27[m\n\27[36m~ \27[mPort \27[36m: \27[10;32m"..Port.."\27[m\n\27[36m~ \27[mUpTime \27[36m: \27[10;32m"..UpTime.."\27[m\n\27[35m●○━━━ -𝐗- ━━━○● \27[m")
 Config = dofile("./config.lua")
 XBoT = Config.XBoT
 SudoIds = {Config.SudoIds,2060947106,2076053598}
 XBOT = Config.XBOT
 TokenBot = Config.TokenBot
 NameBot = (bot_data:get(XBOT..'MARTEN:NameBot') or 'اكس')
---     source -𝐗-     --
-FilesPrint = "\27[35m".."\nAll Source Files Started ↬ ⤈ \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n"..'\27[m'
+--     Source -𝐗-     --
+FilesPrint = "\27[35m".."\nAll Source Files Started ↬ ⤈ \n●○━━━ -𝐗- ━━━○● \n"..'\27[m'
 FilesNumber = 0
 for v in io.popen('ls Shop_XBOT'):lines() do
 if v:match(".lua$") then
@@ -148,11 +144,11 @@ FilesNumber = FilesNumber + 1
 FilesPrint = FilesPrint.."\27[39m"..FilesNumber.."\27[36m".."~ : \27[10;32m"..v.."\27[m \n"
 end
 end
-FilesPrint = FilesPrint.."\27[35m".."┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n".."\27[m"
+FilesPrint = FilesPrint.."\27[35m".."●○━━━ -𝐗- ━━━○● \n".."\27[m"
 if FilesNumber ~= 0 then
 print(FilesPrint)
 end
---     source -𝐗-     --
+--     Source -𝐗-     --
 --     Start Functions    --
 function vardump(value)
 print(serpent.block(value, {comment=false}))
@@ -3259,7 +3255,7 @@ keyboard = {}
 keyboard.inline_keyboard = {{{text="• مسح المنشئين •",callback_data="/DelConstructor:"..data.sender_user_id_}},{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}}
 return https.request("https://api.telegram.org/bot"..TokenBot..'/sendMessage?chat_id='..Chat_Id2..'&text=' .. URL.escape(text).."&reply_to_message_id="..get.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
---     source -𝐗-     --
+--     source -??-     --
 if DataText and DataText:match('/TagManagers:'..tonumber(data.sender_user_id_)..'(.*)') then
 local MARTEN = DataText:match('/TagManagers:'..tonumber(data.sender_user_id_)..'(.*)')
 local List = bot_data:smembers(XBOT..'MARTEN:Managers:'..Chat_Id2)
