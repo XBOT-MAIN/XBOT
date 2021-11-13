@@ -1875,49 +1875,399 @@ keyboard.inline_keyboard = {{{text="• اخفاء الكليشه •",callback_
 return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 --     source -𝐗-     --
---     source -𝐗-     --
-if DataText and DataText:match('/SetCmdGpPic:'..tonumber(data.sender_user_id_)..'(.*)') then
-local MARTEN = DataText:match('/SetCmd:'..tonumber(data.sender_user_id_)..'(.*)')
-bot_data:set(XBOT.."Set:Cmd:Group:New1"..data.chat_id_..":ا","ايدي")
-bot_data:sadd(XBOT.."List:Cmd:Group:New"..data.chat_id_,"ا")
-bot_data:set(XBOT.."Set:Cmd:Group:New1"..data.chat_id_..":م","رفع مميز")
-bot_data:sadd(XBOT.."List:Cmd:Group:New"..data.chat_id_,"م")
-bot_data:set(XBOT.."Set:Cmd:Group:New1"..data.chat_id_..":اد","رفع ادمن")
-bot_data:sadd(XBOT.."List:Cmd:Group:New"..data.chat_id_,"اد")
-bot_data:set(XBOT.."Set:Cmd:Group:New1"..data.chat_id_..":مد","رفع مدير")
-bot_data:sadd(XBOT.."List:Cmd:Group:New"..data.chat_id_,"مد")
-bot_data:set(XBOT.."Set:Cmd:Group:New1"..data.chat_id_..":من","رفع منشئ")
-bot_data:sadd(XBOT.."List:Cmd:Group:New"..data.chat_id_,"من")
-bot_data:set(XBOT.."Set:Cmd:Group:New1"..data.chat_id_..":اس","رفع منشئ اساسي")
-bot_data:sadd(XBOT.."List:Cmd:Group:New"..data.chat_id_,"اس")
-bot_data:set(XBOT.."Set:Cmd:Group:New1"..data.chat_id_..":مط","رفع مطور")
-bot_data:sadd(XBOT.."List:Cmd:Group:New"..data.chat_id_,"مط")
-bot_data:set(XBOT.."Set:Cmd:Group:New1"..data.chat_id_..":ثانوي","رفع مطور ثانوي")
-bot_data:sadd(XBOT.."List:Cmd:Group:New"..data.chat_id_,"ثانوي")
-bot_data:set(XBOT.."Set:Cmd:Group:New1"..data.chat_id_..":تك","تنزيل الكل")
-bot_data:sadd(XBOT.."List:Cmd:Group:New"..data.chat_id_,"تك")
-bot_data:set(XBOT.."Set:Cmd:Group:New1"..data.chat_id_..":تعط","تعطيل الايدي بالصوره")
-bot_data:sadd(XBOT.."List:Cmd:Group:New"..data.chat_id_,"تعط")
-bot_data:set(XBOT.."Set:Cmd:Group:New1"..data.chat_id_..":تفع","تفعيل الايدي بالصوره")
-bot_data:sadd(XBOT.."List:Cmd:Group:New"..data.chat_id_,"تفع")
-bot_data:set(XBOT.."Set:Cmd:Group:New1"..data.chat_id_..":ر","الرابط")
-bot_data:sadd(XBOT.."List:Cmd:Group:New"..data.chat_id_,"ر")
-bot_data:set(XBOT.."Set:Cmd:Group:New1"..data.chat_id_..":رر","ردود المدير")
-bot_data:sadd(XBOT.."List:Cmd:Group:New"..data.chat_id_,"رر")
-bot_data:set(XBOT.."Set:Cmd:Group:New1"..data.chat_id_..":،،","مسح المكتومين")
-bot_data:sadd(XBOT.."List:Cmd:Group:New"..data.chat_id_,"،،")
-bot_data:set(XBOT.."Set:Cmd:Group:New1"..data.chat_id_..":رد","اضف رد")
-bot_data:sadd(XBOT.."List:Cmd:Group:New"..data.chat_id_,"رد")
-bot_data:set(XBOT.."Set:Cmd:Group:New1"..data.chat_id_..":غ","غنيلي")
-bot_data:sadd(XBOT.."List:Cmd:Group:New"..data.chat_id_,"غ")
-bot_data:set(XBOT.."Set:Cmd:Group:New1"..data.chat_id_..":#","مسح قائمه العام")
-bot_data:sadd(XBOT.."List:Cmd:Group:New"..data.chat_id_,"#")
-Text = "⌯︙تم ترتيب الاوامر بالشكل التالي ~\n⌯︙ ايدي - ا .\n⌯︙ رفع مميز - م .\n⌯︙رفع ادمن - اد .\n⌯︙ رفع مدير - مد . \n⌯︙ رفع منشى - من . \n⌯︙ رفع منشئ الاساسي - اس  .\n⌯︙ رفع مطور - مط .\n⌯︙رفع مطور ثانوي - ثانوي .\n⌯︙ تنزيل الكل - تك .\n⌯︙ تعطيل الايدي بالصوره - تعط .\n⌯︙ تفعيل الايدي بالصوره - تفع .\n⌯︙ الرابط - ر .\n⌯︙ ردود المدير - رر .\n⌯︙ مسح المكتومين - ،، .\n⌯︙ اضف رد - رد .\n⌯︙ مسح سحكاتي - سح .\n⌯︙ مسح رسائلي - رس .\n⌯︙ غنيلي - غ .\n⌯︙مسح قائمه العام"
-keyboard = {} 
-keyboard.inline_keyboard = {{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_},{text="• رجوع •",callback_data="/CmdList:"..data.sender_user_id_}},{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}}
-return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+if DataText and DataText:match('/TagSecondSudo:'..tonumber(data.sender_user_id_)..'(.*)') then
+local MARTEN = DataText:match('/TagSecondSudo:'..tonumber(data.sender_user_id_)..'(.*)')
+local List = bot_data:smembers(XBOT..'MARTEN:SecondSudo:')
+text = "⌯︙قائمة المطورين الثانويين ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n"
+for k,v in pairs(List) do
+local username = bot_data:get(XBOT..'Save:UserName'..v)
+if username then
+text = text..k.."~ : [@"..username.."]\n"
+else
+text = text..k.."~ : `"..v.."`\n"
+end end
+if #List == 0 then
+text = "⌯︙*عذرا لم يتم رفع اي مطورين ثانويين*"
 end
---     source -𝐗-     -- 
+keyboard = {} 
+keyboard.inline_keyboard = {{{text="• مسح الثانويين •",callback_data="/DelSecondSudo:"..data.sender_user_id_}},{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}}
+return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+--     source -𝐗-     --
+if DataText and DataText:match('/TagSecondSudoTag:'..tonumber(data.sender_user_id_)..'(.*)') then
+local MARTEN = DataText:match('/TagSecondSudoTag:'..tonumber(data.sender_user_id_)..'(.*)')
+local List = bot_data:smembers(XBOT..'MARTEN:SecondSudo:')
+local Tagall = 'TagAll:'..data.sender_user_id_..''
+local get = bot_data:get(XBOT.. ''..Tagall..'')
+text = "⌯︙قائمة المطورين الثانويين ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n"
+for k,v in pairs(List) do
+local username = bot_data:get(XBOT..'Save:UserName'..v)
+if username then
+text = text..k.."~ : [@"..username.."]\n"
+else
+text = text..k.."~ : `"..v.."`\n"
+end end
+if #List == 0 then
+text = "⌯︙*عذرا لم يتم رفع اي مطورين ثانويين*"
+end
+DeleteMessage(Chat_Id2,{[0] = MsgId2})
+keyboard = {} 
+keyboard.inline_keyboard = {{{text="• مسح الثانويين •",callback_data="/DelSecondSudo:"..data.sender_user_id_}},{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}}
+https.request("https://api.telegram.org/bot"..TokenBot..'/sendMessage?chat_id='..Chat_Id2..'&text=' .. URL.escape(text).."&reply_to_message_id="..get.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+--     source -𝐗-     --
+if DataText and DataText:match('/TagSudoBot:'..tonumber(data.sender_user_id_)..'(.*)') then
+local MARTEN = DataText:match('/TagSudoBot:'..tonumber(data.sender_user_id_)..'(.*)')
+local List = bot_data:smembers(XBOT..'MARTEN:SudoBot:')
+text = "⌯︙قائمة المطورين ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n"
+for k,v in pairs(List) do
+local sudouser = bot_data:get(XBOT..'MARTEN:Sudos'..v) 
+local username = bot_data:get(XBOT..'Save:UserName'..v)
+if username then
+text = text..k.."~ : [@"..username.."] ↬ Gps : "..(sudouser or 0).."\n"
+else
+text = text..k.."~ : "..v.." ↬ Gps : "..(sudouser or 0).."\n"
+end end
+if #List == 0 then
+text = "⌯︙*عذرا لم يتم رفع اي مطورين*"
+end 
+keyboard = {} 
+keyboard.inline_keyboard = {{{text="• مسح المطورين •",callback_data="/DelSudoBot:"..data.sender_user_id_}},{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}}
+return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+--     source -𝐗-     --
+if DataText and DataText:match('/TagSudoBotTag:'..tonumber(data.sender_user_id_)..'(.*)') then
+local MARTEN = DataText:match('/TagSudoBotTag:'..tonumber(data.sender_user_id_)..'(.*)')
+local List = bot_data:smembers(XBOT..'MARTEN:SudoBot:')
+local Tagall = 'TagAll:'..data.sender_user_id_..''
+local get = bot_data:get(XBOT.. ''..Tagall..'')
+text = "⌯︙قائمة المطورين ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n"
+for k,v in pairs(List) do
+local sudouser = bot_data:get(XBOT..'MARTEN:Sudos'..v) 
+local username = bot_data:get(XBOT..'Save:UserName'..v)
+if username then
+text = text..k.."~ : [@"..username.."] ↬ Gps : "..(sudouser or 0).."\n"
+else
+text = text..k.."~ : "..v.." ↬ Gps : "..(sudouser or 0).."\n"
+end end
+if #List == 0 then
+text = "⌯︙*عذرا لم يتم رفع اي مطورين*"
+end 
+DeleteMessage(Chat_Id2,{[0] = MsgId2})
+keyboard = {} 
+keyboard.inline_keyboard = {{{text="• مسح المطورين •",callback_data="/DelSudoBot:"..data.sender_user_id_}},{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}}
+return https.request("https://api.telegram.org/bot"..TokenBot..'/sendMessage?chat_id='..Chat_Id2..'&text=' .. URL.escape(text).."&reply_to_message_id="..get.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+--     source -𝐗-     --
+if DataText and DataText:match('/TagOwner:'..tonumber(data.sender_user_id_)..'(.*)') then
+local MARTEN = DataText:match('/TagOwner:'..tonumber(data.sender_user_id_)..'(.*)')
+local List = bot_data:smembers(XBOT..'MARTEN:Owner:'..Chat_Id2)
+text = "⌯︙قائمة المالكين ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n"
+for k,v in pairs(List) do
+local username = bot_data:get(XBOT..'Save:UserName'..v)
+if username then
+text = text..k.."~ : [@"..username.."]\n"
+else
+text = text..k.."~ : `"..v.."`\n"
+end end
+if #List == 0 then
+text = "⌯︙*لا يوجد مالكين*"
+end
+keyboard = {} 
+keyboard.inline_keyboard = {{{text="• مسح المالكين •",callback_data="/DelOwner:"..data.sender_user_id_}},{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}}
+return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+--     source -𝐗-     --
+if DataText and DataText:match('/TagOwnerTag:'..tonumber(data.sender_user_id_)..'(.*)') then
+local MARTEN = DataText:match('/TagOwnerTag:'..tonumber(data.sender_user_id_)..'(.*)')
+local List = bot_data:smembers(XBOT..'MARTEN:Owner:'..Chat_Id2)
+local Tagall = 'TagAll:'..data.sender_user_id_..''
+local get = bot_data:get(XBOT.. ''..Tagall..'')
+text = "⌯︙قائمة المالكين ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n"
+for k,v in pairs(List) do
+local username = bot_data:get(XBOT..'Save:UserName'..v)
+if username then
+text = text..k.."~ : [@"..username.."]\n"
+else
+text = text..k.."~ : `"..v.."`\n"
+end end
+if #List == 0 then
+text = "⌯︙*لا يوجد مالكين*"
+end
+DeleteMessage(Chat_Id2,{[0] = MsgId2})
+keyboard = {} 
+keyboard.inline_keyboard = {{{text="• مسح المالكين •",callback_data="/DelOwner:"..data.sender_user_id_}},{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}}
+return https.request("https://api.telegram.org/bot"..TokenBot..'/sendMessage?chat_id='..Chat_Id2..'&text=' .. URL.escape(text).."&reply_to_message_id="..get.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+--     source -𝐗-     --
+if DataText and DataText:match('/TagBasicConstructor:'..tonumber(data.sender_user_id_)..'(.*)') then
+local MARTEN = DataText:match('/TagBasicConstructor:'..tonumber(data.sender_user_id_)..'(.*)')
+local List = bot_data:smembers(XBOT..'MARTEN:BasicConstructor:'..Chat_Id2)
+text = "⌯︙قائمة المنشئين الاساسيين ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n"
+for k,v in pairs(List) do
+local username = bot_data:get(XBOT..'Save:UserName'..v)
+if username then
+text = text..k.."~ : [@"..username.."]\n"
+else
+text = text..k.."~ : `"..v.."`\n"
+end end
+if #List == 0 then
+text = "⌯︙*لا يوجد منشئين اساسيين*"
+end
+keyboard = {} 
+keyboard.inline_keyboard = {{{text="• مسح المنشئين الاساسيين •",callback_data="/DelBasicConstructor:"..data.sender_user_id_}},{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}}
+return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+--     source -𝐗-     --
+if DataText and DataText:match('/TagBasicConstructorTag:'..tonumber(data.sender_user_id_)..'(.*)') then
+local MARTEN = DataText:match('/TagBasicConstructorTag:'..tonumber(data.sender_user_id_)..'(.*)')
+local List = bot_data:smembers(XBOT..'MARTEN:BasicConstructor:'..Chat_Id2)
+local Tagall = 'TagAll:'..data.sender_user_id_..''
+local get = bot_data:get(XBOT.. ''..Tagall..'')
+text = "⌯︙قائمة المنشئين الاساسيين ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n"
+for k,v in pairs(List) do
+local username = bot_data:get(XBOT..'Save:UserName'..v)
+if username then
+text = text..k.."~ : [@"..username.."]\n"
+else
+text = text..k.."~ : `"..v.."`\n"
+end end
+if #List == 0 then
+text = "⌯︙*لا يوجد منشئين اساسيين*"
+end
+DeleteMessage(Chat_Id2,{[0] = MsgId2})
+keyboard = {} 
+keyboard.inline_keyboard = {{{text="• مسح المنشئين الاساسيين •",callback_data="/DelBasicConstructor:"..data.sender_user_id_}},{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}}
+return https.request("https://api.telegram.org/bot"..TokenBot..'/sendMessage?chat_id='..Chat_Id2..'&text=' .. URL.escape(text).."&reply_to_message_id="..get.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+--     source -𝐗-     --
+if DataText and DataText:match('/TagConstructor:'..tonumber(data.sender_user_id_)..'(.*)') then
+local MARTEN = DataText:match('/TagConstructor:'..tonumber(data.sender_user_id_)..'(.*)')
+local List = bot_data:smembers(XBOT..'MARTEN:Constructor:'..Chat_Id2)
+text = "⌯︙قائمة المنشئين ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n"
+for k,v in pairs(List) do
+local username = bot_data:get(XBOT..'Save:UserName'..v)
+if username then
+text = text..k.."~ : [@"..username.."]\n"
+else
+text = text..k.."~ : `"..v.."`\n"
+end end
+if #List == 0 then
+text = "⌯︙*لا يوجد منشئين*"
+end
+keyboard = {} 
+keyboard.inline_keyboard = {{{text="• مسح المنشئين •",callback_data="/DelConstructor:"..data.sender_user_id_}},{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}}
+return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+--     source -𝐗-     --
+if DataText and DataText:match('/TagConstructorTag:'..tonumber(data.sender_user_id_)..'(.*)') then
+local MARTEN = DataText:match('/TagConstructorTag:'..tonumber(data.sender_user_id_)..'(.*)')
+local List = bot_data:smembers(XBOT..'MARTEN:Constructor:'..Chat_Id2)
+local Tagall = 'TagAll:'..data.sender_user_id_..''
+local get = bot_data:get(XBOT.. ''..Tagall..'')
+text = "⌯︙قائمة المنشئين ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n"
+for k,v in pairs(List) do
+local username = bot_data:get(XBOT..'Save:UserName'..v)
+if username then
+text = text..k.."~ : [@"..username.."]\n"
+else
+text = text..k.."~ : `"..v.."`\n"
+end end
+if #List == 0 then
+text = "⌯︙*لا يوجد منشئين*"
+end
+DeleteMessage(Chat_Id2,{[0] = MsgId2})
+keyboard = {} 
+keyboard.inline_keyboard = {{{text="• مسح المنشئين •",callback_data="/DelConstructor:"..data.sender_user_id_}},{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}}
+return https.request("https://api.telegram.org/bot"..TokenBot..'/sendMessage?chat_id='..Chat_Id2..'&text=' .. URL.escape(text).."&reply_to_message_id="..get.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+--     source -??-     --
+if DataText and DataText:match('/TagManagers:'..tonumber(data.sender_user_id_)..'(.*)') then
+local MARTEN = DataText:match('/TagManagers:'..tonumber(data.sender_user_id_)..'(.*)')
+local List = bot_data:smembers(XBOT..'MARTEN:Managers:'..Chat_Id2)
+text = "⌯︙قائمة المدراء ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n"
+for k,v in pairs(List) do
+local username = bot_data:get(XBOT..'Save:UserName'..v)
+if username then
+text = text..k.."~ : [@"..username.."]\n"
+else
+text = text..k.."~ : `"..v.."`\n"
+end end
+if #List == 0 then
+text = "⌯︙*لا يوجد مدراء*"
+end
+keyboard = {} 
+keyboard.inline_keyboard = {{{text="• مسح المدراء •",callback_data="/DelManager:"..data.sender_user_id_}},{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}}
+return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+--     source -𝐗-     --
+if DataText and DataText:match('/TagManagersTag:'..tonumber(data.sender_user_id_)..'(.*)') then
+local MARTEN = DataText:match('/TagManagersTag:'..tonumber(data.sender_user_id_)..'(.*)')
+local List = bot_data:smembers(XBOT..'MARTEN:Managers:'..Chat_Id2)
+text = "⌯︙قائمة المدراء ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n"
+for k,v in pairs(List) do
+local username = bot_data:get(XBOT..'Save:UserName'..v)
+if username then
+text = text..k.."~ : [@"..username.."]\n"
+else
+text = text..k.."~ : `"..v.."`\n"
+end end
+if #List == 0 then
+text = "⌯︙*لا يوجد مدراء*"
+end
+keyboard = {} 
+keyboard.inline_keyboard = {{{text="• مسح المدراء •",callback_data="/DelManager:"..data.sender_user_id_}},{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}}
+return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+--     source -𝐗-     --
+if DataText and DataText:match('/TagAdmins:'..tonumber(data.sender_user_id_)..'(.*)') then
+local MARTEN = DataText:match('/TagAdmins:'..tonumber(data.sender_user_id_)..'(.*)')
+local MArRten =  'MARTEN:Admins:'..Chat_Id2
+local List = bot_data:smembers(XBOT..MArRten)
+text = "⌯︙قائمة الادمنيه ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n"
+for k,v in pairs(List) do
+local username = bot_data:get(XBOT..'Save:UserName'..v)
+if username then
+text = text..k.."~ : [@"..username.."]\n"
+else
+text = text..k.."~ : `"..v.."`\n"
+end end
+if #List == 0 then
+text = "⌯︙*لا يوجد ادمنيه*"
+end
+keyboard = {} 
+keyboard.inline_keyboard = {{{text="• مسح الادمنيه •",callback_data="/DelAdmins:"..data.sender_user_id_}},{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}}
+return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+--     source -𝐗-     --
+if DataText and DataText:match('/TagAdminsTag:'..tonumber(data.sender_user_id_)..'(.*)') then
+local MARTEN = DataText:match('/TagAdminsTag:'..tonumber(data.sender_user_id_)..'(.*)')
+local MArRten =  'MARTEN:Admins:'..Chat_Id2
+local List = bot_data:smembers(XBOT..MArRten)
+local Tagall = 'TagAll:'..data.sender_user_id_..''
+local get = bot_data:get(XBOT.. ''..Tagall..'')
+text = "⌯︙قائمة الادمنيه ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n"
+for k,v in pairs(List) do
+local username = bot_data:get(XBOT..'Save:UserName'..v)
+if username then
+text = text..k.."~ : [@"..username.."]\n"
+else
+text = text..k.."~ : `"..v.."`\n"
+end end
+if #List == 0 then
+text = "⌯︙*لا يوجد ادمنيه*"
+end
+DeleteMessage(Chat_Id2,{[0] = MsgId2})
+keyboard = {} 
+keyboard.inline_keyboard = {{{text="• مسح الادمنيه •",callback_data="/DelAdmins:"..data.sender_user_id_}},{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}}
+return https.request("https://api.telegram.org/bot"..TokenBot..'/sendMessage?chat_id='..Chat_Id2..'&text=' .. URL.escape(text).."&reply_to_message_id="..get.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+--     source -𝐗-     --
+if DataText and DataText:match('/TagVipMem:'..tonumber(data.sender_user_id_)..'(.*)') then
+local MARTEN = DataText:match('/TagVipMem:'..tonumber(data.sender_user_id_)..'(.*)')
+local List = bot_data:smembers(XBOT..'MARTEN:VipMem:'..Chat_Id2)
+text = "⌯︙قائمة المميزين ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n"
+for k,v in pairs(List) do
+local username = bot_data:get(XBOT..'Save:UserName'..v)
+if username then
+text = text..k.."~ : [@"..username.."]\n"
+else
+text = text..k.."~ : `"..v.."`\n"
+end end
+if #List == 0 then
+text = "⌯︙*لا يوجد مميزين*"
+end
+keyboard = {} 
+keyboard.inline_keyboard = {{{text="• مسح المميزين •",callback_data="/DelVipMem:"..data.sender_user_id_}},{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}}
+return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+--     source -𝐗-     --
+if DataText and DataText:match('/TagVipMemTag:'..tonumber(data.sender_user_id_)..'(.*)') then
+local MARTEN = DataText:match('/TagVipMemTag:'..tonumber(data.sender_user_id_)..'(.*)')
+local List = bot_data:smembers(XBOT..'MARTEN:VipMem:'..Chat_Id2)
+local Tagall = 'TagAll:'..data.sender_user_id_..''
+local get = bot_data:get(XBOT.. ''..Tagall..'')
+text = "⌯︙قائمة المميزين ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n"
+for k,v in pairs(List) do
+local username = bot_data:get(XBOT..'Save:UserName'..v)
+if username then
+text = text..k.."~ : [@"..username.."]\n"
+else
+text = text..k.."~ : `"..v.."`\n"
+end end
+if #List == 0 then
+text = "⌯︙*لا يوجد مميزين*"
+end
+DeleteMessage(Chat_Id2,{[0] = MsgId2})
+keyboard = {} 
+keyboard.inline_keyboard = {{{text="• مسح المميزين •",callback_data="/DelVipMem:"..data.sender_user_id_}},{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}}
+return https.request("https://api.telegram.org/bot"..TokenBot..'/sendMessage?chat_id='..Chat_Id2..'&text=' .. URL.escape(text).."&reply_to_message_id="..get.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+--     source -𝐗-     --
+if DataText and DataText:match('/TagCleaner:'..tonumber(data.sender_user_id_)..'(.*)') then
+local MARTEN = DataText:match('/TagCleaner:'..tonumber(data.sender_user_id_)..'(.*)')
+local List = bot_data:smembers(XBOT..'MARTEN:Cleaner:'..Chat_Id2)
+text = "⌯︙قائمة المنظفين ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n"
+for k,v in pairs(List) do
+local username = bot_data:get(XBOT..'Save:UserName'..v)
+if username then
+text = text..k.."~ : [@"..username.."]\n"
+else
+text = text..k.."~ : `"..v.."`\n"
+end end
+if #List == 0 then
+text = "⌯︙*لا يوجد منظفين*"
+end
+keyboard = {} 
+keyboard.inline_keyboard = {{{text="• مسح المنظفين •",callback_data="/DelCleanr:"..data.sender_user_id_}},{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}}
+return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+--     source -𝐗-     --
+if DataText and DataText:match('/TagCleanerTag:'..tonumber(data.sender_user_id_)..'(.*)') then
+local MARTEN = DataText:match('/TagCleanerTag:'..tonumber(data.sender_user_id_)..'(.*)')
+local List = bot_data:smembers(XBOT..'MARTEN:Cleaner:'..Chat_Id2)
+local Tagall = 'TagAll:'..data.sender_user_id_..''
+local get = bot_data:get(XBOT.. ''..Tagall..'')
+text = "⌯︙قائمة المنظفين ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n"
+for k,v in pairs(List) do
+local username = bot_data:get(XBOT..'Save:UserName'..v)
+if username then
+text = text..k.."~ : [@"..username.."]\n"
+else
+text = text..k.."~ : `"..v.."`\n"
+end end
+if #List == 0 then
+text = "⌯︙*لا يوجد منظفين*"
+end
+DeleteMessage(Chat_Id2,{[0] = MsgId2})
+keyboard = {} 
+keyboard.inline_keyboard = {{{text="• مسح المنظفين •",callback_data="/DelCleanr:"..data.sender_user_id_}},{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}}
+return https.request("https://api.telegram.org/bot"..TokenBot..'/sendMessage?chat_id='..Chat_Id2..'&text=' .. URL.escape(text).."&reply_to_message_id="..get.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+--     source -𝐗-     --
+if DataText and DataText:match('/TagAll:'..tonumber(data.sender_user_id_)..'(.*)') then
+local MARTEN = DataText:match('/TagAll:'..tonumber(data.sender_user_id_)..'(.*)')   
+function TagAll(dp1,dp2)
+local Tagall = 'TagAll:'..data.sender_user_id_..''
+local get = bot_data:get(XBOT.. ''..Tagall..'')
+local text = "⌯︙وينكم يالربع \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n"
+i = 0
+for k, v in pairs(dp2.members_) do
+i = i + 1
+if bot_data:get(XBOT..'Save:UserName'..v.user_id_) then
+text = text..i.."~ : [@"..bot_data:get(XBOT..'Save:UserName'..v.user_id_).."]\n"
+else
+text = text..i.."~ : "..v.user_id_.."\n"
+end
+end 
+DeleteMessage(Chat_Id2,{[0] = MsgId2})
+keyboard = {} 
+keyboard.inline_keyboard = {{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}}
+return https.request("https://api.telegram.org/bot"..TokenBot..'/sendMessage?chat_id='..Chat_Id2..'&text=' .. URL.escape(text).."&reply_to_message_id="..get.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+tdcli_function({ID = "GetChannelMembers",channel_id_ = getChatId(Chat_Id2).ID, offset_ = 0,limit_ = 200000},TagAll,nil)
+end
+--     source -𝐗-     --
 if DataText and DataText:match('/LeaveBotPic:'..tonumber(data.sender_user_id_)..'(.*)') then
 local MARTEN = DataText:match('/LeaveBotPic:'..tonumber(data.sender_user_id_)..'(.*)')
 if bot_data:get(XBOT.."MARTEN:Left:Bot"..XBOT) then
@@ -5770,6 +6120,134 @@ if text and (text == 'تعطيل التاك' or text == 'تعطيل التاك �
 ReplyStatus(msg,msg.sender_user_id_,"EbDsDrg","⌯︙تم تعطيل امر تاك للكل\n✓")
 bot_data:set(XBOT..'MARTEN:Lock:TagAll'..msg.chat_id_,true)
 end
+--     source -𝐗-     --
+if text == "كشف الرتب" or text == "الرتب" then
+local Text = '*⌯︙اليك الرتب الاتيـة وعددها ↫ ⤈ ⚖️*'
+local ListSudo = bot_data:scard(XBOT.."MARTEN:MARTENSudo:")
+local ListSecondSudo = bot_data:scard(XBOT.."MARTEN:SecondSudo:")
+local ListSudoBot = bot_data:scard(XBOT.."MARTEN:SudoBot:")
+local ListOwner = bot_data:scard(XBOT.."MARTEN:Owner:"..msg.chat_id_)
+local ListBasicConstructor = bot_data:scard(XBOT.."MARTEN:BasicConstructor:"..msg.chat_id_)
+local ListConstructor = bot_data:scard(XBOT.."MARTEN:Constructor:"..msg.chat_id_)
+local ListManagers = bot_data:scard(XBOT.."MARTEN:Managers:"..msg.chat_id_)
+local ListAdmins = bot_data:scard(XBOT.."MARTEN:Admins:"..msg.chat_id_)
+local ListVipMem = bot_data:scard(XBOT.."MARTEN:VipMem:"..msg.chat_id_)
+local ListCleaner = bot_data:scard(XBOT.."MARTEN:Cleaner:"..msg.chat_id_)
+local inline = {
+	{{text="• للاساسسين {"..ListSudo.."} •",callback_data="/TagSudo:"..msg.sender_user_id_},{text="• للثانويين {"..ListSecondSudo.."} •",callback_data="/TagSecondSudo:"..msg.sender_user_id_}},
+	{{text="• للمطورين {"..ListSudoBot.."} •",callback_data="/TagSudoBot:"..msg.sender_user_id_}},
+	{{text="• المالكين {"..ListOwner.."} •",callback_data="/TagOwner:"..msg.sender_user_id_},{text="• المنشئين الاساسين {"..ListBasicConstructor.."} •",callback_data="/TagBasicConstructor:"..msg.sender_user_id_}},
+	{{text="• المنشئين {"..ListConstructor.."} •",callback_data="/TagConstructor:"..msg.sender_user_id_}},
+	{{text="• المدراء {"..ListManagers.."} •",callback_data="/TagManagers:"..msg.sender_user_id_},{text="• الادمنيه {"..ListAdmins.."} •",callback_data="/TagAdmins:"..msg.sender_user_id_}},
+	{{text="• المميزين {"..ListVipMem.."} •",callback_data="/TagVipMem:"..msg.sender_user_id_},{text="• المنظفين {"..ListCleaner.."} •",callback_data="/TagCleaner:"..msg.sender_user_id_}},
+	{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..msg.sender_user_id_}},
+	{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}
+}
+SendInline(msg.chat_id_,Text,nil,inline,msg.id_/2097152/0.5)
+end
+--     source -𝐗-     --
+if Admin(msg) then
+if text == "تاك" then
+local Text = '*⌯︙اختر نوع التاك ↫ ⤈ 🔍*'
+local Tagall = 'TagAll:'..msg.sender_user_id_..''
+bot_data:set(XBOT.. ''..Tagall..'' ,(msg.id_/2097152/0.5))
+local ListSudo = bot_data:scard(XBOT.."MARTEN:MARTENSudo:")
+local ListSecondSudo = bot_data:scard(XBOT.."MARTEN:SecondSudo:")
+local ListSudoBot = bot_data:scard(XBOT.."MARTEN:SudoBot:")
+local ListOwner = bot_data:scard(XBOT.."MARTEN:Owner:"..msg.chat_id_)
+local ListBasicConstructor = bot_data:scard(XBOT.."MARTEN:BasicConstructor:"..msg.chat_id_)
+local ListConstructor = bot_data:scard(XBOT.."MARTEN:Constructor:"..msg.chat_id_)
+local ListManagers = bot_data:scard(XBOT.."MARTEN:Managers:"..msg.chat_id_)
+local ListAdmins = bot_data:scard(XBOT.."MARTEN:Admins:"..msg.chat_id_)
+local ListVipMem = bot_data:scard(XBOT.."MARTEN:VipMem:"..msg.chat_id_)
+local ListCleaner = bot_data:scard(XBOT.."MARTEN:Cleaner:"..msg.chat_id_)
+keyboard = {} 
+if Sudo(msg) then
+keyboard.inline_keyboard = {
+	{{text="• تاك للكل •",callback_data="/TagAll:"..msg.sender_user_id_}},
+	{{text="• للثانويين {"..ListSecondSudo.."} •",callback_data="/TagSecondSudoTag:"..msg.sender_user_id_}},
+	{{text="• للمطورين {"..ListSudoBot.."} •",callback_data="/TagSudoBotTag:"..msg.sender_user_id_}},
+	{{text="• المالكين {"..ListOwner.."} •",callback_data="/TagOwnerTag:"..msg.sender_user_id_},{text="• المنشئين الاساسين {"..ListBasicConstructor.."} •",callback_data="/TagBasicConstructorTag:"..msg.sender_user_id_}},
+	{{text="• المنشئين {"..ListConstructor.."} •",callback_data="/TagConstructorTag:"..msg.sender_user_id_}},
+	{{text="• المدراء {"..ListManagers.."} •",callback_data="/TagManagersTag:"..msg.sender_user_id_},{text="• الادمنيه {"..ListAdmins.."} •",callback_data="/TagAdminsTag:"..msg.sender_user_id_}},
+	{{text="• المميزين {"..ListVipMem.."} •",callback_data="/TagVipMemTag:"..msg.sender_user_id_},{text="• المنظفين {"..ListCleaner.."} •",callback_data="/TagCleanerTag:"..msg.sender_user_id_}},
+	{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..msg.sender_user_id_}},
+	{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}
+} 
+elseif SecondSudo(msg) then
+keyboard.inline_keyboard = {
+	{{text="• تاك للكل •",callback_data="/TagAll:"..msg.sender_user_id_}},
+	{{text="• للثانويين {"..ListSecondSudo.."} •",callback_data="/TagSecondSudoTag:"..msg.sender_user_id_}},
+	{{text="• للمطورين {"..ListSudoBot.."} •",callback_data="/TagSudoBotTag:"..msg.sender_user_id_}},
+	{{text="• المالكين {"..ListOwner.."} •",callback_data="/TagOwnerTag:"..msg.sender_user_id_},{text="• المنشئين الاساسين {"..ListBasicConstructor.."} •",callback_data="/TagBasicConstructorTag:"..msg.sender_user_id_}},
+	{{text="• المنشئين {"..ListConstructor.."} •",callback_data="/TagConstructorTag:"..msg.sender_user_id_}},
+	{{text="• المدراء {"..ListManagers.."} •",callback_data="/TagManagersTag:"..msg.sender_user_id_},{text="• الادمنيه {"..ListAdmins.."} •",callback_data="/TagAdminsTag:"..msg.sender_user_id_}},
+	{{text="• المميزين {"..ListVipMem.."} •",callback_data="/TagVipMemTag:"..msg.sender_user_id_},{text="• المنظفين {"..ListCleaner.."} •",callback_data="/TagCleanerTag:"..msg.sender_user_id_}},
+	{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..msg.sender_user_id_}},
+	{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}
+}
+elseif SudoBot(msg) then
+keyboard.inline_keyboard = {
+	{{text="• تاك للكل •",callback_data="/TagAll:"..msg.sender_user_id_}},
+	{{text="• للثانويين {"..ListSecondSudo.."} •",callback_data="/TagSecondSudoTag:"..msg.sender_user_id_}},
+	{{text="• للمطورين {"..ListSudoBot.."} •",callback_data="/TagSudoBotTag:"..msg.sender_user_id_}},
+	{{text="• المالكين {"..ListOwner.."} •",callback_data="/TagOwnerTag:"..msg.sender_user_id_},{text="• المنشئين الاساسين {"..ListBasicConstructor.."} •",callback_data="/TagBasicConstructorTag:"..msg.sender_user_id_}},
+	{{text="• المنشئين {"..ListConstructor.."} •",callback_data="/TagConstructorTag:"..msg.sender_user_id_}},
+	{{text="• المدراء {"..ListManagers.."} •",callback_data="/TagManagersTag:"..msg.sender_user_id_},{text="• الادمنيه {"..ListAdmins.."} •",callback_data="/TagAdminsTag:"..msg.sender_user_id_}},
+	{{text="• المميزين {"..ListVipMem.."} •",callback_data="/TagVipMemTag:"..msg.sender_user_id_},{text="• المنظفين {"..ListCleaner.."} •",callback_data="/TagCleanerTag:"..msg.sender_user_id_}},
+	{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..msg.sender_user_id_}},
+	{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}
+}
+elseif Owner(msg) then
+keyboard.inline_keyboard = {
+	{{text="• تاك للكل •",callback_data="/TagAll:"..msg.sender_user_id_}},
+	{{text="• المالكين {"..ListOwner.."} •",callback_data="/TagOwnerTag:"..msg.sender_user_id_},{text="• المنشئين الاساسين {"..ListBasicConstructor.."} •",callback_data="/TagBasicConstructorTag:"..msg.sender_user_id_}},
+	{{text="• المنشئين {"..ListConstructor.."} •",callback_data="/TagConstructorTag:"..msg.sender_user_id_}},
+	{{text="• المدراء {"..ListManagers.."} •",callback_data="/TagManagersTag:"..msg.sender_user_id_},{text="• الادمنيه {"..ListAdmins.."} •",callback_data="/TagAdminsTag:"..msg.sender_user_id_}},
+	{{text="• المميزين {"..ListVipMem.."} •",callback_data="/TagVipMemTag:"..msg.sender_user_id_},{text="• المنظفين {"..ListCleaner.."} •",callback_data="/TagCleanerTag:"..msg.sender_user_id_}},
+	{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..msg.sender_user_id_}},
+	{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}
+}
+elseif BasicConstructor(msg) then
+keyboard.inline_keyboard = {
+	{{text="• تاك للكل •",callback_data="/TagAll:"..msg.sender_user_id_}},
+	{{text="• المنشئين الاساسين {"..ListBasicConstructor.."} •",callback_data="/TagBasicConstructorTag:"..msg.sender_user_id_}},
+	{{text="• المنشئين {"..ListConstructor.."} •",callback_data="/TagConstructorTag:"..msg.sender_user_id_}},
+	{{text="• المدراء {"..ListManagers.."} •",callback_data="/TagManagersTag:"..msg.sender_user_id_},{text="• الادمنيه {"..ListAdmins.."} •",callback_data="/TagAdminsTag:"..msg.sender_user_id_}},
+	{{text="• المميزين {"..ListVipMem.."} •",callback_data="/TagVipMemTag:"..msg.sender_user_id_},{text="• المنظفين {"..ListCleaner.."} •",callback_data="/TagCleanerTag:"..msg.sender_user_id_}},
+	{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..msg.sender_user_id_}},
+	{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}
+}
+elseif Constructor(msg) then
+keyboard.inline_keyboard = {
+	{{text="• تاك للكل •",callback_data="/TagAll:"..msg.sender_user_id_}},
+	{{text="• المنشئين {"..ListConstructor.."} •",callback_data="/TagConstructorTag:"..msg.sender_user_id_}},
+	{{text="• المدراء {"..ListManagers.."} •",callback_data="/TagManagersTag:"..msg.sender_user_id_},{text="• الادمنيه {"..ListAdmins.."} •",callback_data="/TagAdminsTag:"..msg.sender_user_id_}},
+	{{text="• المميزين {"..ListVipMem.."} •",callback_data="/TagVipMemTag:"..msg.sender_user_id_},{text="• المنظفين {"..ListCleaner.."} •",callback_data="/TagCleanerTag:"..msg.sender_user_id_}},
+	{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..msg.sender_user_id_}},
+	{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}
+}
+elseif Manager(msg) then
+keyboard.inline_keyboard = {
+	{{text="• تاك للكل •",callback_data="/TagAll:"..msg.sender_user_id_}},
+	{{text="• الادمنيه {"..ListAdmins.."} •",callback_data="/TagAdminsTag:"..msg.sender_user_id_}},
+	{{text="• المميزين {"..ListVipMem.."} •",callback_data="/TagVipMemTag:"..msg.sender_user_id_},{text="• المنظفين {"..ListCleaner.."} •",callback_data="/TagCleanerTag:"..msg.sender_user_id_}},
+	{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..msg.sender_user_id_}},
+	{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}
+}
+elseif Admin(msg) then
+keyboard.inline_keyboard = {
+	{{text="• تاك للكل •",callback_data="/TagAll:"..msg.sender_user_id_}},
+	{{text="• المميزين {"..ListVipMem.."} •",callback_data="/TagVipMemTag:"..msg.sender_user_id_},{text="• المنظفين {"..ListCleaner.."} •",callback_data="/TagCleanerTag:"..msg.sender_user_id_}},
+	{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..msg.sender_user_id_}},
+	{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}
+}
+end
+Msg_id = msg.id_/2097152/0.5
+return https.request("https://api.telegram.org/bot"..TokenBot..'/sendMessage?chat_id='..msg.chat_id_..'&text=' .. URL.escape(Text).."&reply_to_message_id="..Msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+end
+--     source -𝐗-     --
 if Admin(msg) then
 if text == "تاك للكل" and ChCheck(msg) then
 if not bot_data:get(XBOT..'MARTEN:Lock:TagAll'..msg.chat_id_) then
