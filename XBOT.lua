@@ -12038,24 +12038,6 @@ end,nil)
 end 
 end
 --     Source -X-     --
-if text and text:match("^غادر (-%d+)$")  then
-local Text = { string.match(text, "^(غادر) (-%d+)$")}
-if not SecondSudo(msg) then
-send_X(msg.chat_id_, msg.id_, 1, '⌯︙للمطور الاساسي فقط', 1, 'md')
-else 
-tdcli_function({ID ="GetChat",chat_id_=Text[2]},function(arg,dp) 
-if dp.id_ then
-send_X(msg.chat_id_, msg.id_, 1, "⌯︙المجموعه ↫ ["..dp.title_.."]\n⌯︙تمت المغادره منها بنجاح", 1, "md")
-send_X(Text[2], 0, 1, "⌯︙بامر المطور تم مغادرة هذه المجموعه ", 1, "md")  
-ChatLeave(dp.id_, XBOT)
-bot_data:srem(XBOT.."MARTEN:Groups", dp.id_)
-else
-send_X(msg.chat_id_, msg.id_, 1, "⌯︙لم تتم اضافتي بها لاقوم بمغادرتها", 1, "md")
-end 
-end,nil)
-end 
-end
---     Source -X-     --
 if text and text:match("^تعين عدد الاعضاء (%d+)$") and SecondSudo(msg) or text and text:match("^تعيين عدد الاعضاء (%d+)$") and SecondSudo(msg) then
 local Num = text:match("تعين عدد الاعضاء (%d+)$") or text:match("تعيين عدد الاعضاء (%d+)$")
 bot_data:set(XBOT..'MARTEN:Num:Add:Bot',Num) 
