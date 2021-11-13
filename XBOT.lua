@@ -1875,6 +1875,215 @@ keyboard.inline_keyboard = {{{text="• اخفاء الكليشه •",callback_
 return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 --     source -𝐗-     --
+if DataText and DataText:match('/lockorder:(.*)') then
+local MARTEN = DataText:match('/lockorder:(.*)')
+if tonumber(MARTEN) == tonumber(data.sender_user_id_) then
+local order = bot_data:get(XBOT..'MARTEN:order')
+local Text = [[
+⌯︙اهلا بك في قائمة اوامر التعطيل والتفعيل ↫ ⤈ 
+ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+⌯︙يمكنك التعطيل والتفعيل عن طريق الازرار بلاسفل
+ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+» [𝐬𝐨𝐮𝐫𝐜𝐞 -𝐗-](https://t.me/SrcX_B0T)➤
+]] 
+keyboard = {} 
+keyboard.inline_keyboard = {{{text="• تعطيل الايدي بالصوره •",callback_data="/LockIdPhoto:"..data.sender_user_id_},{text="• تفعيل الايدي بالصوره •",callback_data="/UnLockIdPhoto:"..data.sender_user_id_}},{{text="• تعطيل الايدي •",callback_data="/LockId:"..data.sender_user_id_},{text="• تفعيل الايدي •",callback_data="/UnLockId:"..data.sender_user_id_}},{{text="• تعطيل الرابط •",callback_data="/LockGpLinks:"..data.sender_user_id_},{text="• تفعيل الرابط •",callback_data="/UnLockGpLinks:"..data.sender_user_id_}},{{text="• تعطيل الرابط انلاين •",callback_data="/LockGpLinksinline:"..data.sender_user_id_},{text="• تفعيل الرابط انلاين •",callback_data="/UnLockGpLinksinline:"..data.sender_user_id_}},{{text="• تعطيل الترحيب •",callback_data="/LockWelcome:"..data.sender_user_id_},{text="• تفعيل الترحيب •",callback_data="/UnLockWelcome:"..data.sender_user_id_}},{{text="• تعطيل الردود المطور •",callback_data="/LockAllRed:"..data.sender_user_id_},{text="• تفعيل الردود المطور •",callback_data="/UnLockAllRed:"..data.sender_user_id_}},{{text="• تعطيل ردود المدير •",callback_data="/LockGpRed:"..data.sender_user_id_},{text="• تفعيل ردود المدير •",callback_data="/UnLockGpRed:"..data.sender_user_id_}},{{text="• تعطيل نزلني •",callback_data="/LockDelMe:"..data.sender_user_id_},{text="• تفعيل نزلني •",callback_data="/UnLockDelMe:"..data.sender_user_id_}},{{text="• تعطيل اطردني •",callback_data="/LockKickMe:"..data.sender_user_id_},{text="• تفعيل اطردني •",callback_data="/UnLockKickMe:"..data.sender_user_id_}},{{text="• تعطيل الحظر •",callback_data="/LockKickBan:"..data.sender_user_id_},{text="• تفعيل الحظر •",callback_data="/UnLockKickBan:"..data.sender_user_id_}},{{text="• تعطيل الرفع •",callback_data="/LockProSet:"..data.sender_user_id_},{text="• تفعيل الرفع •",callback_data="/UnLockProSet:"..data.sender_user_id_}},{{text="• تعطيل الالعاب •",callback_data="/LockGames:"..data.sender_user_id_},{text="• تفعيل الالعاب •",callback_data="/UnLockGames:"..data.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_},{text="• القائمه الرئيسيه •",callback_data="/HelpList:"..data.sender_user_id_}},{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}}
+return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(order or Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end end
+--     source -𝐗-     --
+if DataText and DataText:match('/LockIdPhoto:'..tonumber(data.sender_user_id_)..'(.*)') then
+local MARTEN = DataText:match('/LockIdPhoto:'..tonumber(data.sender_user_id_)..'(.*)')
+bot_data:set(XBOT..'MARTEN:Lock:Id:Photo'..data.chat_id_,true)
+Text = "*⌯︙تم تعطيل الايدي بالصوره*\n•-› X"
+keyboard = {} 
+keyboard.inline_keyboard = {{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_},{text="• رجوع •",callback_data="/lockorder:"..data.sender_user_id_}},{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}}
+return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+if DataText and DataText:match('/unLockIdPhoto:'..tonumber(data.sender_user_id_)..'(.*)') then
+local MARTEN = DataText:match('/unLockIdPhoto:'..tonumber(data.sender_user_id_)..'(.*)')
+bot_data:del(XBOT..'MARTEN:Lock:Id:Photo'..data.chat_id_)
+Text = "*⌯︙تم تفعيل الايدي بالصوره*\n•-› ✓"
+keyboard = {} 
+keyboard.inline_keyboard = {{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_},{text="• رجوع •",callback_data="/lockorder:"..data.sender_user_id_}},{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}}
+return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+if DataText and DataText:match('/LockId:'..tonumber(data.sender_user_id_)..'(.*)') then
+local MARTEN = DataText:match('/LockId:'..tonumber(data.sender_user_id_)..'(.*)')
+bot_data:set(XBOT..'MARTEN:Lock:Id'..data.chat_id_,true)
+Text = "*⌯︙تم تعطيل الايدي*\n•-› X"
+keyboard = {} 
+keyboard.inline_keyboard = {{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_},{text="• رجوع •",callback_data="/lockorder:"..data.sender_user_id_}},{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}}
+return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+if DataText and DataText:match('/unLockId:'..tonumber(data.sender_user_id_)..'(.*)') then
+local MARTEN = DataText:match('/unLockId:'..tonumber(data.sender_user_id_)..'(.*)')
+bot_data:del(XBOT..'MARTEN:Lock:Id'..data.chat_id_)
+Text = "*⌯︙تم تفعيل الايدي*\n•-› ✓"
+keyboard = {} 
+keyboard.inline_keyboard = {{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_},{text="• رجوع •",callback_data="/lockorder:"..data.sender_user_id_}},{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}}
+return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+if DataText and DataText:match('/LockGpLinks:'..tonumber(data.sender_user_id_)..'(.*)') then
+local MARTEN = DataText:match('/LockGpLinks:'..tonumber(data.sender_user_id_)..'(.*)')
+bot_data:set(XBOT.."MARTEN:Lock:GpLinks"..data.chat_id_,"ok")
+Text = "*⌯︙تم تعطيل الرابط*\n•-› X"
+keyboard = {} 
+keyboard.inline_keyboard = {{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_},{text="• رجوع •",callback_data="/lockorder:"..data.sender_user_id_}},{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}}
+return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+if DataText and DataText:match('/unLockGpLinks:'..tonumber(data.sender_user_id_)..'(.*)') then
+local MARTEN = DataText:match('/unLockGpLinks:'..tonumber(data.sender_user_id_)..'(.*)')
+bot_data:del(XBOT.."MARTEN:Lock:GpLinks"..data.chat_id_)
+Text = "*⌯︙تم تفعيل الرابط*\n•-› ✓"
+keyboard = {} 
+keyboard.inline_keyboard = {{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_},{text="• رجوع •",callback_data="/lockorder:"..data.sender_user_id_}},{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}}
+return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+if DataText and DataText:match('/LockGpLinksinline:'..tonumber(data.sender_user_id_)..'(.*)') then
+local MARTEN = DataText:match('/LockGpLinksinline:'..tonumber(data.sender_user_id_)..'(.*)')
+bot_data:set(XBOT.."MARTEN:Lock:GpLinksinline"..data.chat_id_,"ok")
+Text = "*⌯︙تم تعطيل الرابط انلاين*\n•-› X"
+keyboard = {} 
+keyboard.inline_keyboard = {{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_},{text="• رجوع •",callback_data="/lockorder:"..data.sender_user_id_}},{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}}
+return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+if DataText and DataText:match('/UnLockGpLinksinline:'..tonumber(data.sender_user_id_)..'(.*)') then
+local MARTEN = DataText:match('/UnLockGpLinksinline:'..tonumber(data.sender_user_id_)..'(.*)')
+bot_data:del(XBOT.."MARTEN:Lock:GpLinksinline"..data.chat_id_)
+Text = "*⌯︙تم تفعيل الرابط انلاين*\n•-› ✓"
+keyboard = {} 
+keyboard.inline_keyboard = {{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_},{text="• رجوع •",callback_data="/lockorder:"..data.sender_user_id_}},{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}}
+return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+if DataText and DataText:match('/LockWelcome:'..tonumber(data.sender_user_id_)..'(.*)') then
+local MARTEN = DataText:match('/LockWelcome:'..tonumber(data.sender_user_id_)..'(.*)')
+bot_data:del(XBOT.."MARTEN:Lock:Welcome"..data.chat_id_)
+Text = "*⌯︙تم تعطيل الترحيب*\n•-› X"
+keyboard = {} 
+keyboard.inline_keyboard = {{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_},{text="• رجوع •",callback_data="/lockorder:"..data.sender_user_id_}},{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}}
+return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+if DataText and DataText:match('/UnLockWelcome:'..tonumber(data.sender_user_id_)..'(.*)') then
+local MARTEN = DataText:match('/UnLockWelcome:'..tonumber(data.sender_user_id_)..'(.*)')
+bot_data:set(XBOT.."MARTEN:Lock:Welcome"..data.chat_id_,true)
+Text = "*⌯︙تم تفعيل الترحيب*\n•-› ✓"
+keyboard = {} 
+keyboard.inline_keyboard = {{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_},{text="• رجوع •",callback_data="/lockorder:"..data.sender_user_id_}},{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}}
+return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+if DataText and DataText:match('/LockAllRed:'..tonumber(data.sender_user_id_)..'(.*)') then
+local MARTEN = DataText:match('/LockAllRed:'..tonumber(data.sender_user_id_)..'(.*)')
+bot_data:set(XBOT..'MARTEN:Lock:AllRed'..data.chat_id_,true)
+Text = "*⌯︙تم تعطيل ردود المطور*\n•-› X"
+keyboard = {} 
+keyboard.inline_keyboard = {{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_},{text="• رجوع •",callback_data="/lockorder:"..data.sender_user_id_}},{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}}
+return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+if DataText and DataText:match('/UnLockAllRed:'..tonumber(data.sender_user_id_)..'(.*)') then
+local MARTEN = DataText:match('/UnLockAllRed:'..tonumber(data.sender_user_id_)..'(.*)')
+bot_data:del(XBOT..'MARTEN:Lock:AllRed'..data.chat_id_)
+Text = "*⌯︙تم تفعيل ردود المطور*\n•-› ✓"
+keyboard = {} 
+keyboard.inline_keyboard = {{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_},{text="• رجوع •",callback_data="/lockorder:"..data.sender_user_id_}},{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}}
+return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+if DataText and DataText:match('/LockGpRed:'..tonumber(data.sender_user_id_)..'(.*)') then
+local MARTEN = DataText:match('/LockGpRed:'..tonumber(data.sender_user_id_)..'(.*)')
+bot_data:set(XBOT..'MARTEN:Lock:GpRed'..data.chat_id_,true)
+Text = "*⌯︙تم تعطيل ردود المدير*\n•-› X"
+keyboard = {} 
+keyboard.inline_keyboard = {{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_},{text="• رجوع •",callback_data="/lockorder:"..data.sender_user_id_}},{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}}
+return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+if DataText and DataText:match('/UnLockGpRed:'..tonumber(data.sender_user_id_)..'(.*)') then
+local MARTEN = DataText:match('/UnLockGpRed:'..tonumber(data.sender_user_id_)..'(.*)')
+bot_data:del(XBOT..'MARTEN:Lock:GpRed'..data.chat_id_)
+Text = "*⌯︙تم تفعيل ردود المدير*\n•-› ✓"
+keyboard = {} 
+keyboard.inline_keyboard = {{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_},{text="• رجوع •",callback_data="/lockorder:"..data.sender_user_id_}},{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}}
+return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+if DataText and DataText:match('/LockDelMe:'..tonumber(data.sender_user_id_)..'(.*)') then
+local MARTEN = DataText:match('/LockDelMe:'..tonumber(data.sender_user_id_)..'(.*)')
+bot_data:set(XBOT.."MARTEN:Del:Me"..data.chat_id_, true)
+Text = "*⌯︙تم تعطيل نزلني*\n•-› X"
+keyboard = {} 
+keyboard.inline_keyboard = {{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_},{text="• رجوع •",callback_data="/lockorder:"..data.sender_user_id_}},{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}}
+return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+if DataText and DataText:match('/UnLockDelMe:'..tonumber(data.sender_user_id_)..'(.*)') then
+local MARTEN = DataText:match('/UnLockDelMe:'..tonumber(data.sender_user_id_)..'(.*)')
+bot_data:del(XBOT.."MARTEN:Del:Me"..data.chat_id_)
+Text = "*⌯︙تم تفعيل نزلني*\n•-› ✓"
+keyboard = {} 
+keyboard.inline_keyboard = {{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_},{text="• رجوع •",callback_data="/lockorder:"..data.sender_user_id_}},{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}}
+return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+if DataText and DataText:match('/LockKickMe:'..tonumber(data.sender_user_id_)..'(.*)') then
+local MARTEN = DataText:match('/LockKickMe:'..tonumber(data.sender_user_id_)..'(.*)')
+bot_data:set(XBOT.."MARTEN:Kick:Me"..data.chat_id_, true)
+Text = "*⌯︙تم تعطيل اطردني*\n•-› X"
+keyboard = {} 
+keyboard.inline_keyboard = {{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_},{text="• رجوع •",callback_data="/lockorder:"..data.sender_user_id_}},{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}}
+return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+if DataText and DataText:match('/UnLockKickMe:'..tonumber(data.sender_user_id_)..'(.*)') then
+local MARTEN = DataText:match('/UnLockKickMe:'..tonumber(data.sender_user_id_)..'(.*)')
+bot_data:del(XBOT.."MARTEN:Kick:Me"..data.chat_id_)
+Text = "*⌯︙تم تفعيل اطردني*\n•-› ✓"
+keyboard = {} 
+keyboard.inline_keyboard = {{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_},{text="• رجوع •",callback_data="/lockorder:"..data.sender_user_id_}},{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}}
+return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+if DataText and DataText:match('/LockKickBan:'..tonumber(data.sender_user_id_)..'(.*)') then
+local MARTEN = DataText:match('/LockKickBan:'..tonumber(data.sender_user_id_)..'(.*)')
+bot_data:set(XBOT.."MARTEN:Lock:KickBan"..data.chat_id_,"true")
+Text = "*⌯︙تم تعطيل الحظر*\n•-› X"
+keyboard = {} 
+keyboard.inline_keyboard = {{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_},{text="• رجوع •",callback_data="/lockorder:"..data.sender_user_id_}},{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}}
+return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+if DataText and DataText:match('/UnLockKickBan:'..tonumber(data.sender_user_id_)..'(.*)') then
+local MARTEN = DataText:match('/UnLockKickBan:'..tonumber(data.sender_user_id_)..'(.*)')
+bot_data:del(XBOT.."MARTEN:Lock:KickBan"..data.chat_id_)
+Text = "*⌯︙تم تفعيل الحظر*\n•-› ✓"
+keyboard = {} 
+keyboard.inline_keyboard = {{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_},{text="• رجوع •",callback_data="/lockorder:"..data.sender_user_id_}},{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}}
+return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+if DataText and DataText:match('/LockProSet:'..tonumber(data.sender_user_id_)..'(.*)') then
+local MARTEN = DataText:match('/LockProSet:'..tonumber(data.sender_user_id_)..'(.*)')
+bot_data:set(XBOT.."MARTEN:Lock:ProSet"..data.chat_id_,"true")
+Text = "*⌯︙تم تعطيل الرفع*\n•-› X"
+keyboard = {} 
+keyboard.inline_keyboard = {{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_},{text="• رجوع •",callback_data="/lockorder:"..data.sender_user_id_}},{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}}
+return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+if DataText and DataText:match('/UnLocProSet:'..tonumber(data.sender_user_id_)..'(.*)') then
+local MARTEN = DataText:match('/UnLocProSet:'..tonumber(data.sender_user_id_)..'(.*)')
+bot_data:del(XBOT.."MARTEN:Lock:ProSet"..data.chat_id_)
+Text = "*⌯︙تم تفعيل الرفع*\n•-› ✓"
+keyboard = {} 
+keyboard.inline_keyboard = {{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_},{text="• رجوع •",callback_data="/lockorder:"..data.sender_user_id_}},{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}}
+return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+if DataText and DataText:match('/LockGames:'..tonumber(data.sender_user_id_)..'(.*)') then
+local MARTEN = DataText:match('/LockGames:'..tonumber(data.sender_user_id_)..'(.*)')
+bot_data:set(XBOT..'MARTEN:Lock:Games'..data.chat_id_,true)  
+Text = "*⌯︙تم تعطيل الالعاب*\n•-› X"
+keyboard = {} 
+keyboard.inline_keyboard = {{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_},{text="• رجوع •",callback_data="/lockorder:"..data.sender_user_id_}},{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}}
+return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+if DataText and DataText:match('/UnLockGames:'..tonumber(data.sender_user_id_)..'(.*)') then
+local MARTEN = DataText:match('/UnLockGames:'..tonumber(data.sender_user_id_)..'(.*)')
+bot_data:del(XBOT..'MARTEN:Lock:Games'..data.chat_id_) 
+Text = "*⌯︙تم تفعيل الالعاب*\n•-› ✓"
+keyboard = {} 
+keyboard.inline_keyboard = {{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_},{text="• رجوع •",callback_data="/lockorder:"..data.sender_user_id_}},{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}}
+return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+--     source -𝐗-     --
 if DataText and DataText:match('/DelRed:'..tonumber(data.sender_user_id_)..'(.*)') then
 local S0FI = DataText:match('/DelRed:'..tonumber(data.sender_user_id_)..'(.*)')
 EditMsg(Chat_Id2, Msg_Id2, "⌯︙الكلمه ↫ "..S0FI.." تم حذفها") 
@@ -12513,6 +12722,20 @@ end
 Msg_id = msg.id_/2097152/0.5
 return https.request("https://api.telegram.org/bot"..TokenBot..'/sendMessage?chat_id='..msg.chat_id_..'&text=' .. URL.escape(Del or Text).."&reply_to_message_id="..Msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
+--     source -𝐗-     --
+if Manager(msg) then
+if text == "التعطيل" or text == "التفعيل" or text == "اوامر التفعيل" or text == "اوامر التعطيل" or text == "اوامر التفعيل والتعطيل" then
+local order = bot_data:get(XBOT..'MARTEN:order')
+local Text = [[
+⌯︙اهلاً بك في قائمة اوامر التعطيل والتفعيل ↫ ⤈ 🔐 
+ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+⌯︙يمكنك التعطيل والتفعيل عن طريق الازرار بلاسفل ↫ ⤈ 🔓
+ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+» [𝐬𝐨𝐮𝐫𝐜𝐞 -𝐗-](https://t.me/SrcX_B0T)➤
+]] 
+local inline = {{{text="• تعطيل الايدي بالصوره •",callback_data="/LockIdPhoto:"..msg.sender_user_id_},{text="• تفعيل الايدي بالصوره •",callback_data="/UnLockIdPhoto:"..msg.sender_user_id_}},{{text="• تعطيل الايدي •",callback_data="/LockId:"..msg.sender_user_id_},{text="• تفعيل الايدي •",callback_data="/UnLockId:"..msg.sender_user_id_}},{{text="• تعطيل الرابط •",callback_data="/LockGpLinks:"..msg.sender_user_id_},{text="• تفعيل الرابط •",callback_data="/UnLockGpLinks:"..msg.sender_user_id_}},{{text="• تعطيل الرابط انلاين •",callback_data="/LockGpLinksinline:"..msg.sender_user_id_},{text="• تفعيل الرابط انلاين •",callback_data="/UnLockGpLinksinline:"..msg.sender_user_id_}},{{text="• تعطيل الترحيب •",callback_data="/LockWelcome:"..msg.sender_user_id_},{text="• تفعيل الترحيب •",callback_data="/UnLockWelcome:"..msg.sender_user_id_}},{{text="• تعطيل الردود المطور •",callback_data="/LockAllRed:"..msg.sender_user_id_},{text="• تفعيل الردود المطور •",callback_data="/UnLockAllRed:"..msg.sender_user_id_}},{{text="• تعطيل ردود المدير •",callback_data="/LockGpRed:"..msg.sender_user_id_},{text="• تفعيل ردود المدير •",callback_data="/UnLockGpRed:"..msg.sender_user_id_}},{{text="• تعطيل نزلني •",callback_data="/LockDelMe:"..msg.sender_user_id_},{text="• تفعيل نزلني •",callback_data="/UnLockDelMe:"..msg.sender_user_id_}},{{text="• تعطيل اطردني •",callback_data="/LockKickMe:"..msg.sender_user_id_},{text="• تفعيل اطردني •",callback_data="/UnLockKickMe:"..msg.sender_user_id_}},{{text="• تعطيل الحظر •",callback_data="/LockKickBan:"..msg.sender_user_id_},{text="• تفعيل الحظر •",callback_data="/UnLockKickBan:"..msg.sender_user_id_}},{{text="• تعطيل الرفع •",callback_data="/LockProSet:"..msg.sender_user_id_},{text="• تفعيل الرفع •",callback_data="/UnLockProSet:"..msg.sender_user_id_}},{{text="• تعطيل الالعاب •",callback_data="/LockGames:"..msg.sender_user_id_},{text="• تفعيل الالعاب •",callback_data="/UnLockGames:"..msg.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_},{text="• القائمه الرئيسيه •",callback_data="/HelpList:"..data.sender_user_id_}},{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}}
+SendInline(msg.chat_id_,Text,nil,inline,msg.id_/2097152/0.5)
+end end
 --     source -𝐗-     --
 if text == "مسح قائمه المنع" and Owner(msg) then
 local Filter = bot_data:get(XBOT..'MARTEN:Filter')
