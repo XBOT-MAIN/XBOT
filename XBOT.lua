@@ -1316,7 +1316,6 @@ if DataText and DataText:match('/DelList:(.*)') then
 local MARTEN = DataText:match('/DelList:(.*)')
 if tonumber(MARTEN) == tonumber(data.sender_user_id_) then
 local Del = bot_data:get(XBOT..'MARTEN:Del')
-local ListSudo = bot_data:scard(XBOT.."MARTEN:MARTENSudo:")
 local ListSecondSudo = bot_data:scard(XBOT.."MARTEN:SecondSudo:")
 local ListSudoBot = bot_data:scard(XBOT.."MARTEN:SudoBot:")
 local ListOwner = bot_data:scard(XBOT.."MARTEN:Owner:"..data.chat_id_)
@@ -1414,15 +1413,6 @@ end
 https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end end
 if Sudo(data) then
-if DataText and DataText:match('/DelMARTENSudo:'..tonumber(data.sender_user_id_)..'(.*)') then
-local MARTEN = DataText:match('/DelMARTENSudo:'..tonumber(data.sender_user_id_)..'(.*)')
-bot_data:del(XBOT..'MARTEN:MARTENSudo:')
-Text = "*⌯︙تم حذف الاساسيين*"
-keyboard = {} 
-keyboard.inline_keyboard = {{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_},{text="• القائمه الرئيسيه •",callback_data="/DelList:"..data.sender_user_id_}}}
-https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
-end end
-if MARTENSudo(data) then
 if DataText and DataText:match('/DelSecondSudo:'..tonumber(data.sender_user_id_)..'(.*)') then
 local MARTEN = DataText:match('/DelSecondSudo:'..tonumber(data.sender_user_id_)..'(.*)')
 bot_data:del(XBOT..'MARTEN:SecondSudo:')
@@ -8405,7 +8395,7 @@ local List = {
 - 𓏬 𝐔𝐬𝐄𝐫 : #username 𓂅 .
 - 𓏬 𝐌𝐬𝐆  : #msgs 𓂅 .
 - 𓏬 𝐒𝐭𝐀 : #stast 𓂅 .
-- ?? 𝐈𝐃 : #id 𓂅 .
+- 𓏬 𝐈𝐃 : #id 𓂅 .
 ]],
 [[
 .𖣂 𝙪𝙨𝙚𝙧𝙣𝙖𝙢𝙚 , #username  
@@ -12058,7 +12048,6 @@ end
 --     Source -𝐗-     --
 if text == "مسح الرتب" and Admin(msg) then
 local Del = bot_data:get(XBOT..'MARTEN:Del')
-local ListSudo = bot_data:scard(XBOT.."MARTEN:MARTENSudo:")
 local ListSecondSudo = bot_data:scard(XBOT.."MARTEN:SecondSudo:")
 local ListSudoBot = bot_data:scard(XBOT.."MARTEN:SudoBot:")
 local ListOwner = bot_data:scard(XBOT.."MARTEN:Owner:"..msg.chat_id_)
@@ -12078,19 +12067,7 @@ local Text = [[
 keyboard = {} 
 if Sudo(msg) then
 keyboard.inline_keyboard = {
-	{{text="• مسح الاساسيين {"..ListSudo.."} •",callback_data="/DelMARTENSudo:"..msg.sender_user_id_}},
 	{{text="• مسح الثانويين {"..ListSecondSudo.."} •",callback_data="/DelSecondSudo:"..msg.sender_user_id_},{text="• مسح المطورين {"..ListSudoBot.."} •",callback_data="/DelSudoBot:"..msg.sender_user_id_}},
-	{{text="• مسح المنشئين الاساسيين {"..ListBasicConstructor.."} •",callback_data="/DelBasicConstructor:"..msg.sender_user_id_}},
-	{{text="• مسح المالكين {"..ListOwner.."} •",callback_data="/DelOwner:"..msg.sender_user_id_},{text="• مسح المنشئين {"..ListConstructor.."} •",callback_data="/DelConstructor:"..msg.sender_user_id_}},
-	{{text="• مسح المدراء {"..ListManagers.."} •",callback_data="/DelManager:"..msg.sender_user_id_},{text="• مسح الادمنيه {"..ListAdmins.."} •",callback_data="/DelAdmins:"..msg.sender_user_id_}},
-	{{text="• مسح المميزين {"..ListVipMem.."} •",callback_data="/DelVipMem:"..msg.sender_user_id_}},
-	{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..msg.sender_user_id_},{text="• القائمه الرئيسيه •",callback_data="/DelList:"..msg.sender_user_id_}},
-	{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}
-}
-elseif MARTENSudo(msg) then
-keyboard.inline_keyboard = {
-	{{text="• مسح الثانويين {"..ListSecondSudo.."} •",callback_data="/DelSecondSudo:"..msg.sender_user_id_}},
-	{{text="• مسح المطورين {"..ListSudoBot.."} •",callback_data="/DelSudoBot:"..msg.sender_user_id_}},
 	{{text="• مسح المنشئين الاساسيين {"..ListBasicConstructor.."} •",callback_data="/DelBasicConstructor:"..msg.sender_user_id_}},
 	{{text="• مسح المالكين {"..ListOwner.."} •",callback_data="/DelOwner:"..msg.sender_user_id_},{text="• مسح المنشئين {"..ListConstructor.."} •",callback_data="/DelConstructor:"..msg.sender_user_id_}},
 	{{text="• مسح المدراء {"..ListManagers.."} •",callback_data="/DelManager:"..msg.sender_user_id_},{text="• مسح الادمنيه {"..ListAdmins.."} •",callback_data="/DelAdmins:"..msg.sender_user_id_}},
