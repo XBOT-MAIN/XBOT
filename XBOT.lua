@@ -1327,9 +1327,9 @@ local ListVipMem = bot_data:scard(XBOT.."MARTEN:VipMem:"..data.chat_id_)
 local ListCleaner = bot_data:scard(XBOT.."MARTEN:Cleaner:"..data.chat_id_)
 local Text = [[
 ⌯︙اهلاً بك في قائمـة اوامر الرتب ↫ ⤈ 🪜
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+●○━━━ -𝐗- ━━━○●
 ⌯︙يمكنك مسح رتب المجموعـة من خلال الازرار اسفل ↫ ⤈ 
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+●○━━━ -𝐗- ━━━○●
 » [𝐬𝐨𝐮𝐫𝐜𝐞 -𝐗-](https://t.me/SrcX_B0T)➤
 ]] 
 keyboard = {} 
@@ -1500,9 +1500,9 @@ if tonumber(MARTEN) == tonumber(data.sender_user_id_) then
 local Filter = bot_data:get(XBOT..'MARTEN:Filter')
 local Text = [[
 *⌯︙اهلا بك في قائمة المنع ↫ ⤈*
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+●○━━━ -𝐗- ━━━○●
 *⌯︙يمكنك مسح الممنوعات من خلال الازرار اسفل*
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+●○━━━ -𝐗- ━━━○●
 » [𝐬𝐨𝐮𝐫𝐜𝐞 -𝐗-](https://t.me/SrcX_B0T)➤
 ]] 
 keyboard = {} 
@@ -1561,9 +1561,9 @@ if tonumber(MARTEN) == tonumber(data.sender_user_id_) then
 local locklist = bot_data:get(XBOT..'MARTEN:locklist')
 local Text = [[
 ⌯︙اهلاً بك في قائمة القفل والفتح ↫ ⤈ ⛓
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+●○━━━ -𝐗- ━━━○●
 ⌯︙يمكنك فتح و قفل الاوامر من خلال الازرار اسفل ↫ ⤈ 🔧 
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+●○━━━ -𝐗- ━━━○●
 » [𝐬𝐨𝐮𝐫𝐜𝐞 -𝐗-](https://t.me/SrcX_B0T)➤
 ]] 
 
@@ -1625,11 +1625,11 @@ if tonumber(MARTEN) == tonumber(data.sender_user_id_) then
 local LockBotList = bot_data:get(XBOT..'MARTEN:LockBotList')
 local Text = [[
 *⌯︙اهلا بك في قائمة قفل البوتات  ↫ ⤈*
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+●○━━━ -𝐗- ━━━○●
 *⌯︙بالطرد*
 *⌯︙بالكتم*
 *⌯︙بالتقيد*
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+●○━━━ -𝐗- ━━━○●
 » [𝐬𝐨𝐮𝐫𝐜𝐞 -𝐗-](https://t.me/SrcX_B0T)➤
 ]] 
 keyboard = {} 
@@ -1644,12 +1644,12 @@ if tonumber(MARTEN) == tonumber(data.sender_user_id_) then
 local LockSpamList = bot_data:get(XBOT..'MARTEN:LockSpamList')
 local Text = [[
 *⌯︙اهلا بك في قائمة قفل التكرار  ↫ ⤈*
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+●○━━━ -𝐗- ━━━○●
 *⌯︙بالطرد*
 *⌯︙بالكتم*
 *⌯︙بالتقيد*
 *⌯︙بالحذف*
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+●○━━━ -𝐗- ━━━○●
 » [𝐬𝐨𝐮𝐫𝐜𝐞 -𝐗-](https://t.me/SrcX_B0T)➤
 ]] 
 keyboard = {} 
@@ -1878,7 +1878,7 @@ end
 if DataText and DataText:match('/TagSecondSudo:'..tonumber(data.sender_user_id_)..'(.*)') then
 local MARTEN = DataText:match('/TagSecondSudo:'..tonumber(data.sender_user_id_)..'(.*)')
 local List = bot_data:smembers(XBOT..'MARTEN:SecondSudo:')
-text = "⌯︙قائمة المطورين الثانويين ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n"
+text = "⌯︙قائمة المطورين الثانويين ↫ ⤈ \n●○━━━ -𝐗- ━━━○●\n"
 for k,v in pairs(List) do
 local username = bot_data:get(XBOT..'Save:UserName'..v)
 if username then
@@ -1899,7 +1899,7 @@ local MARTEN = DataText:match('/TagSecondSudoTag:'..tonumber(data.sender_user_id
 local List = bot_data:smembers(XBOT..'MARTEN:SecondSudo:')
 local Tagall = 'TagAll:'..data.sender_user_id_..''
 local get = bot_data:get(XBOT.. ''..Tagall..'')
-text = "⌯︙قائمة المطورين الثانويين ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n"
+text = "⌯︙قائمة المطورين الثانويين ↫ ⤈ \n●○━━━ -𝐗- ━━━○●\n"
 for k,v in pairs(List) do
 local username = bot_data:get(XBOT..'Save:UserName'..v)
 if username then
@@ -1919,7 +1919,7 @@ end
 if DataText and DataText:match('/TagSudoBot:'..tonumber(data.sender_user_id_)..'(.*)') then
 local MARTEN = DataText:match('/TagSudoBot:'..tonumber(data.sender_user_id_)..'(.*)')
 local List = bot_data:smembers(XBOT..'MARTEN:SudoBot:')
-text = "⌯︙قائمة المطورين ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n"
+text = "⌯︙قائمة المطورين ↫ ⤈ \n●○━━━ -𝐗- ━━━○●\n"
 for k,v in pairs(List) do
 local sudouser = bot_data:get(XBOT..'MARTEN:Sudos'..v) 
 local username = bot_data:get(XBOT..'Save:UserName'..v)
@@ -1941,7 +1941,7 @@ local MARTEN = DataText:match('/TagSudoBotTag:'..tonumber(data.sender_user_id_).
 local List = bot_data:smembers(XBOT..'MARTEN:SudoBot:')
 local Tagall = 'TagAll:'..data.sender_user_id_..''
 local get = bot_data:get(XBOT.. ''..Tagall..'')
-text = "⌯︙قائمة المطورين ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n"
+text = "⌯︙قائمة المطورين ↫ ⤈ \n●○━━━ -𝐗- ━━━○●\n"
 for k,v in pairs(List) do
 local sudouser = bot_data:get(XBOT..'MARTEN:Sudos'..v) 
 local username = bot_data:get(XBOT..'Save:UserName'..v)
@@ -1962,7 +1962,7 @@ end
 if DataText and DataText:match('/TagOwner:'..tonumber(data.sender_user_id_)..'(.*)') then
 local MARTEN = DataText:match('/TagOwner:'..tonumber(data.sender_user_id_)..'(.*)')
 local List = bot_data:smembers(XBOT..'MARTEN:Owner:'..Chat_Id2)
-text = "⌯︙قائمة المالكين ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n"
+text = "⌯︙قائمة المالكين ↫ ⤈ \n●○━━━ -𝐗- ━━━○●\n"
 for k,v in pairs(List) do
 local username = bot_data:get(XBOT..'Save:UserName'..v)
 if username then
@@ -1983,7 +1983,7 @@ local MARTEN = DataText:match('/TagOwnerTag:'..tonumber(data.sender_user_id_)..'
 local List = bot_data:smembers(XBOT..'MARTEN:Owner:'..Chat_Id2)
 local Tagall = 'TagAll:'..data.sender_user_id_..''
 local get = bot_data:get(XBOT.. ''..Tagall..'')
-text = "⌯︙قائمة المالكين ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n"
+text = "⌯︙قائمة المالكين ↫ ⤈ \n●○━━━ -𝐗- ━━━○●\n"
 for k,v in pairs(List) do
 local username = bot_data:get(XBOT..'Save:UserName'..v)
 if username then
@@ -2003,7 +2003,7 @@ end
 if DataText and DataText:match('/TagBasicConstructor:'..tonumber(data.sender_user_id_)..'(.*)') then
 local MARTEN = DataText:match('/TagBasicConstructor:'..tonumber(data.sender_user_id_)..'(.*)')
 local List = bot_data:smembers(XBOT..'MARTEN:BasicConstructor:'..Chat_Id2)
-text = "⌯︙قائمة المنشئين الاساسيين ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n"
+text = "⌯︙قائمة المنشئين الاساسيين ↫ ⤈ \n●○━━━ -𝐗- ━━━○●\n"
 for k,v in pairs(List) do
 local username = bot_data:get(XBOT..'Save:UserName'..v)
 if username then
@@ -2024,7 +2024,7 @@ local MARTEN = DataText:match('/TagBasicConstructorTag:'..tonumber(data.sender_u
 local List = bot_data:smembers(XBOT..'MARTEN:BasicConstructor:'..Chat_Id2)
 local Tagall = 'TagAll:'..data.sender_user_id_..''
 local get = bot_data:get(XBOT.. ''..Tagall..'')
-text = "⌯︙قائمة المنشئين الاساسيين ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n"
+text = "⌯︙قائمة المنشئين الاساسيين ↫ ⤈ \n●○━━━ -𝐗- ━━━○●\n"
 for k,v in pairs(List) do
 local username = bot_data:get(XBOT..'Save:UserName'..v)
 if username then
@@ -2044,7 +2044,7 @@ end
 if DataText and DataText:match('/TagConstructor:'..tonumber(data.sender_user_id_)..'(.*)') then
 local MARTEN = DataText:match('/TagConstructor:'..tonumber(data.sender_user_id_)..'(.*)')
 local List = bot_data:smembers(XBOT..'MARTEN:Constructor:'..Chat_Id2)
-text = "⌯︙قائمة المنشئين ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n"
+text = "⌯︙قائمة المنشئين ↫ ⤈ \n●○━━━ -𝐗- ━━━○●\n"
 for k,v in pairs(List) do
 local username = bot_data:get(XBOT..'Save:UserName'..v)
 if username then
@@ -2065,7 +2065,7 @@ local MARTEN = DataText:match('/TagConstructorTag:'..tonumber(data.sender_user_i
 local List = bot_data:smembers(XBOT..'MARTEN:Constructor:'..Chat_Id2)
 local Tagall = 'TagAll:'..data.sender_user_id_..''
 local get = bot_data:get(XBOT.. ''..Tagall..'')
-text = "⌯︙قائمة المنشئين ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n"
+text = "⌯︙قائمة المنشئين ↫ ⤈ \n●○━━━ -𝐗- ━━━○●\n"
 for k,v in pairs(List) do
 local username = bot_data:get(XBOT..'Save:UserName'..v)
 if username then
@@ -2085,7 +2085,7 @@ end
 if DataText and DataText:match('/TagManagers:'..tonumber(data.sender_user_id_)..'(.*)') then
 local MARTEN = DataText:match('/TagManagers:'..tonumber(data.sender_user_id_)..'(.*)')
 local List = bot_data:smembers(XBOT..'MARTEN:Managers:'..Chat_Id2)
-text = "⌯︙قائمة المدراء ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n"
+text = "⌯︙قائمة المدراء ↫ ⤈ \n●○━━━ -𝐗- ━━━○●\n"
 for k,v in pairs(List) do
 local username = bot_data:get(XBOT..'Save:UserName'..v)
 if username then
@@ -2104,7 +2104,7 @@ end
 if DataText and DataText:match('/TagManagersTag:'..tonumber(data.sender_user_id_)..'(.*)') then
 local MARTEN = DataText:match('/TagManagersTag:'..tonumber(data.sender_user_id_)..'(.*)')
 local List = bot_data:smembers(XBOT..'MARTEN:Managers:'..Chat_Id2)
-text = "⌯︙قائمة المدراء ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n"
+text = "⌯︙قائمة المدراء ↫ ⤈ \n●○━━━ -𝐗- ━━━○●\n"
 for k,v in pairs(List) do
 local username = bot_data:get(XBOT..'Save:UserName'..v)
 if username then
@@ -2124,7 +2124,7 @@ if DataText and DataText:match('/TagAdmins:'..tonumber(data.sender_user_id_)..'(
 local MARTEN = DataText:match('/TagAdmins:'..tonumber(data.sender_user_id_)..'(.*)')
 local MArRten =  'MARTEN:Admins:'..Chat_Id2
 local List = bot_data:smembers(XBOT..MArRten)
-text = "⌯︙قائمة الادمنيه ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n"
+text = "⌯︙قائمة الادمنيه ↫ ⤈ \n●○━━━ -𝐗- ━━━○●\n"
 for k,v in pairs(List) do
 local username = bot_data:get(XBOT..'Save:UserName'..v)
 if username then
@@ -2146,7 +2146,7 @@ local MArRten =  'MARTEN:Admins:'..Chat_Id2
 local List = bot_data:smembers(XBOT..MArRten)
 local Tagall = 'TagAll:'..data.sender_user_id_..''
 local get = bot_data:get(XBOT.. ''..Tagall..'')
-text = "⌯︙قائمة الادمنيه ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n"
+text = "⌯︙قائمة الادمنيه ↫ ⤈ \n●○━━━ -𝐗- ━━━○●\n"
 for k,v in pairs(List) do
 local username = bot_data:get(XBOT..'Save:UserName'..v)
 if username then
@@ -2166,7 +2166,7 @@ end
 if DataText and DataText:match('/TagVipMem:'..tonumber(data.sender_user_id_)..'(.*)') then
 local MARTEN = DataText:match('/TagVipMem:'..tonumber(data.sender_user_id_)..'(.*)')
 local List = bot_data:smembers(XBOT..'MARTEN:VipMem:'..Chat_Id2)
-text = "⌯︙قائمة المميزين ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n"
+text = "⌯︙قائمة المميزين ↫ ⤈ \n●○━━━ -𝐗- ━━━○●\n"
 for k,v in pairs(List) do
 local username = bot_data:get(XBOT..'Save:UserName'..v)
 if username then
@@ -2187,7 +2187,7 @@ local MARTEN = DataText:match('/TagVipMemTag:'..tonumber(data.sender_user_id_)..
 local List = bot_data:smembers(XBOT..'MARTEN:VipMem:'..Chat_Id2)
 local Tagall = 'TagAll:'..data.sender_user_id_..''
 local get = bot_data:get(XBOT.. ''..Tagall..'')
-text = "⌯︙قائمة المميزين ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n"
+text = "⌯︙قائمة المميزين ↫ ⤈ \n●○━━━ -𝐗- ━━━○●\n"
 for k,v in pairs(List) do
 local username = bot_data:get(XBOT..'Save:UserName'..v)
 if username then
@@ -2207,7 +2207,7 @@ end
 if DataText and DataText:match('/TagCleaner:'..tonumber(data.sender_user_id_)..'(.*)') then
 local MARTEN = DataText:match('/TagCleaner:'..tonumber(data.sender_user_id_)..'(.*)')
 local List = bot_data:smembers(XBOT..'MARTEN:Cleaner:'..Chat_Id2)
-text = "⌯︙قائمة المنظفين ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n"
+text = "⌯︙قائمة المنظفين ↫ ⤈ \n●○━━━ -𝐗- ━━━○●\n"
 for k,v in pairs(List) do
 local username = bot_data:get(XBOT..'Save:UserName'..v)
 if username then
@@ -2228,7 +2228,7 @@ local MARTEN = DataText:match('/TagCleanerTag:'..tonumber(data.sender_user_id_).
 local List = bot_data:smembers(XBOT..'MARTEN:Cleaner:'..Chat_Id2)
 local Tagall = 'TagAll:'..data.sender_user_id_..''
 local get = bot_data:get(XBOT.. ''..Tagall..'')
-text = "⌯︙قائمة المنظفين ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n"
+text = "⌯︙قائمة المنظفين ↫ ⤈ \n●○━━━ -𝐗- ━━━○●\n"
 for k,v in pairs(List) do
 local username = bot_data:get(XBOT..'Save:UserName'..v)
 if username then
@@ -2250,7 +2250,7 @@ local MARTEN = DataText:match('/TagAll:'..tonumber(data.sender_user_id_)..'(.*)'
 function TagAll(dp1,dp2)
 local Tagall = 'TagAll:'..data.sender_user_id_..''
 local get = bot_data:get(XBOT.. ''..Tagall..'')
-local text = "⌯︙وينكم يالربع \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n"
+local text = "⌯︙وينكم يالربع \n●○━━━ -𝐗- ━━━○●\n"
 i = 0
 for k, v in pairs(dp2.members_) do
 i = i + 1
@@ -2355,7 +2355,7 @@ LinkGroup ='لا يوجد'
 end
 bot_data:set(XBOT.."MARTEN:Groups:Links"..data.chat_id_,LinkGroup) 
 if not Sudo(data) then
-SendText(XBoT,"⌯︙تم تفعيل مجموعه جديده ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n⌯︙بواسطة ↫ "..Name.."\n⌯︙اسم المجموعه ↫ ["..NameChat.."]\n⌯︙عدد اعضاء المجموعه ↫ ❨ *"..NumMem.."* ❩\n⌯︙ايدي المجموعه ↫ ⤈ \n❨ `"..data.chat_id_.."` ❩\n⌯︙رابط المجموعه ↫ ⤈\n❨ ["..LinkGroup.."] ❩\nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n⌯︙الوقت ↫ "..os.date("%I:%M%p").."\n⌯︙التاريخ ↫ "..os.date("%Y/%m/%d").."",0,'md')
+SendText(XBoT,"⌯︙تم تفعيل مجموعه جديده ↫ ⤈ \n●○━━━ -𝐗- ━━━○●\n⌯︙بواسطة ↫ "..Name.."\n⌯︙اسم المجموعه ↫ ["..NameChat.."]\n⌯︙عدد اعضاء المجموعه ↫ ❨ *"..NumMem.."* ❩\n⌯︙ايدي المجموعه ↫ ⤈ \n❨ `"..data.chat_id_.."` ❩\n⌯︙رابط المجموعه ↫ ⤈\n❨ ["..LinkGroup.."] ❩\n●○━━━ -𝐗- ━━━○●\n⌯︙الوقت ↫ "..os.date("%I:%M%p").."\n⌯︙التاريخ ↫ "..os.date("%Y/%m/%d").."",0,'md')
 end
 end
 end,nil)
@@ -2397,7 +2397,7 @@ LinkGroup ='لا يوجد'
 end
 bot_data:set(XBOT.."MARTEN:Groups:Links"..data.chat_id_,LinkGroup) 
 if not Sudo(data) then
-SendText(XBoT,"⌯︙تم تعطيل مجموعه جديده ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n⌯︙بواسطة ↫ "..Name.."\n⌯︙اسم المجموعه ↫ ["..NameChat.."]\n⌯︙ايدي المجموعه ↫ ⤈ \n❨ `"..data.chat_id_.."` ❩\n⌯︙رابط المجموعه ↫ ⤈\n❨ ["..LinkGroup.."] ❩\nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n⌯︙الوقت ↫ "..os.date("%I:%M%p").."\n⌯︙التاريخ ↫ "..os.date("%Y/%m/%d").."",0,'md')
+SendText(XBoT,"⌯︙تم تعطيل مجموعه جديده ↫ ⤈ \n●○━━━ -𝐗- ━━━○●\n⌯︙بواسطة ↫ "..Name.."\n⌯︙اسم المجموعه ↫ ["..NameChat.."]\n⌯︙ايدي المجموعه ↫ ⤈ \n❨ `"..data.chat_id_.."` ❩\n⌯︙رابط المجموعه ↫ ⤈\n❨ ["..LinkGroup.."] ❩\n●○━━━ -𝐗- ━━━○●\n⌯︙الوقت ↫ "..os.date("%I:%M%p").."\n⌯︙التاريخ ↫ "..os.date("%Y/%m/%d").."",0,'md')
 end
 end
 end,nil)
@@ -2452,7 +2452,7 @@ bot_data:set(XBOT.."Set:Cmd:Group:New1"..data.chat_id_..":غ","غنيلي")
 bot_data:sadd(XBOT.."List:Cmd:Group:New"..data.chat_id_,"غ")
 bot_data:set(XBOT.."Set:Cmd:Group:New1"..data.chat_id_..":#","مسح قائمه العام")
 bot_data:sadd(XBOT.."List:Cmd:Group:New"..data.chat_id_,"#")
-Text = "⌯︙تم ترتيب الاوامر بالشكل التالي ~\nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n• ايدي ↫ ا .\n• رفع مميز ↫ م .\n•رفع ادمن ↫ اد .\n• رفع مدير ↫ مد . \n• رفع منشى ↫ من . \n• رفع منشئ الاساسي ↫ اس  .\n• رفع مطور ↫ مط .\n•رفع مطور ثانوي ↫ ثانوي .\n• تنزيل الكل ↫ تك .\n• تعطيل الايدي بالصوره ↫ تعط .\n• تفعيل الايدي بالصوره ↫ تفع .\n• الرابط ↫ ر .\n• ردود المدير ↫ رر .\n• مسح المكتومين ↫ ،، .\n• اضف رد ↫ رد .\n• مسح سحكاتي ↫ سح .\n• مسح رسائلي ↫ رس .\n• غنيلي ↫ غ .\n•مسح قائمه العام ↫ #\nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ"
+Text = "⌯︙تم ترتيب الاوامر بالشكل التالي ~\n●○━━━ -𝐗- ━━━○●\n• ايدي ↫ ا .\n• رفع مميز ↫ م .\n•رفع ادمن ↫ اد .\n• رفع مدير ↫ مد . \n• رفع منشى ↫ من . \n• رفع منشئ الاساسي ↫ اس  .\n• رفع مطور ↫ مط .\n•رفع مطور ثانوي ↫ ثانوي .\n• تنزيل الكل ↫ تك .\n• تعطيل الايدي بالصوره ↫ تعط .\n• تفعيل الايدي بالصوره ↫ تفع .\n• الرابط ↫ ر .\n• ردود المدير ↫ رر .\n• مسح المكتومين ↫ ،، .\n• اضف رد ↫ رد .\n• مسح سحكاتي ↫ سح .\n• مسح رسائلي ↫ رس .\n• غنيلي ↫ غ .\n•مسح قائمه العام ↫ #\n●○━━━ -𝐗- ━━━○●"
 keyboard = {} 
 keyboard.inline_keyboard = {{{text="• رجوع •",callback_data="/ReloadPic:"..data.sender_user_id_}},{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}}
 return https.request("https://api.telegram.org/bot"..TokenBot..'/EditMessagecaption?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&caption=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -4358,7 +4358,7 @@ for i=0,#msg.content_.members_ do
 BotWelcome = msg.content_.members_[i].id_    
 if BotWelcome and BotWelcome == tonumber(XBOT) then 
 if bot_data:sismember(XBOT..'MARTEN:Groups',msg.chat_id_) then BotText = "مفعله في السابق\n⌯︙ارسل ↫ الاوامر واستمتع بالمميزيات" else BotText = "معطله يجب رفعي مشرف\n⌯︙بعد ذلك يرجى ارسال امر ↫ تفعيل\n⌯︙سيتم رفع الادمنيه والمنشئ تلقائيا" end 
-if bot_data:get(XBOT.."MARTEN:Text:BotWelcome") then MARTENText = bot_data:get(XBOT.."MARTEN:Text:BotWelcome") else MARTENText = "⌯︙مرحبا انا بوت اسمي "..NameBot.."\n⌯︙حالة المجموعه ↫ "..BotText.."\nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ" end 
+if bot_data:get(XBOT.."MARTEN:Text:BotWelcome") then MARTENText = bot_data:get(XBOT.."MARTEN:Text:BotWelcome") else MARTENText = "⌯︙مرحبا انا بوت اسمي "..NameBot.."\n⌯︙حالة المجموعه ↫ "..BotText.."\n●○━━━ -𝐗- ━━━○●" end 
 if bot_data:get(XBOT.."MARTEN:Photo:BotWelcome") then MARTENPhoto = bot_data:get(XBOT.."MARTEN:Photo:BotWelcome") elseif MArRten.photos_[0] then MARTENPhoto = MArRten.photos_[0].sizes_[1].photo_.persistent_id_ else MARTENPhoto = nil end 
 if MARTENPhoto ~= nil then
 keyboard = {} 
@@ -8617,7 +8617,7 @@ end
 if Admin(msg) then
 if text == "المميزين" and ChCheck(msg) then 
 local List = bot_data:smembers(XBOT..'MARTEN:VipMem:'..msg.chat_id_)
-text = "⌯︙قائمة المميزين ↫ ⤈ \n●○━━━ -𝐗- ━━━○●\n"
+text = "⌯︙قائمة المميزين ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n"
 for k,v in pairs(List) do
 local username = bot_data:get(XBOT..'Save:UserName'..v)
 if username then
@@ -8628,14 +8628,15 @@ end end
 if #List == 0 then 
 text = "⌯︙*لا يوجد مميزين*"
 end
-send_X(msg.chat_id_, msg.id_, 1, text, 1, "md")
-end end 
---     Source -X-     --
+local inline = {{{text="• مسح المميزين •",callback_data="/DelVipMem:"..msg.sender_user_id_}},{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}}
+SendInline(msg.chat_id_,text,nil,inline,msg.id_/2097152/0.5)
+end end
+--     source -𝐗-     --
 if Manager(msg) then
 if text == "الادمنيه" and ChCheck(msg) or text == "الادمنية" and ChCheck(msg) then 
-local MARTEN =  'MARTEN:Admins:'..msg.chat_id_
-local List = bot_data:smembers(XBOT..MARTEN)
-text = "⌯︙قائمة الادمنيه ↫ ⤈ \n●○━━━ -𝐗- ━━━○●\n"
+local MArRten =  'MARTEN:Admins:'..msg.chat_id_
+local List = bot_data:smembers(XBOT..MArRten)
+text = "⌯︙قائمة الادمنيه ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n"
 for k,v in pairs(List) do
 local username = bot_data:get(XBOT..'Save:UserName'..v)
 if username then
@@ -8646,13 +8647,14 @@ end end
 if #List == 0 then
 text = "⌯︙*لا يوجد ادمنيه*"
 end
-send_X(msg.chat_id_, msg.id_, 1, text, 1, "md")
+local inline = {{{text="• مسح الادمنيه •",callback_data="/DelAdmins:"..msg.sender_user_id_}},{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}}
+SendInline(msg.chat_id_,text,nil,inline,msg.id_/2097152/0.5)
 end end
---     Source -X-     -- 
+--     source -𝐗-     -- 
 if Constructor(msg) then
 if text == "المدراء" and ChCheck(msg) or text == "مدراء" and ChCheck(msg) then 
 local List = bot_data:smembers(XBOT..'MARTEN:Managers:'..msg.chat_id_)
-text = "⌯︙قائمة المدراء ↫ ⤈ \n●○━━━ -𝐗- ━━━○●\n"
+text = "⌯︙قائمة المدراء ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n"
 for k,v in pairs(List) do
 local username = bot_data:get(XBOT..'Save:UserName'..v)
 if username then
@@ -8663,11 +8665,12 @@ end end
 if #List == 0 then 
 text = "⌯︙*لا يوجد مدراء*"
 end
-send_X(msg.chat_id_, msg.id_, 1, text, 1, "md")
+local inline = {{{text="• مسح المدراء •",callback_data="/DelManager:"..msg.sender_user_id_}},{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}}
+SendInline(msg.chat_id_,text,nil,inline,msg.id_/2097152/0.5)
 end 
 if text == "المنظفين" and ChCheck(msg) then 
 local List = bot_data:smembers(XBOT..'MARTEN:Cleaner:'..msg.chat_id_)
-text = "⌯︙قائمة المنظفين ↫ ⤈ \n●○━━━ -𝐗- ━━━○●\n"
+text = "⌯︙قائمة المنظفين ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n"
 for k,v in pairs(List) do
 local username = bot_data:get(XBOT..'Save:UserName'..v)
 if username then
@@ -8678,13 +8681,14 @@ end end
 if #List == 0 then 
 text = "⌯︙*لا يوجد منظفين*"
 end
-send_X(msg.chat_id_, msg.id_, 1, text, 1, "md")
-end end 
---     Source -X-     --
+local inline = {{{text="• مسح المنظفين •",callback_data="/DelCleanr:"..msg.sender_user_id_}},{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}}
+SendInline(msg.chat_id_,text,nil,inline,msg.id_/2097152/0.5)
+end end
+--     source -𝐗-     --
 if BasicConstructor(msg) then
 if text == "المنشئين" and ChCheck(msg) then 
 local List = bot_data:smembers(XBOT..'MARTEN:Constructor:'..msg.chat_id_)
-text = "⌯︙قائمة المنشئين ↫ ⤈ \n●○━━━ -𝐗- ━━━○●\n"
+text = "⌯︙قائمة المنشئين ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n"
 for k,v in pairs(List) do
 local username = bot_data:get(XBOT..'Save:UserName'..v)
 if username then
@@ -8695,13 +8699,14 @@ end end
 if #List == 0 then 
 text = "⌯︙*لا يوجد منشئين*"
 end
-send_X(msg.chat_id_, msg.id_, 1, text, 1, "md")
-end end 
---     Source -X-     --
+local inline = {{{text="• مسح المنشئين •",callback_data="/DelConstructor:"..msg.sender_user_id_}},{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}}
+SendInline(msg.chat_id_,text,nil,inline,msg.id_/2097152/0.5)
+end end
+--     source -𝐗-     --
 if Owner(msg) then
 if text == "المالكين" and ChCheck(msg) then 
 local List = bot_data:smembers(XBOT..'MARTEN:Owner:'..msg.chat_id_)
-text = "⌯︙قائمة المالكين ↫ ⤈ \n●○━━━ -𝐗- ━━━○●\n"
+text = "⌯︙قائمة المالكين ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n"
 for k,v in pairs(List) do
 local username = bot_data:get(XBOT..'Save:UserName'..v)
 if username then
@@ -8711,12 +8716,13 @@ text = text..k.."~ : `"..v.."`\n"
 end end
 if #List == 0 then 
 text = "⌯︙*لا يوجد مالكين*"
-end
-send_X(msg.chat_id_, msg.id_, 1, text, 1, "md")
 end 
+local inline = {{{text="• مسح المالكين •",callback_data="/DelOwner:"..msg.sender_user_id_}},{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}}
+SendInline(msg.chat_id_,text,nil,inline,msg.id_/2097152/0.5)
+end
 if text == "المنشئين الاساسيين" and ChCheck(msg) or text == "منشئين اساسيين" and ChCheck(msg) or text == "المنشئين الاساسين" and ChCheck(msg) then 
 local List = bot_data:smembers(XBOT..'MARTEN:BasicConstructor:'..msg.chat_id_)
-text = "⌯︙قائمة المنشئين الاساسيين ↫ ⤈ \n●○━━━ -𝐗- ━━━○●\n"
+text = "⌯︙قائمة المنشئين الاساسيين ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n"
 for k,v in pairs(List) do
 local username = bot_data:get(XBOT..'Save:UserName'..v)
 if username then
@@ -8727,7 +8733,8 @@ end end
 if #List == 0 then 
 text = "⌯︙*لا يوجد منشئين اساسيين*"
 end
-send_X(msg.chat_id_, msg.id_, 1, text, 1, "md")
+local inline = {{{text="• مسح المنشئين الاساسيين •",callback_data="/DelBasicConstructor:"..msg.sender_user_id_}},{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}}
+SendInline(msg.chat_id_,text,nil,inline,msg.id_/2097152/0.5)
 end 
 end 
 if text ==("المنشئ") and ChCheck(msg) or text ==("المالك") and ChCheck(msg) then
@@ -9013,9 +9020,9 @@ end
 send_X(msg.chat_id_, msg.id_, 1, text, 1, "md")
 end
 --     Source -X-     --
-if text == "المطورين الثانويين" and SecondSudo(msg) or text == "الثانويين" and SecondSudo(msg) or text == "↫ الثانويين ⌯" and SecondSudo(msg) then 
+if text == "المطورين الثانويين" and SecondSudo(msg) and ChCheck(msg) or text == "الثانويين" and SecondSudo(msg) and ChCheck(msg) or text == "↫ الثانويين ⌯" and SecondSudo(msg) and ChCheck(msg) then 
 local List = bot_data:smembers(XBOT..'MARTEN:SecondSudo:')
-text = "⌯︙قائمة المطورين الثانويين ↫ ⤈ \n●○━━━ -𝐗- ━━━○●\n"
+text = "⌯︙قائمة المطورين الثانويين ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n"
 for k,v in pairs(List) do
 local username = bot_data:get(XBOT..'Save:UserName'..v)
 if username then
@@ -9026,8 +9033,9 @@ end end
 if #List == 0 then
 text = "⌯︙*عذرا لم يتم رفع اي مطورين ثانويين*"
 end
-send_X(msg.chat_id_, msg.id_, 1, text, 1, "md")
-end 
+local inline = {{{text="• مسح الثانويين •",callback_data="/DelSecondSudo:"..msg.sender_user_id_}},{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}}
+SendInline(msg.chat_id_,text,nil,inline,msg.id_/2097152/0.5)
+end
 --     Source -X-     --
 if SudoBot(msg) then
 if text == "قائمه العام" and ChCheck(msg) or text == "المحظورين عام" and ChCheck(msg) or text == "المكتومين عام" and ChCheck(msg) or text == "↫ قائمه العام ⌯" and ChCheck(msg) then 
@@ -9065,22 +9073,23 @@ end
 send_X(msg.chat_id_, msg.id_, 1, text, 1, "md")
 end 
 --     Source -X-     --
-if text == "المطورين" and ChCheck(msg) or text == "↫ المطورين  ⌯" and ChCheck(msg) then 
+if text == "المطورين" and ChCheck(msg) or text == "↫ المطورين ⌯" and ChCheck(msg) then 
 local List = bot_data:smembers(XBOT..'MARTEN:SudoBot:')
-text = "⌯︙قائمة المطورين ↫ ⤈ \n●○━━━ -𝐗- ━━━○●\n"
+text = "⌯︙قائمة المطورين ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n"
 for k,v in pairs(List) do
 local sudouser = bot_data:get(XBOT..'MARTEN:Sudos'..v) 
 local username = bot_data:get(XBOT..'Save:UserName'..v)
 if username then
 text = text..k.."~ : [@"..username.."] ↬ Gps : "..(sudouser or 0).."\n"
 else
-text = text..k.."~ : `"..v.."` ↬ Gps : "..(sudouser or 0).."\n"
+text = text..k.."~ : "..v.." ↬ Gps : "..(sudouser or 0).."\n"
 end end
 if #List == 0 then
 text = "⌯︙*عذرا لم يتم رفع اي مطورين*"
-end
-send_X(msg.chat_id_, msg.id_, 1, text, 1, "md")
 end 
+local inline = {{{text="• مسح المطورين •",callback_data="/DelSudoBot:"..msg.sender_user_id_}},{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}}
+SendInline(msg.chat_id_,text,nil,inline,msg.id_/2097152/0.5)
+end
 --     Source -X-     --
 if text == "المدراء العامين" and ChCheck(msg) then 
 local List = bot_data:smembers(XBOT..'MARTEN:ManagerAll:')
@@ -13209,9 +13218,9 @@ local ListVipMem = bot_data:scard(XBOT.."MARTEN:VipMem:"..msg.chat_id_)
 local ListCleaner = bot_data:scard(XBOT.."MARTEN:Cleaner:"..msg.chat_id_)
 local Text = [[
 ⌯︙اهلاً بك في قائمـة اوامر الرتب ↫ ⤈ 🪜
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+●○━━━ -𝐗- ━━━○●
 ⌯︙يمكنك مسح رتب المجموعـة من خلال الازرار اسفل ↫ ⤈ 
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+●○━━━ -𝐗- ━━━○●
 » [𝐬𝐨𝐮𝐫𝐜𝐞 -𝐗-](https://t.me/SrcX_B0T)➤
 ]] 
 keyboard = {} 
@@ -13288,9 +13297,9 @@ if text == "مسح قائمه المنع" and Owner(msg) then
 local Filter = bot_data:get(XBOT..'MARTEN:Filter')
 local Text = [[
 ⌯︙اهلا بك في قائمة المنع ↫ ⤈ 
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+●○━━━ -𝐗- ━━━○●
 *⌯︙يمكنك مسح الممنوعات من خلال الازرار اسفل*
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+●○━━━ -𝐗- ━━━○●
 » [𝐬𝐨𝐮𝐫𝐜𝐞 -𝐗-](https://t.me/SrcX_B0T)➤
 ]] 
 local inline = {{{text="• مسح المتحركات •",callback_data="/DelGif:"..msg.sender_user_id_},{text="• مسح الملصقات •",callback_data="/DelSticker:"..msg.sender_user_id_}},{{text="• مسح الصور •",callback_data="/DelPhoto:"..msg.sender_user_id_},{text="• مسح الكلمات •",callback_data="/DelTextfilter:"..msg.sender_user_id_}},{{text="• مسح قوائم المنع •",callback_data="/DelAllFilter:"..msg.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..msg.sender_user_id_}},{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}}
@@ -13302,9 +13311,9 @@ if text == "قفل" or text == "القفل" or text == "قفل" or text == "فت
 local locklist = bot_data:get(XBOT..'MARTEN:locklist')
 local Text = [[
 ⌯︙اهلاً بك في قائمة القفل والفتح ↫ ⤈ ⛓
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+●○━━━ -𝐗- ━━━○●
 ⌯︙يمكنك فتح و قفل الاوامر من خلال الازرار اسفل ↫ ⤈ 🔧 
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+●○━━━ -𝐗- ━━━○●
 » [𝐬𝐨𝐮𝐫𝐜𝐞 -𝐗-](https://t.me/SrcX_B0T)➤
 ]] 
 --     source -𝐗-     --
