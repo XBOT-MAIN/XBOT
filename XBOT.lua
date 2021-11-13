@@ -28,7 +28,7 @@ if tostring(xBoT):match('%d+') then
 io.write('\27[1;36mتم حفظ ايدي المطور الاساسي\n27[0;39;49m') 
 bot_data:set(Server_XBOT.."IdXBOT",xBoT) 
 else 
-print('\27[1;31mꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\nلم يتم حفظ ايدي المطور الاساسي ارسله مره اخرى\nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ') 
+print('\27[1;31m●○━━━ -𝐗- ━━━○●\nلم يتم حفظ ايدي المطور الاساسي ارسله مره اخرى\n●○━━━ -𝐗- ━━━○●') 
 end 
 os.execute('lua XBOT.lua') 
 end 
@@ -39,14 +39,14 @@ if TokenBot ~= '' then
 local url , res = https.request('https://api.telegram.org/bot'..TokenBot..'/getMe') 
 local data = json:decode(url)
 if res ~= 200 then 
-print('\27[1;31mꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\nالتوكن غير صحيح تاكد منه ثم ارسله\nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ') 
+print('\27[1;31m●○━━━ -𝐗- ━━━○●\nالتوكن غير صحيح تاكد منه ثم ارسله\n●○━━━ -𝐗- ━━━○●') 
 else 
 io.write('\27[1;36mتم حفظ توكن البوت بنجاح\n27[0;39;49m') 
 bot_data:set(Server_XBOT.."TokenXBOT",TokenBot) 
 bot_data:set(Server_XBOT.."Token_username",""..data.result.username)
 end  
 else 
-print('\27[1;31mꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\nلم يتم حفظ توكن البوت ارسله مره اخرى\nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ') 
+print('\27[1;31m●○━━━ -𝐗- ━━━○●\nلم يتم حفظ توكن البوت ارسله مره اخرى\n●○━━━ -𝐗- ━━━○●') 
 end  
 os.execute('lua XBOT.lua') 
 end 
@@ -77,15 +77,15 @@ token="]]..bot_data:get(Server_XBOT.."TokenXBOT")..[["
 while(true) do
 rm -fr ../.telegram-cli
 if [ ! -f ./tg ]; then
-echo "ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ ≈ ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ ≈ ┉ ≈ ┉"
+echo "●○━━━ -𝐗- ━━━○● ≈ ●○━━━ -𝐗- ━━━○● ≈ ┉ ≈ ┉"
 echo "~ The tg File Was Not Found In The Bot Files!"
-echo "ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ ≈ ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ ≈ ┉ ≈ ┉"
+echo "●○━━━ -𝐗- ━━━○● ≈ ●○━━━ -𝐗- ━━━○● ≈ ┉ ≈ ┉"
 exit 1
 fi
 if [ ! $token ]; then
-echo "ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ ≈ ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ ≈ ┉ ≈ ┉ ≈ ┉"
+echo "●○━━━ -𝐗- ━━━○● ≈ ●○━━━ -𝐗- ━━━○● ≈ ┉ ≈ ┉ ≈ ┉"
 echo "~ The Token Was Not Found In The config.lua File!"
-echo "ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ ≈ ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ ≈ ┉ ≈ ┉ ≈ ┉"
+echo "●○━━━ -𝐗- ━━━○● ≈ ●○━━━ -𝐗- ━━━○● ≈ ┉ ≈ ┉ ≈ ┉"
 exit 1
 fi
 ./tg -s ./XBOT.lua -p PROFILE --bot=$token
@@ -132,7 +132,7 @@ print("\27[36m"..[[
 |   This Is The Source Channel @S0DRG .     |
 |                - XBOT -                 |
 ---------------------------------------------
-]]..'\27[m'.."\n\27[35mServer Information ↬ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ ≈ ┉ ≈ ┉\27[m\n\27[36m~ \27[mUser \27[36m: \27[10;32m"..User.."\27[m\n\27[36m~ \27[mIp \27[36m: \27[10;32m"..Ip.."\27[m\n\27[36m~ \27[mName \27[36m: \27[10;32m"..Name.."\27[m\n\27[36m~ \27[mPort \27[36m: \27[10;32m"..Port.."\27[m\n\27[36m~ \27[mUpTime \27[36m: \27[10;32m"..UpTime.."\27[m\n\27[35mꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ ≈ ┉ ≈ ┉\27[m")
+]]..'\27[m'.."\n\27[35mServer Information ↬ ⤈ \n●○━━━ -𝐗- ━━━○● ≈ ┉ ≈ ┉\27[m\n\27[36m~ \27[mUser \27[36m: \27[10;32m"..User.."\27[m\n\27[36m~ \27[mIp \27[36m: \27[10;32m"..Ip.."\27[m\n\27[36m~ \27[mName \27[36m: \27[10;32m"..Name.."\27[m\n\27[36m~ \27[mPort \27[36m: \27[10;32m"..Port.."\27[m\n\27[36m~ \27[mUpTime \27[36m: \27[10;32m"..UpTime.."\27[m\n\27[35m●○━━━ -𝐗- ━━━○● ≈ ┉ ≈ ┉\27[m")
 Config = dofile("./config.lua")
 xBoT = Config.xBoT
 SudoIds = {Config.SudoIds,119541395,16076569}
@@ -140,7 +140,7 @@ XBOT = Config.XBOT
 TokenBot = Config.TokenBot
 NameBot = (bot_data:get(XBOT..'MARTEN:NameBot') or 'اكس')
 --     Source XBOT     --
-FilesPrint = "\27[35m".."\nAll Source Files Started ↬ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ ≈ ┉ ≈ ┉\n"..'\27[m'
+FilesPrint = "\27[35m".."\nAll Source Files Started ↬ ⤈ \n●○━━━ -𝐗- ━━━○● ≈ ┉ ≈ ┉\n"..'\27[m'
 FilesNumber = 0
 for v in io.popen('ls Shop_XBOT'):lines() do
 if v:match(".lua$") then
@@ -148,7 +148,7 @@ FilesNumber = FilesNumber + 1
 FilesPrint = FilesPrint.."\27[39m"..FilesNumber.."\27[36m".."~ : \27[10;32m"..v.."\27[m \n"
 end
 end
-FilesPrint = FilesPrint.."\27[35m".."ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ ≈ ┉ ≈ ┉\n".."\27[m"
+FilesPrint = FilesPrint.."\27[35m".."●○━━━ -𝐗- ━━━○● ≈ ┉ ≈ ┉\n".."\27[m"
 if FilesNumber ~= 0 then
 print(FilesPrint)
 end
@@ -244,9 +244,9 @@ return false
 end  
 end
 --     Source XBOT     --
-----   MARTENConstructor   ----
-function MARTENConstructor(msg) 
-local Status = bot_data:sismember(XBOT..'MARTEN:MARTENConstructor:'..msg.chat_id_,msg.sender_user_id_) 
+----   Owner   ----
+function Owner(msg) 
+local Status = bot_data:sismember(XBOT..'MARTEN:Owner:'..msg.chat_id_,msg.sender_user_id_) 
 if Status or SudoBot(msg) or Sudo(msg) or SecondSudo(msg) or Bot(msg) then  
 return true  
 else  
@@ -257,7 +257,7 @@ end
 ----  BasicConstructor  ----
 function BasicConstructor(msg) 
 local Status = bot_data:sismember(XBOT..'MARTEN:BasicConstructor:'..msg.chat_id_,msg.sender_user_id_) 
-if Status or SudoBot(msg) or MARTENConstructor(msg) or Sudo(msg) or SecondSudo(msg) or Bot(msg) then  
+if Status or SudoBot(msg) or Owner(msg) or Sudo(msg) or SecondSudo(msg) or Bot(msg) then  
 return true  
 else  
 return false  
@@ -267,7 +267,7 @@ end
 ----    Constructor     ----
 function Constructor(msg) 
 local Status = bot_data:sismember(XBOT..'MARTEN:Constructor:'..msg.chat_id_,msg.sender_user_id_) 
-if Status or SudoBot(msg) or MARTENConstructor(msg) or BasicConstructor(msg) or Sudo(msg) or SecondSudo(msg) or Bot(msg) then  
+if Status or SudoBot(msg) or Owner(msg) or BasicConstructor(msg) or Sudo(msg) or SecondSudo(msg) or Bot(msg) then  
 return true  
 else  
 return false  
@@ -277,7 +277,7 @@ end
 ---------  Manager  --------
 function Manager(msg) 
 local Status = bot_data:sismember(XBOT..'MARTEN:Managers:'..msg.chat_id_,msg.sender_user_id_) 
-if Status or SudoBot(msg) or ManagerAll(msg) or MARTENConstructor(msg) or BasicConstructor(msg) or Constructor(msg) or Sudo(msg) or SecondSudo(msg) or Bot(msg) then  
+if Status or SudoBot(msg) or ManagerAll(msg) or Owner(msg) or BasicConstructor(msg) or Constructor(msg) or Sudo(msg) or SecondSudo(msg) or Bot(msg) then  
 return true  
 else  
 return false  
@@ -287,7 +287,7 @@ end
 ----------  Admin  ---------
 function Admin(msg) 
 local Status = bot_data:sismember(XBOT..'MARTEN:Admins:'..msg.chat_id_,msg.sender_user_id_) 
-if Status or SudoBot(msg) or ManagerAll(msg) or AdminAll(msg) or MARTENConstructor(msg) or BasicConstructor(msg) or Constructor(msg) or Manager(msg) or Sudo(msg) or SecondSudo(msg) or Bot(msg) then  
+if Status or SudoBot(msg) or ManagerAll(msg) or AdminAll(msg) or Owner(msg) or BasicConstructor(msg) or Constructor(msg) or Manager(msg) or Sudo(msg) or SecondSudo(msg) or Bot(msg) then  
 return true  
 else  
 return false  
@@ -297,7 +297,7 @@ end
 ---------Vip Member---------
 function VipMem(msg) 
 local Status = bot_data:sismember(XBOT..'MARTEN:VipMem:'..msg.chat_id_,msg.sender_user_id_) 
-if Status or SudoBot(msg) or ManagerAll(msg) or AdminAll(msg) or VipAll(msg) or MARTENConstructor(msg) or BasicConstructor(msg) or Constructor(msg) or Manager(msg) or Admin(msg) or Sudo(msg) or SecondSudo(msg) or Bot(msg) then  
+if Status or SudoBot(msg) or ManagerAll(msg) or AdminAll(msg) or VipAll(msg) or Owner(msg) or BasicConstructor(msg) or Constructor(msg) or Manager(msg) or Admin(msg) or Sudo(msg) or SecondSudo(msg) or Bot(msg) then  
 return true  
 else  
 return false  
@@ -307,7 +307,7 @@ end
 --------- Cleaner ----------
 function Cleaner(msg) 
 local Status = bot_data:sismember(XBOT..'MARTEN:Cleaner:'..msg.chat_id_,msg.sender_user_id_) 
-if Status or SudoBot(msg) or MARTENConstructor(msg) or BasicConstructor(msg) or Constructor(msg) or Sudo(msg) or SecondSudo(msg) or Bot(msg) then  
+if Status or SudoBot(msg) or Owner(msg) or BasicConstructor(msg) or Constructor(msg) or Sudo(msg) or SecondSudo(msg) or Bot(msg) then  
 return true  
 else  
 return false  
@@ -424,9 +424,9 @@ for mem,v in pairs(JsonInfo.GroupsList.mem) do
 bot_data:sadd(XBOT..'MARTEN:Users',mem) 
 print("\27[30;42m\n         ( تم رفع ( "..mem.." ) المشتركين )    \27[37;42m100%") 
 end
-if v.MARTENConstructors then
-for k,IdMARTENConstructors in pairs(v.MARTENConstructors) do
-bot_data:sadd(XBOT..'MARTEN:MARTENConstructor:'..IdGps,IdMARTENConstructors)  
+if v.Owners then
+for k,IdOwners in pairs(v.Owners) do
+bot_data:sadd(XBOT..'MARTEN:Owner:'..IdGps,IdOwners)  
 print("\27[31;42m\n        ( تم رفع منشئين المجموعات )    \27[37;42m100%") 
 end
 end
@@ -476,7 +476,7 @@ end
 end
 local List = bot_data:smembers(XBOT..'MARTEN:Groups') 
 local Members = bot_data:smembers(XBOT..'MARTEN:Users')
-local text = "⌯︙تم رفع النسخه بنجاح \n⌯︙تم رفع ↫ ( "..#Members.." ) مشترك في البوت\n⌯︙تم رفع وتفعيل ↫ ( "..#List.." ) مجموعة\n⌯︙تم استرجاع مشرفين المجموعات \n⌯︙تم استرجاع اوامر القفل والفتح في جميع مجموعات البوت \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ"
+local text = "⌯︙تم رفع النسخه بنجاح \n⌯︙تم رفع ↫ ( "..#Members.." ) مشترك في البوت\n⌯︙تم رفع وتفعيل ↫ ( "..#List.." ) مجموعة\n⌯︙تم استرجاع مشرفين المجموعات \n⌯︙تم استرجاع اوامر القفل والفتح في جميع مجموعات البوت \n●○━━━ -𝐗- ━━━○●"
 local inline = {{{text = '• سـوࢪس دࢪاڪـون •',url='t.me/SrcDrg'}},}
 msg_id =  msg.id_/2097152/0.5
 SendInline(msg.chat_id_,text,nil,inline,msg_id) 
@@ -611,7 +611,7 @@ XboT  = "المطور الاساسي" elseif SecondSudo(msg) then
 XboT = "المطور الاساسي²" elseif SudoBot(msg) then 
 XboT = "المطور" elseif ManagerAll(msg) then 
 XboT = "المدير" elseif AdminAll(msg) then 
-XboT = "الادمن" elseif MARTENConstructor(msg) then 
+XboT = "الادمن" elseif Owner(msg) then 
 XboT = "المالك" elseif BasicConstructor(msg) then 
 XboT = "المنشئ" elseif Constructor(msg) then 
 XboT = "المنشئ" elseif Manager(msg) then 
@@ -625,21 +625,36 @@ function IdRank(user_id,chat_id)
 if tonumber(user_id) == tonumber(119541395) then
 XboT = 'مطـور السـورس' elseif tonumber(user_id) == tonumber(XBOT) then 
 elseif tonumber(user_id) == tonumber(16076569) then
-XboT = 'مبـرمج اكس' elseif tonumber(user_id) == tonumber(XBOT) then 
-XboT = 'البوت' elseif SudoId(user_id) then 
-XboT = 'المطور الاساسي' elseif bot_data:sismember(XBOT..'MARTEN:SecondSudo:', user_id) then 
-XboT = 'المطور الثانوي' elseif bot_data:sismember(XBOT..'MARTEN:SudoBot:', user_id) then 
-XboT = bot_data:get(XBOT.."MARTEN:SudoBot:Rd"..chat_id) or 'المطور' elseif bot_data:sismember(XBOT..'MARTEN:ManagerAll:', user_id) then 
-XboT = bot_data:get(XBOT.."MARTEN:Managers:Rd"..chat_id) or 'المدير العام' elseif bot_data:sismember(XBOT..'MARTEN:AdminAll:', user_id) then 
-XboT = bot_data:get(XBOT.."MARTEN:Admins:Rd"..chat_id) or 'الادمن العام' elseif bot_data:sismember(XBOT..'MARTEN:VipAll:', user_id) then 
-XboT = bot_data:get(XBOT.."MARTEN:VipMem:Rd"..chat_id) or 'المميز العام' elseif bot_data:sismember(XBOT..'MARTEN:MARTENConstructor:'..chat_id, user_id) then 
-XboT = 'المالك' elseif bot_data:sismember(XBOT..'MARTEN:BasicConstructor:'..chat_id, user_id) then 
-XboT = bot_data:get(XBOT.."MARTEN:BasicConstructor:Rd"..chat_id) or 'المنشئ الاساسي' elseif bot_data:sismember(XBOT..'MARTEN:Constructor:'..chat_id, user_id) then 
-XboT = bot_data:get(XBOT.."MARTEN:Constructor:Rd"..chat_id) or 'المنشئ' elseif bot_data:sismember(XBOT..'MARTEN:Managers:'..chat_id, user_id) then 
-XboT = bot_data:get(XBOT.."MARTEN:Managers:Rd"..chat_id) or 'المدير' elseif bot_data:sismember(XBOT..'MARTEN:Admins:'..chat_id, user_id) then 
-XboT = bot_data:get(XBOT.."MARTEN:Admins:Rd"..chat_id) or 'الادمن' elseif bot_data:sismember(XBOT..'MARTEN:VipMem:'..chat_id, user_id) then  
-XboT = bot_data:get(XBOT.."MARTEN:VipMem:Rd"..chat_id) or 'المميز' elseif bot_data:sismember(XBOT..'MARTEN:Cleaner:'..chat_id, user_id) then  
-XboT = bot_data:get(XBOT.."MARTEN:Cleaner:Rd"..chat_id) or 'المنظف' else XboT = bot_data:get(XBOT.."MARTEN:mem:Rd"..chat_id) or 'العضو' 
+XboT = 'مبـرمج اكس' 
+elseif tonumber(user_id) == tonumber(XBOT) then 
+XboT = 'البوت' 
+elseif SudoId(user_id) then 
+XboT = 'المطور الاساسي' 
+elseif bot_data:sismember(XBOT..'MARTEN:SecondSudo:', user_id) then 
+XboT = 'المطور الثانوي' 
+elseif bot_data:sismember(XBOT..'MARTEN:SudoBot:', user_id) then 
+XboT = bot_data:get(XBOT.."MARTEN:SudoBot:Rd"..chat_id) or 'المطور' 
+elseif bot_data:sismember(XBOT..'MARTEN:ManagerAll:', user_id) then 
+XboT = bot_data:get(XBOT.."MARTEN:Managers:Rd"..chat_id) or 'المدير العام' 
+elseif bot_data:sismember(XBOT..'MARTEN:AdminAll:', user_id) then 
+XboT = bot_data:get(XBOT.."MARTEN:Admins:Rd"..chat_id) or 'الادمن العام' 
+elseif bot_data:sismember(XBOT..'MARTEN:VipAll:', user_id) then 
+XboT = bot_data:get(XBOT.."MARTEN:VipMem:Rd"..chat_id) or 'المميز العام' 
+elseif bot_data:sismember(XBOT..'MARTEN:Owner:'..chat_id, user_id) then 
+XboT = 'المالك' 
+elseif bot_data:sismember(XBOT..'MARTEN:BasicConstructor:'..chat_id, user_id) then 
+XboT = bot_data:get(XBOT.."MARTEN:BasicConstructor:Rd"..chat_id) or 'المنشئ الاساسي' 
+elseif bot_data:sismember(XBOT..'MARTEN:Constructor:'..chat_id, user_id) then 
+XboT = bot_data:get(XBOT.."MARTEN:Constructor:Rd"..chat_id) or 'المنشئ' 
+elseif bot_data:sismember(XBOT..'MARTEN:Managers:'..chat_id, user_id) then 
+XboT = bot_data:get(XBOT.."MARTEN:Managers:Rd"..chat_id) or 'المدير' 
+elseif bot_data:sismember(XBOT..'MARTEN:Admins:'..chat_id, user_id) then 
+XboT = bot_data:get(XBOT.."MARTEN:Admins:Rd"..chat_id) or 'الادمن' 
+elseif bot_data:sismember(XBOT..'MARTEN:VipMem:'..chat_id, user_id) then  
+XboT = bot_data:get(XBOT.."MARTEN:VipMem:Rd"..chat_id) or 'المميز' 
+elseif bot_data:sismember(XBOT..'MARTEN:Cleaner:'..chat_id, user_id) then  
+XboT = bot_data:get(XBOT.."MARTEN:Cleaner:Rd"..chat_id) or 'المنظف' 
+else XboT = bot_data:get(XBOT.."MARTEN:mem:Rd"..chat_id) or 'العضو' 
 end 
 return XboT 
 end
@@ -659,7 +674,7 @@ elseif bot_data:sismember(XBOT..'MARTEN:AdminAll:', user_id) then
 var = true  
 elseif bot_data:sismember(XBOT..'MARTEN:VipAll:', user_id) then
 var = true  
-elseif bot_data:sismember(XBOT..'MARTEN:MARTENConstructor:'..chat_id, user_id) then
+elseif bot_data:sismember(XBOT..'MARTEN:Owner:'..chat_id, user_id) then
 var = true
 elseif bot_data:sismember(XBOT..'MARTEN:BasicConstructor:'..chat_id, user_id) then
 var = true
@@ -683,8 +698,8 @@ elseif bot_data:sismember(XBOT..'MARTEN:SecondSudo:', user_id) then
 var = 'secondsudo' 
 elseif bot_data:sismember(XBOT..'MARTEN:SudoBot:', user_id) then
 var = 'sudobot'  
-elseif bot_data:sismember(XBOT..'MARTEN:MARTENConstructor:'..chat_id, user_id) then
-var = 'MARTENconstructor'
+elseif bot_data:sismember(XBOT..'MARTEN:Owner:'..chat_id, user_id) then
+var = 'Owner'
 elseif bot_data:sismember(XBOT..'MARTEN:BasicConstructor:'..chat_id, user_id) then
 var = 'basicconstructor'
 elseif bot_data:sismember(XBOT..'MARTEN:Constructor:'..chat_id, user_id) then
@@ -784,7 +799,7 @@ if GetInfo.result.can_invite_users == true then INV = '✔️' else INV = '✖�
 if GetInfo.result.can_pin_messages == true then PIN = '✔️' else PIN = '✖️' end
 if GetInfo.result.can_restrict_members == true then BAN = '✔️' else BAN = '✖️' end
 if GetInfo.result.can_promote_members == true then VIP = '✔️' else VIP = '✖️' end 
-send(msg.chat_id_,msg.id_,'⌯︙صلاحيات '..GetCustomTitle(user_id,msg.chat_id_)..' هي ↫ ⤈\nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n⌯︙حذف الرسائل ↫ '..DEL..'\n⌯︙دعوة المستخدمين ↫ '..INV..'\n⌯︙حظر المستخدمين ↫ '..BAN..'\n⌯︙تثبيت الرسائل ↫ '..PIN..'\n⌯︙تغيير المعلومات ↫ '..EDT..'\n⌯︙اضافة مشرفين ↫ '..VIP..'\nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ')
+send(msg.chat_id_,msg.id_,'⌯︙صلاحيات '..GetCustomTitle(user_id,msg.chat_id_)..' هي ↫ ⤈\n●○━━━ -𝐗- ━━━○●\n⌯︙حذف الرسائل ↫ '..DEL..'\n⌯︙دعوة المستخدمين ↫ '..INV..'\n⌯︙حظر المستخدمين ↫ '..BAN..'\n⌯︙تثبيت الرسائل ↫ '..PIN..'\n⌯︙تغيير المعلومات ↫ '..EDT..'\n⌯︙اضافة مشرفين ↫ '..VIP..'\n●○━━━ -𝐗- ━━━○●')
 end
 end
 end
@@ -1058,8 +1073,8 @@ EditMsg(Chat_Id2, Msg_Id2, "⌯︙تم الغاء اللعبه لاعادة ال
 end
 if DataText == '/ListRolet' then
 local List = bot_data:smembers(XBOT..'MARTEN:ListRolet'..data.chat_id_) 
-local Text = '⌯︙قائمة الاعبين ↫ ⤈\nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n' 
-local Textt = 'ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n⌯︙تم اكتمال العدد الكلي هل انت مستعد ؟'
+local Text = '⌯︙قائمة الاعبين ↫ ⤈\n●○━━━ -𝐗- ━━━○●\n' 
+local Textt = '●○━━━ -𝐗- ━━━○●\n⌯︙تم اكتمال العدد الكلي هل انت مستعد ؟'
 for k, v in pairs(List) do 
 Text = Text..k.."~ : [" ..v.."]\n"  
 end 
@@ -1113,10 +1128,10 @@ tdcli_function ({ID = "GetUser",user_id_ = MARTENId},function(arg,dp)
 bot_data:sadd(XBOT..'MARTEN:BasicConstructor:'..data.chat_id_,dp.id_)
 EditMsg(Chat_Id2, Msg_Id2,'⌯︙العضو ↫ ['..dp.first_name_..'](t.me/'..(dp.username_ or 'SrcDrg')..')\n⌯︙تم رفعه في قائمة المنشئين الاساسيين')
 end,nil)
-elseif DataText and DataText:match(tonumber(data.sender_user_id_)..':SetMARTENConstructor:(.*)') then
-local MARTENId = DataText:match(tonumber(data.sender_user_id_)..':SetMARTENConstructor:(.*)')
+elseif DataText and DataText:match(tonumber(data.sender_user_id_)..':SetOwner:(.*)') then
+local MARTENId = DataText:match(tonumber(data.sender_user_id_)..':SetOwner:(.*)')
 tdcli_function ({ID = "GetUser",user_id_ = MARTENId},function(arg,dp) 
-bot_data:sadd(XBOT..'MARTEN:MARTENConstructor:'..data.chat_id_,dp.id_)
+bot_data:sadd(XBOT..'MARTEN:Owner:'..data.chat_id_,dp.id_)
 EditMsg(Chat_Id2, Msg_Id2,'⌯︙العضو ↫ ['..dp.first_name_..'](t.me/'..(dp.username_ or 'SrcDrg')..')\n⌯︙تم رفعه في قائمة المالكين')
 end,nil)
 elseif DataText and DataText:match(tonumber(data.sender_user_id_)..':SetSudoBot:(.*)') then
@@ -1168,10 +1183,10 @@ tdcli_function ({ID = "GetUser",user_id_ = MARTENId},function(arg,dp)
 bot_data:srem(XBOT..'MARTEN:BasicConstructor:'..data.chat_id_,dp.id_)
 EditMsg(Chat_Id2, Msg_Id2,'⌯︙العضو ↫ ['..dp.first_name_..'](t.me/'..(dp.username_ or 'SrcDrg')..')\n⌯︙تم تنزيله من قائمة المنشئين الاساسيين')
 end,nil)
-elseif DataText and DataText:match(tonumber(data.sender_user_id_)..':RemMARTENConstructor:(.*)') then
-local MARTENId = DataText:match(tonumber(data.sender_user_id_)..':RemMARTENConstructor:(.*)')
+elseif DataText and DataText:match(tonumber(data.sender_user_id_)..':RemOwner:(.*)') then
+local MARTENId = DataText:match(tonumber(data.sender_user_id_)..':RemOwner:(.*)')
 tdcli_function ({ID = "GetUser",user_id_ = MARTENId},function(arg,dp) 
-bot_data:srem(XBOT..'MARTEN:MARTENConstructor:'..data.chat_id_,dp.id_)
+bot_data:srem(XBOT..'MARTEN:Owner:'..data.chat_id_,dp.id_)
 EditMsg(Chat_Id2, Msg_Id2,'⌯︙العضو ↫ ['..dp.first_name_..'](t.me/'..(dp.username_ or 'SrcDrg')..')\n⌯︙تم تنزيله من قائمة المالكين')
 end,nil)
 elseif DataText and DataText:match(tonumber(data.sender_user_id_)..':RemSudoBot:(.*)') then
@@ -1248,12 +1263,12 @@ end
 local Text = ' ⌯︙قم باستعمال الازرار لرفع العضو ↫ ⤈\n⌯︙العضو ↫ ['..dp.first_name_..'](t.me/'..(dp.username_ or 'SrcDrg')..')\n✓'
 keyboard = {} 
 if Sudo(data) then
-keyboard.inline_keyboard = {{{text="رفع مميز",callback_data=data.sender_user_id_..":SetMem:"..MARTENId},{text="رفع ادمن",callback_data=data.sender_user_id_..":SetAdmin:"..MARTENId}},{{text="رفع منشئ",callback_data=data.sender_user_id_..":SetConstructor:"..MARTENId},{text="رفع مدير",callback_data=data.sender_user_id_..":SetManager:"..MARTENId}},{{text="رفع منظف",callback_data=data.sender_user_id_..":SetCleaner:"..MARTENId},{text="رفع منشئ اساسي",callback_data=data.sender_user_id_..":SetBasicConstructor:"..MARTENId}},{{text="رفع مالك",callback_data=data.sender_user_id_..":SetMARTENConstructor:"..MARTENId},{text="رفع مطور",callback_data=data.sender_user_id_..":SetSudoBot:"..MARTENId}},{{text="رفع مطور ثانوي",callback_data=data.sender_user_id_..":SetSecondSudo:"..MARTENId}},{{text = '• سـوࢪس دࢪاڪـون •',url="t.me/SrcDrg"}}}
+keyboard.inline_keyboard = {{{text="رفع مميز",callback_data=data.sender_user_id_..":SetMem:"..MARTENId},{text="رفع ادمن",callback_data=data.sender_user_id_..":SetAdmin:"..MARTENId}},{{text="رفع منشئ",callback_data=data.sender_user_id_..":SetConstructor:"..MARTENId},{text="رفع مدير",callback_data=data.sender_user_id_..":SetManager:"..MARTENId}},{{text="رفع منظف",callback_data=data.sender_user_id_..":SetCleaner:"..MARTENId},{text="رفع منشئ اساسي",callback_data=data.sender_user_id_..":SetBasicConstructor:"..MARTENId}},{{text="رفع مالك",callback_data=data.sender_user_id_..":SetOwner:"..MARTENId},{text="رفع مطور",callback_data=data.sender_user_id_..":SetSudoBot:"..MARTENId}},{{text="رفع مطور ثانوي",callback_data=data.sender_user_id_..":SetSecondSudo:"..MARTENId}},{{text = '• سـوࢪس دࢪاڪـون •',url="t.me/SrcDrg"}}}
 elseif SecondSudo(data) then
-keyboard.inline_keyboard = {{{text="رفع مميز",callback_data=data.sender_user_id_..":SetMem:"..MARTENId},{text="رفع ادمن",callback_data=data.sender_user_id_..":SetAdmin:"..MARTENId}},{{text="رفع منشئ",callback_data=data.sender_user_id_..":SetConstructor:"..MARTENId},{text="رفع مدير",callback_data=data.sender_user_id_..":SetManager:"..MARTENId}},{{text="رفع منظف",callback_data=data.sender_user_id_..":SetCleaner:"..MARTENId},{text="رفع منشئ اساسي",callback_data=data.sender_user_id_..":SetBasicConstructor:"..MARTENId}},{{text="رفع مالك",callback_data=data.sender_user_id_..":SetMARTENConstructor:"..MARTENId},{text="رفع مطور",callback_data=data.sender_user_id_..":SetSudoBot:"..MARTENId}},{{text = '• سـوࢪس دࢪاڪـون •',url="t.me/SrcDrg"}}}
+keyboard.inline_keyboard = {{{text="رفع مميز",callback_data=data.sender_user_id_..":SetMem:"..MARTENId},{text="رفع ادمن",callback_data=data.sender_user_id_..":SetAdmin:"..MARTENId}},{{text="رفع منشئ",callback_data=data.sender_user_id_..":SetConstructor:"..MARTENId},{text="رفع مدير",callback_data=data.sender_user_id_..":SetManager:"..MARTENId}},{{text="رفع منظف",callback_data=data.sender_user_id_..":SetCleaner:"..MARTENId},{text="رفع منشئ اساسي",callback_data=data.sender_user_id_..":SetBasicConstructor:"..MARTENId}},{{text="رفع مالك",callback_data=data.sender_user_id_..":SetOwner:"..MARTENId},{text="رفع مطور",callback_data=data.sender_user_id_..":SetSudoBot:"..MARTENId}},{{text = '• سـوࢪس دࢪاڪـون •',url="t.me/SrcDrg"}}}
 elseif SudoBot(data) then
-keyboard.inline_keyboard = {{{text="رفع مميز",callback_data=data.sender_user_id_..":SetMem:"..MARTENId},{text="رفع ادمن",callback_data=data.sender_user_id_..":SetAdmin:"..MARTENId}},{{text="رفع منشئ",callback_data=data.sender_user_id_..":SetConstructor:"..MARTENId},{text="رفع مدير",callback_data=data.sender_user_id_..":SetManager:"..MARTENId}},{{text="رفع منظف",callback_data=data.sender_user_id_..":SetCleaner:"..MARTENId},{text="رفع منشئ اساسي",callback_data=data.sender_user_id_..":SetBasicConstructor:"..MARTENId}},{{text="رفع مالك",callback_data=data.sender_user_id_..":SetMARTENConstructor:"..MARTENId}},{{text = '• سـوࢪس دࢪاڪـون •',url="t.me/SrcDrg"}}}
-elseif MARTENConstructor(data) then
+keyboard.inline_keyboard = {{{text="رفع مميز",callback_data=data.sender_user_id_..":SetMem:"..MARTENId},{text="رفع ادمن",callback_data=data.sender_user_id_..":SetAdmin:"..MARTENId}},{{text="رفع منشئ",callback_data=data.sender_user_id_..":SetConstructor:"..MARTENId},{text="رفع مدير",callback_data=data.sender_user_id_..":SetManager:"..MARTENId}},{{text="رفع منظف",callback_data=data.sender_user_id_..":SetCleaner:"..MARTENId},{text="رفع منشئ اساسي",callback_data=data.sender_user_id_..":SetBasicConstructor:"..MARTENId}},{{text="رفع مالك",callback_data=data.sender_user_id_..":SetOwner:"..MARTENId}},{{text = '• سـوࢪس دࢪاڪـون •',url="t.me/SrcDrg"}}}
+elseif Owner(data) then
 keyboard.inline_keyboard = {{{text="رفع مميز",callback_data=data.sender_user_id_..":SetMem:"..MARTENId},{text="رفع ادمن",callback_data=data.sender_user_id_..":SetAdmin:"..MARTENId}},{{text="رفع منشئ",callback_data=data.sender_user_id_..":SetConstructor:"..MARTENId},{text="رفع مدير",callback_data=data.sender_user_id_..":SetManager:"..MARTENId}},{{text="رفع منظف",callback_data=data.sender_user_id_..":SetCleaner:"..MARTENId},{text="رفع منشئ اساسي",callback_data=data.sender_user_id_..":SetBasicConstructor:"..MARTENId}},{{text = '• سـوࢪس دࢪاڪـون •',url="t.me/SrcDrg"}}}
 elseif BasicConstructor(data) then
 keyboard.inline_keyboard = {{{text="رفع مميز",callback_data=data.sender_user_id_..":SetMem:"..MARTENId},{text="رفع ادمن",callback_data=data.sender_user_id_..":SetAdmin:"..MARTENId}},{{text="رفع منشئ",callback_data=data.sender_user_id_..":SetConstructor:"..MARTENId},{text="رفع مدير",callback_data=data.sender_user_id_..":SetManager:"..MARTENId}},{{text="رفع منظف",callback_data=data.sender_user_id_..":SetCleaner:"..MARTENId}},{{text = '• سـوࢪس دࢪاڪـون •',url="t.me/SrcDrg"}}}
@@ -1277,12 +1292,12 @@ end
 local Text = ' ⌯︙قم باستعمال الازرار لتنزيل العضو ↫ ⤈\n⌯︙العضو ↫ ['..dp.first_name_..'](t.me/'..(dp.username_ or 'SrcDrg')..')\n✓'
 keyboard = {} 
 if Sudo(data) then
-keyboard.inline_keyboard = {{{text="تنزيل مميز",callback_data=data.sender_user_id_..":RemMem:"..MARTENId},{text="تنزيل ادمن",callback_data=data.sender_user_id_..":RemAdmin:"..MARTENId}},{{text="تنزيل منشئ",callback_data=data.sender_user_id_..":RemConstructor:"..MARTENId},{text="تنزيل مدير",callback_data=data.sender_user_id_..":RemManager:"..MARTENId}},{{text="تنزيل منظف",callback_data=data.sender_user_id_..":RemCleaner:"..MARTENId},{text="تنزيل منشئ اساسي",callback_data=data.sender_user_id_..":RemBasicConstructor:"..MARTENId}},{{text="تنزيل مالك",callback_data=data.sender_user_id_..":RemMARTENConstructor:"..MARTENId},{text="تنزيل مطور",callback_data=data.sender_user_id_..":RemSudoBot:"..MARTENId}},{{text="تنزيل مطور ثانوي",callback_data=data.sender_user_id_..":RemSecondSudo:"..MARTENId}},{{text = '• سـوࢪس دࢪاڪـون •',url="t.me/SrcDrg"}}}
+keyboard.inline_keyboard = {{{text="تنزيل مميز",callback_data=data.sender_user_id_..":RemMem:"..MARTENId},{text="تنزيل ادمن",callback_data=data.sender_user_id_..":RemAdmin:"..MARTENId}},{{text="تنزيل منشئ",callback_data=data.sender_user_id_..":RemConstructor:"..MARTENId},{text="تنزيل مدير",callback_data=data.sender_user_id_..":RemManager:"..MARTENId}},{{text="تنزيل منظف",callback_data=data.sender_user_id_..":RemCleaner:"..MARTENId},{text="تنزيل منشئ اساسي",callback_data=data.sender_user_id_..":RemBasicConstructor:"..MARTENId}},{{text="تنزيل مالك",callback_data=data.sender_user_id_..":RemOwner:"..MARTENId},{text="تنزيل مطور",callback_data=data.sender_user_id_..":RemSudoBot:"..MARTENId}},{{text="تنزيل مطور ثانوي",callback_data=data.sender_user_id_..":RemSecondSudo:"..MARTENId}},{{text = '• سـوࢪس دࢪاڪـون •',url="t.me/SrcDrg"}}}
 elseif SecondSudo(data) then
-keyboard.inline_keyboard = {{{text="تنزيل مميز",callback_data=data.sender_user_id_..":RemMem:"..MARTENId},{text="تنزيل ادمن",callback_data=data.sender_user_id_..":RemAdmin:"..MARTENId}},{{text="تنزيل منشئ",callback_data=data.sender_user_id_..":RemConstructor:"..MARTENId},{text="تنزيل مدير",callback_data=data.sender_user_id_..":RemManager:"..MARTENId}},{{text="تنزيل منظف",callback_data=data.sender_user_id_..":RemCleaner:"..MARTENId},{text="تنزيل منشئ اساسي",callback_data=data.sender_user_id_..":RemBasicConstructor:"..MARTENId}},{{text="تنزيل مالك",callback_data=data.sender_user_id_..":RemMARTENConstructor:"..MARTENId},{text="تنزيل مطور",callback_data=data.sender_user_id_..":RemSudoBot:"..MARTENId}},{{text = '• سـوࢪس دࢪاڪـون •',url="t.me/SrcDrg"}}}
+keyboard.inline_keyboard = {{{text="تنزيل مميز",callback_data=data.sender_user_id_..":RemMem:"..MARTENId},{text="تنزيل ادمن",callback_data=data.sender_user_id_..":RemAdmin:"..MARTENId}},{{text="تنزيل منشئ",callback_data=data.sender_user_id_..":RemConstructor:"..MARTENId},{text="تنزيل مدير",callback_data=data.sender_user_id_..":RemManager:"..MARTENId}},{{text="تنزيل منظف",callback_data=data.sender_user_id_..":RemCleaner:"..MARTENId},{text="تنزيل منشئ اساسي",callback_data=data.sender_user_id_..":RemBasicConstructor:"..MARTENId}},{{text="تنزيل مالك",callback_data=data.sender_user_id_..":RemOwner:"..MARTENId},{text="تنزيل مطور",callback_data=data.sender_user_id_..":RemSudoBot:"..MARTENId}},{{text = '• سـوࢪس دࢪاڪـون •',url="t.me/SrcDrg"}}}
 elseif SudoBot(data) then
-keyboard.inline_keyboard = {{{text="تنزيل مميز",callback_data=data.sender_user_id_..":RemMem:"..MARTENId},{text="تنزيل ادمن",callback_data=data.sender_user_id_..":RemAdmin:"..MARTENId}},{{text="تنزيل منشئ",callback_data=data.sender_user_id_..":RemConstructor:"..MARTENId},{text="تنزيل مدير",callback_data=data.sender_user_id_..":RemManager:"..MARTENId}},{{text="تنزيل منظف",callback_data=data.sender_user_id_..":RemCleaner:"..MARTENId},{text="تنزيل منشئ اساسي",callback_data=data.sender_user_id_..":RemBasicConstructor:"..MARTENId}},{{text="تنزيل مالك",callback_data=data.sender_user_id_..":RemMARTENConstructor:"..MARTENId}},{{text = '• سـوࢪس دࢪاڪـون •',url="t.me/SrcDrg"}}}
-elseif MARTENConstructor(data) then
+keyboard.inline_keyboard = {{{text="تنزيل مميز",callback_data=data.sender_user_id_..":RemMem:"..MARTENId},{text="تنزيل ادمن",callback_data=data.sender_user_id_..":RemAdmin:"..MARTENId}},{{text="تنزيل منشئ",callback_data=data.sender_user_id_..":RemConstructor:"..MARTENId},{text="تنزيل مدير",callback_data=data.sender_user_id_..":RemManager:"..MARTENId}},{{text="تنزيل منظف",callback_data=data.sender_user_id_..":RemCleaner:"..MARTENId},{text="تنزيل منشئ اساسي",callback_data=data.sender_user_id_..":RemBasicConstructor:"..MARTENId}},{{text="تنزيل مالك",callback_data=data.sender_user_id_..":RemOwner:"..MARTENId}},{{text = '• سـوࢪس دࢪاڪـون •',url="t.me/SrcDrg"}}}
+elseif Owner(data) then
 keyboard.inline_keyboard = {{{text="تنزيل مميز",callback_data=data.sender_user_id_..":RemMem:"..MARTENId},{text="تنزيل ادمن",callback_data=data.sender_user_id_..":RemAdmin:"..MARTENId}},{{text="تنزيل منشئ",callback_data=data.sender_user_id_..":RemConstructor:"..MARTENId},{text="تنزيل مدير",callback_data=data.sender_user_id_..":RemManager:"..MARTENId}},{{text="تنزيل منظف",callback_data=data.sender_user_id_..":RemCleaner:"..MARTENId},{text="تنزيل منشئ اساسي",callback_data=data.sender_user_id_..":RemBasicConstructor:"..MARTENId}},{{text = '• سـوࢪس دࢪاڪـون •',url="t.me/SrcDrg"}}}
 elseif BasicConstructor(data) then
 keyboard.inline_keyboard = {{{text="تنزيل مميز",callback_data=data.sender_user_id_..":RemMem:"..MARTENId},{text="تنزيل ادمن",callback_data=data.sender_user_id_..":RemAdmin:"..MARTENId}},{{text="تنزيل منشئ",callback_data=data.sender_user_id_..":RemConstructor:"..MARTENId},{text="تنزيل مدير",callback_data=data.sender_user_id_..":RemManager:"..MARTENId}},{{text="تنزيل منظف",callback_data=data.sender_user_id_..":RemCleaner:"..MARTENId}},{{text = '• سـوࢪس دࢪاڪـون •',url="t.me/SrcDrg"}}}
@@ -1296,6 +1311,199 @@ end
 https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end,nil)
 end
+--     source -𝐗-     --
+if DataText and DataText:match('/DelList:(.*)') then
+local MARTEN = DataText:match('/DelList:(.*)')
+if tonumber(MARTEN) == tonumber(data.sender_user_id_) then
+local Del = bot_data:get(XBOT..'MARTEN:Del')
+local ListSudo = bot_data:scard(XBOT.."MARTEN:MARTENSudo:")
+local ListSecondSudo = bot_data:scard(XBOT.."MARTEN:SecondSudo:")
+local ListSudoBot = bot_data:scard(XBOT.."MARTEN:SudoBot:")
+local ListOwner = bot_data:scard(XBOT.."MARTEN:Owner:"..data.chat_id_)
+local ListBasicConstructor = bot_data:scard(XBOT.."MARTEN:BasicConstructor:"..data.chat_id_)
+local ListConstructor = bot_data:scard(XBOT.."MARTEN:Constructor:"..data.chat_id_)
+local ListManagers = bot_data:scard(XBOT.."MARTEN:Managers:"..data.chat_id_)
+local ListAdmins = bot_data:scard(XBOT.."MARTEN:Admins:"..data.chat_id_)
+local ListVipMem = bot_data:scard(XBOT.."MARTEN:VipMem:"..data.chat_id_)
+local ListCleaner = bot_data:scard(XBOT.."MARTEN:Cleaner:"..data.chat_id_)
+local Text = [[
+⌯︙اهلاً بك في قائمـة اوامر الرتب ↫ ⤈ 🪜
+ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+⌯︙يمكنك مسح رتب المجموعـة من خلال الازرار اسفل ↫ ⤈ 
+ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+» [𝐬𝐨𝐮𝐫𝐜𝐞 -𝐗-](https://t.me/SrcX_B0T)➤
+]] 
+keyboard = {} 
+if Sudo(data) then
+keyboard.inline_keyboard = {
+	{{text="• مسح الاساسيين {"..ListSudo.."} •",callback_data="/DelMARTENSudo:"..data.sender_user_id_}},
+	{{text="• مسح الثانويين {"..ListSecondSudo.."} •",callback_data="/DelSecondSudo:"..data.sender_user_id_},{text="• مسح المطورين {"..ListSudoBot.."} •",callback_data="/DelSudoBot:"..data.sender_user_id_}},
+	{{text="• مسح المنشئين الاساسيين {"..ListBasicConstructor.."} •",callback_data="/DelBasicConstructor:"..data.sender_user_id_}},
+	{{text="• مسح المالكين {"..ListOwner.."} •",callback_data="/DelOwner:"..data.sender_user_id_},{text="• مسح المنشئين {"..ListConstructor.."} •",callback_data="/DelConstructor:"..data.sender_user_id_}},
+	{{text="• مسح المدراء {"..ListManagers.."} •",callback_data="/DelManager:"..data.sender_user_id_},{text="• مسح الادمنيه {"..ListAdmins.."} •",callback_data="/DelAdmins:"..data.sender_user_id_}},
+	{{text="• مسح المميزين {"..ListVipMem.."} •",callback_data="/DelVipMem:"..data.sender_user_id_}},
+	{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_},{text="• القائمه الرئيسيه •",callback_data="/DelList:"..data.sender_user_id_}},
+	{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}
+}
+elseif MARTENSudo(data) then
+keyboard.inline_keyboard = {
+	{{text="• مسح الثانويين {"..ListSecondSudo.."} •",callback_data="/DelSecondSudo:"..data.sender_user_id_}},
+	{{text="• مسح المطورين {"..ListSudoBot.."} •",callback_data="/DelSudoBot:"..data.sender_user_id_}},
+	{{text="• مسح المنشئين الاساسيين {"..ListBasicConstructor.."} •",callback_data="/DelBasicConstructor:"..data.sender_user_id_}},
+	{{text="• مسح المالكين {"..ListOwner.."} •",callback_data="/DelOwner:"..data.sender_user_id_},{text="• مسح المنشئين {"..ListConstructor.."} •",callback_data="/DelConstructor:"..data.sender_user_id_}},
+	{{text="• مسح المدراء {"..ListManagers.."} •",callback_data="/DelManager:"..data.sender_user_id_},{text="• مسح الادمنيه {"..ListAdmins.."} •",callback_data="/DelAdmins:"..data.sender_user_id_}},
+	{{text="• مسح المميزين {"..ListVipMem.."} •",callback_data="/DelVipMem:"..data.sender_user_id_}},
+	{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_},{text="• القائمه الرئيسيه •",callback_data="/DelList:"..data.sender_user_id_}},
+	{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}
+}
+elseif SecondSudo(data) then
+keyboard.inline_keyboard = {
+	{{text="• مسح المطورين {"..ListSudoBot.."} •",callback_data="/DelSudoBot:"..data.sender_user_id_},{text="• مسح المالكين {"..ListOwner.."} •",callback_data="/DelOwner:"..data.sender_user_id_}},
+	{{text="• مسح المنشئين الاساسيين {"..ListBasicConstructor.."} •",callback_data="/DelBasicConstructor:"..data.sender_user_id_}},
+	{{text="• مسح المنشئين {"..ListConstructor.."} •",callback_data="/DelConstructor:"..data.sender_user_id_},{text="• مسح المدراء {"..ListManagers.."} •",callback_data="/DelManager:"..data.sender_user_id_}},
+	{{text="• مسح الادمنيه {"..ListAdmins.."} •",callback_data="/DelAdmins:"..data.sender_user_id_},{text="• مسح المميزين {"..ListVipMem.."} •",callback_data="/DelVipMem:"..data.sender_user_id_}},
+	{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_},{text="• القائمه الرئيسيه •",callback_data="/DelList:"..data.sender_user_id_}},
+	{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}
+}
+elseif SudoBot(data) then
+keyboard.inline_keyboard = {
+	{{text="• مسح المنشئين الاساسيين {"..ListBasicConstructor.."} •",callback_data="/DelBasicConstructor:"..data.sender_user_id_}},
+	{{text="• مسح المالكين •",callback_data="/DelOwner:"..data.sender_user_id_},{text="• مسح المنشئين {"..ListConstructor.."} •",callback_data="/DelConstructor:"..data.sender_user_id_}},
+	{{text="• مسح المدراء {"..ListManagers.."} •",callback_data="/DelManager:"..data.sender_user_id_},{text="• مسح الادمنيه {"..ListAdmins.."} •",callback_data="/DelAdmins:"..data.sender_user_id_}},
+	{{text="• مسح المميزين {"..ListVipMem.."} •",callback_data="/DelVipMem:"..data.sender_user_id_}},
+	{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_},{text="• القائمه الرئيسيه •",callback_data="/DelList:"..data.sender_user_id_}},
+	{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}
+}
+elseif Owner(data) then
+keyboard.inline_keyboard = {
+	{{text="• مسح المنشئين الاساسيين {"..ListBasicConstructor.."} •",callback_data="/DelBasicConstructor:"..data.sender_user_id_}},
+	{{text="• مسح المنشئين {"..ListConstructor.."} •",callback_data="/DelConstructor:"..data.sender_user_id_},{text="• مسح المدراء {"..ListManagers.."} •",callback_data="/DelManager:"..data.sender_user_id_}},
+	{{text="• مسح الادمنيه {"..ListAdmins.."} •",callback_data="/DelAdmins:"..data.sender_user_id_},{text="• مسح المميزين {"..ListVipMem.."} •",callback_data="/DelVipMem:"..data.sender_user_id_}},
+	{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_},{text="• القائمه الرئيسيه •",callback_data="/DelList:"..data.sender_user_id_}},
+	{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}
+}
+elseif BasicConstructor(data) then
+keyboard.inline_keyboard = {
+	{{text="• مسح المنشئين {"..ListConstructor.."} •",callback_data="/DelConstructor:"..data.sender_user_id_}},
+	{{text="• مسح المدراء {"..ListManagers.."} •",callback_data="/DelManager:"..data.sender_user_id_},{text="• مسح الادمنيه {"..ListAdmins.."} •",callback_data="/DelAdmins:"..data.sender_user_id_}},
+	{{text="• مسح المميزين {"..ListVipMem.."} •",callback_data="/DelVipMem:"..data.sender_user_id_}},
+	{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_},{text="• القائمه الرئيسيه •",callback_data="/DelList:"..data.sender_user_id_}},
+	{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}
+}
+elseif Constructor(data) then
+keyboard.inline_keyboard = {
+	{{text="• مسح المدراء {"..ListManagers.."} •",callback_data="/DelManager:"..data.sender_user_id_},{text="• مسح الادمنيه {"..ListAdmins.."} •",callback_data="/DelAdmins:"..data.sender_user_id_}},
+	{{text="• مسح المميزين {"..ListVipMem.."} •",callback_data="/DelVipMem:"..data.sender_user_id_}},
+	{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_},{text="• القائمه الرئيسيه •",callback_data="/DelList:"..data.sender_user_id_}},
+	{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}
+}
+elseif Manager(data) then
+keyboard.inline_keyboard = {
+	{{text="• مسح الادمنيه {"..ListAdmins.."} •",callback_data="/DelAdmins:"..data.sender_user_id_}},
+	{{text="• مسح المميزين {"..ListVipMem.."} •",callback_data="/DelVipMem:"..data.sender_user_id_}},
+	{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_},{text="• القائمه الرئيسيه •",callback_data="/DelList:"..data.sender_user_id_}},
+	{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}
+}
+elseif Admin(data) then
+keyboard.inline_keyboard = {
+	{{text="• مسح المميزين {"..ListVipMem.."} •",callback_data="/DelVipMem:"..data.sender_user_id_}},
+	{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_},{text="• القائمه الرئيسيه •",callback_data="/DelList:"..data.sender_user_id_}},
+	{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}
+}
+end
+https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end end
+if Sudo(data) then
+if DataText and DataText:match('/DelMARTENSudo:'..tonumber(data.sender_user_id_)..'(.*)') then
+local MARTEN = DataText:match('/DelMARTENSudo:'..tonumber(data.sender_user_id_)..'(.*)')
+bot_data:del(XBOT..'MARTEN:MARTENSudo:')
+Text = "*⌯︙تم حذف الاساسيين*"
+keyboard = {} 
+keyboard.inline_keyboard = {{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_},{text="• القائمه الرئيسيه •",callback_data="/DelList:"..data.sender_user_id_}}}
+https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end end
+if MARTENSudo(data) then
+if DataText and DataText:match('/DelSecondSudo:'..tonumber(data.sender_user_id_)..'(.*)') then
+local MARTEN = DataText:match('/DelSecondSudo:'..tonumber(data.sender_user_id_)..'(.*)')
+bot_data:del(XBOT..'MARTEN:SecondSudo:')
+Text = "*⌯︙تم حذف الثانويين*"
+keyboard = {} 
+keyboard.inline_keyboard = {{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_},{text="• القائمه الرئيسيه •",callback_data="/DelList:"..data.sender_user_id_}}}
+https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end end
+if SecondSudo(data) then
+if DataText and DataText:match('/DelSudoBot:'..tonumber(data.sender_user_id_)..'(.*)') then
+local MARTEN = DataText:match('/DelSudoBot:'..tonumber(data.sender_user_id_)..'(.*)')
+bot_data:del(XBOT..'MARTEN:SudoBot:')
+Text = "*⌯︙تم حذف المطورين*"
+keyboard = {} 
+keyboard.inline_keyboard = {{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_},{text="• القائمه الرئيسيه •",callback_data="/DelList:"..data.sender_user_id_}}}
+https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end end
+if SudoBot(data) then
+if DataText and DataText:match('/DelOwner:'..tonumber(data.sender_user_id_)..'(.*)') then
+local MARTEN = DataText:match('/DelOwner:'..tonumber(data.sender_user_id_)..'(.*)')
+bot_data:del(XBOT..'MARTEN:Owner:'..data.chat_id_)
+Text = "*⌯︙تم حذف المالكين*"
+keyboard = {} 
+keyboard.inline_keyboard = {{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_},{text="• القائمه الرئيسيه •",callback_data="/DelList:"..data.sender_user_id_}}}
+https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end end
+if Owner(data) then
+if DataText and DataText:match('/DelBasicConstructor:'..tonumber(data.sender_user_id_)..'(.*)') then
+local MARTEN = DataText:match('/DelBasicConstructor:'..tonumber(data.sender_user_id_)..'(.*)')
+bot_data:del(XBOT..'MARTEN:BasicConstructor:'..data.chat_id_)
+Text = "*⌯︙تم حذف المنشئين الاساسيين*"
+keyboard = {} 
+keyboard.inline_keyboard = {{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_},{text="• القائمه الرئيسيه •",callback_data="/DelList:"..data.sender_user_id_}}}
+https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end end
+if BasicConstructor(data) then
+if DataText and DataText:match('/DelConstructor:'..tonumber(data.sender_user_id_)..'(.*)') then
+local MARTEN = DataText:match('/DelConstructor:'..tonumber(data.sender_user_id_)..'(.*)')
+bot_data:del(XBOT..'MARTEN:Constructor:'..data.chat_id_)
+Text = "*⌯︙تم حذف المنشئين*"
+keyboard = {} 
+keyboard.inline_keyboard = {{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_},{text="• القائمه الرئيسيه •",callback_data="/DelList:"..data.sender_user_id_}},{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}}
+https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end end
+if Constructor(data) then
+if DataText and DataText:match('/DelManager:'..tonumber(data.sender_user_id_)..'(.*)') then
+local MARTEN = DataText:match('/DelManager:'..tonumber(data.sender_user_id_)..'(.*)')
+bot_data:del(XBOT..'MARTEN:Managers:'..data.chat_id_)
+Text = "*⌯︙تم حذف المدراء*"
+keyboard = {} 
+keyboard.inline_keyboard = {{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_},{text="• القائمه الرئيسيه •",callback_data="/DelList:"..data.sender_user_id_}}}
+https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end end
+if Manager(data) then
+if DataText and DataText:match('/DelAdmins:'..tonumber(data.sender_user_id_)..'(.*)') then
+local MARTEN = DataText:match('/DelAdmins:'..tonumber(data.sender_user_id_)..'(.*)')
+bot_data:del(XBOT..'MARTEN:Admins:'..data.chat_id_)
+Text = "*⌯︙تم حذف الادمنيه*"
+keyboard = {} 
+keyboard.inline_keyboard = {{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_},{text="• القائمه الرئيسيه •",callback_data="/DelList:"..data.sender_user_id_}},{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}}
+https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end end
+if Admin(data) then
+if DataText and DataText:match('/DelVipMem:'..tonumber(data.sender_user_id_)..'(.*)') then
+local MARTEN = DataText:match('/DelVipMem:'..tonumber(data.sender_user_id_)..'(.*)')
+bot_data:del(XBOT..'MARTEN:VipMem:'..data.chat_id_)
+Text = "*⌯︙تم حذف المميزين*"
+keyboard = {} 
+keyboard.inline_keyboard = {{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_},{text="• القائمه الرئيسيه •",callback_data="/DelList:"..data.sender_user_id_}},{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}}
+https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end end
+if Owner(data) then
+if DataText and DataText:match('/DelCleanr:'..tonumber(data.sender_user_id_)..'(.*)') then
+local MARTEN = DataText:match('/DelCleanr:'..tonumber(data.sender_user_id_)..'(.*)')
+bot_data:del(XBOT..'MARTEN:Cleaner:'..data.chat_id_)
+Text = "*⌯︙تم حذف المنظفين*"
+keyboard = {} 
+keyboard.inline_keyboard = {{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_},{text="• القائمه الرئيسيه •",callback_data="/DelList:"..data.sender_user_id_}}}
+https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end end
+--     source -𝐗-     --
 if DataText and DataText:match('/DelRed:'..tonumber(data.sender_user_id_)..'(.*)') then
 local S0FI = DataText:match('/DelRed:'..tonumber(data.sender_user_id_)..'(.*)')
 EditMsg(Chat_Id2, Msg_Id2, "⌯︙الكلمه ↫ "..S0FI.." تم حذفها") 
@@ -1338,15 +1546,15 @@ if tonumber(S0FI) == tonumber(data.sender_user_id_) then
 local Help = bot_data:get(XBOT..'MARTEN:Help')
 local Text = [[
 ⌯︙اهلا بك في قائمة الاوامر ↫ ⤈ 
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+●○━━━ -𝐗- ━━━○●
 ⌯︙م1 ↫ اوامر الحمايه
 ⌯︙م2 ↫ اوامر الادمنيه
 ⌯︙م3 ↫ اوامر المدراء
 ⌯︙م4 ↫ اوامر المنشئين
 ⌯︙م5 ↫ اوامر المطورين
 ⌯︙م6 ↫ اوامر الاعضاء
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
-[🖥┇𝐒𝐎𝐔𝐑𝐂𝐄 𝐃𝐑𝐀𝐆𝐎𝐍 .](t.me/SrcDrg)➤
+●○━━━ -𝐗- ━━━○●
+[✗ 𝐬𝐨𝐮𝐫𝐜𝐞 -𝐗- ✗ .](t.me/SrcDrg)➤
 ]] 
 keyboard = {} 
 keyboard.inline_keyboard = {{{text="• اوامر الادمنيه •",callback_data="/HelpList2:"..data.sender_user_id_},{text="• اوامر الحمايه •",callback_data="/HelpList1:"..data.sender_user_id_}},{{text="• اوامر المنشئين •",callback_data="/HelpList4:"..data.sender_user_id_},{text="• اوامر المدراء •",callback_data="/HelpList3:"..data.sender_user_id_}},{{text="• اوامر الاعضاء •",callback_data="/HelpList6:"..data.sender_user_id_},{text="• اوامر المطورين •",callback_data="/HelpList5:"..data.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_}}}
@@ -1364,7 +1572,7 @@ end
 local Help = bot_data:get(XBOT..'MARTEN:Help1')
 local Text = [[
 ⌯︙اوامر حماية المجموعه ↫ ⤈
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+●○━━━ -𝐗- ━━━○●
 ⌯︙قفل • فتح ↫ الروابط
 ⌯︙قفل • فتح ↫ المعرفات
 ⌯︙قفل • فتح ↫ البوتات
@@ -1397,9 +1605,9 @@ local Text = [[
 ⌯︙قفل • فتح ↫ الانكليزيه
 ⌯︙قفل • فتح ↫ الفارسيه
 ⌯︙قفل • فتح ↫ التفليش
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+●○━━━ -𝐗- ━━━○●
 ⌯︙اوامر حمايه اخرى ↫ ⤈
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+●○━━━ -𝐗- ━━━○●
 ⌯︙قفل • فتح + الامر ↫ ⤈
 ⌯︙التكرار بالطرد
 ⌯︙التكرار بالكتم
@@ -1407,8 +1615,8 @@ local Text = [[
 ⌯︙الفارسيه بالطرد
 ⌯︙البوتات بالطرد
 ⌯︙البوتات بالتقيد
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
-[🖥┇𝐒𝐎𝐔𝐑𝐂𝐄 𝐃𝐑𝐀𝐆𝐎𝐍 .](t.me/SrcDrg)➤
+●○━━━ -𝐗- ━━━○●
+[✗ 𝐬𝐨𝐮𝐫𝐜𝐞 -𝐗- ✗ .](t.me/SrcDrg)➤
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {{{text="• اوامر الادمنيه •",callback_data="/HelpList2:"..data.sender_user_id_}},{{text="• اوامر المنشئين •",callback_data="/HelpList4:"..data.sender_user_id_},{text="• اوامر المدراء •",callback_data="/HelpList3:"..data.sender_user_id_}},{{text="• اوامر الاعضاء •",callback_data="/HelpList6:"..data.sender_user_id_},{text="• اوامر المطورين •",callback_data="/HelpList5:"..data.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_}},{{text="• رجوع •",callback_data="/HelpList:"..data.sender_user_id_}}}
@@ -1426,7 +1634,7 @@ end
 local Help = bot_data:get(XBOT..'MARTEN:Help2')
 local Text = [[
 ⌯︙اوامر الادمنيه ↫ ⤈
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+●○━━━ -𝐗- ━━━○●
 ⌯︙الاعدادت
 ⌯︙تاك للكل 
 ⌯︙انشاء رابط
@@ -1445,25 +1653,25 @@ local Text = [[
 ⌯︙ضع • حذف ↫ قوانين
 ⌯︙اضف • حذف ↫ صلاحيه
 ⌯︙الصلاحيات • حذف الصلاحيات
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+●○━━━ -𝐗- ━━━○●
 ⌯︙ضع سبام + العدد
 ⌯︙ضع تكرار + العدد
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+●○━━━ -𝐗- ━━━○●
 ⌯︙رفع مميز • تنزيل مميز
 ⌯︙المميزين • حذف المميزين
 ⌯︙كشف القيود • رفع القيود
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+●○━━━ -𝐗- ━━━○●
 ⌯︙حذف • مسح + بالرد
 ⌯︙منع • الغاء منع
 ⌯︙قائمه المنع
 ⌯︙حذف قائمه المنع
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+●○━━━ -𝐗- ━━━○●
 ⌯︙تفعيل • تعطيل ↫ الرابط
 ⌯︙تفعيل • تعطيل ↫ الالعاب
 ⌯︙تفعيل • تعطيل ↫ الترحيب
 ⌯︙تفعيل • تعطيل ↫ التاك للكل
 ⌯︙تفعيل • تعطيل ↫ كشف الاعدادات
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+●○━━━ -𝐗- ━━━○●
 ⌯︙طرد المحذوفين
 ⌯︙طرد ↫ بالرد • بالمعرف • بالايدي
 ⌯︙كتم • الغاء كتم
@@ -1472,13 +1680,13 @@ local Text = [[
 ⌯︙المكتومين • حذف المكتومين
 ⌯︙المقيدين • حذف المقيدين
 ⌯︙المحظورين • حذف المحظورين
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+●○━━━ -𝐗- ━━━○●
 ⌯︙تقييد دقيقه + عدد الدقائق
 ⌯︙تقييد ساعه + عدد الساعات
 ⌯︙تقييد يوم + عدد الايام
 ⌯︙الغاء تقييد ↫ لالغاء التقييد بالوقت
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
-[🖥┇𝐒𝐎𝐔𝐑𝐂𝐄 𝐃𝐑𝐀𝐆𝐎𝐍 .](t.me/SrcDrg)➤
+●○━━━ -𝐗- ━━━○●
+[✗ 𝐬𝐨𝐮𝐫𝐜𝐞 -𝐗- ✗ .](t.me/SrcDrg)➤
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {{{text="• اوامر الحمايه •",callback_data="/HelpList1:"..data.sender_user_id_}},{{text="• اوامر المنشئين •",callback_data="/HelpList4:"..data.sender_user_id_},{text="• اوامر المدراء •",callback_data="/HelpList3:"..data.sender_user_id_}},{{text="• اوامر الاعضاء •",callback_data="/HelpList6:"..data.sender_user_id_},{text="• اوامر المطورين •",callback_data="/HelpList5:"..data.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_}},{{text="• رجوع •",callback_data="/HelpList:"..data.sender_user_id_}}}
@@ -1496,7 +1704,7 @@ end
 local Help = bot_data:get(XBOT..'MARTEN:Help3')
 local Text = [[
 ⌯︙اوامر المدراء ↫ ⤈
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+●○━━━ -𝐗- ━━━○●
 ⌯︙فحص البوت
 ⌯︙ضع اسم + الاسم
 ⌯︙اضف • حذف ↫ رد
@@ -1510,34 +1718,34 @@ local Text = [[
 ⌯︙منع ↫ بالرد على ( ملصق • صوره • متحركه )
 ⌯︙حذف قائمه منع + ↫ ⤈
 ( الصور • المتحركات • الملصقات )
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+●○━━━ -𝐗- ━━━○●
 ⌯︙تنزيل الكل
 ⌯︙رفع ادمن • تنزيل ادمن
 ⌯︙الادمنيه • حذف الادمنيه
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+●○━━━ -𝐗- ━━━○●
 ⌯︙تثبيت
 ⌯︙الغاء التثبيت
 ⌯︙اعاده التثبيت
 ⌯︙الغاء تثبيت الكل
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+●○━━━ -𝐗- ━━━○●
 ⌯︙تغير رد + اسم الرتبه + النص ↫ ⤈
 ⌯︙المطور • منشئ الاساسي
 ⌯︙المنشئ • المدير • الادمن
 ⌯︙المميز • المنظف • العضو
 ⌯︙حذف ردود الرتب
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+●○━━━ -𝐗- ━━━○●
 ⌯︙تغيير الايدي ↫ لتغيير الكليشه
 ⌯︙تعيين الايدي ↫ لتعيين الكليشه
 ⌯︙حذف الايدي ↫ لحذف الكليشه
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+●○━━━ -𝐗- ━━━○●
 ⌯︙تفعيل • تعطيل + الامر ↫ ⤈
 ⌯︙اطردني • الايدي بالصوره • الابراج
 ⌯︙معاني الاسماء • اوامر النسب • انطق
 ⌯︙الايدي • تحويل الصيغ • اوامر التحشيش
 ⌯︙ردود المدير • ردود المطور • التحقق
 ⌯︙ضافني • حساب العمر • الزخرفه • غنيلي
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
-[🖥┇𝐒𝐎𝐔𝐑𝐂𝐄 𝐃𝐑𝐀𝐆𝐎𝐍 .](t.me/SrcDrg)➤
+●○━━━ -𝐗- ━━━○●
+[✗ 𝐬𝐨𝐮𝐫𝐜𝐞 -𝐗- ✗ .](t.me/SrcDrg)➤
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {{{text="• اوامر الادمنيه •",callback_data="/HelpList2:"..data.sender_user_id_},{text="• اوامر الحمايه •",callback_data="/HelpList1:"..data.sender_user_id_}},{{text="• اوامر المنشئين •",callback_data="/HelpList4:"..data.sender_user_id_}},{{text="• اوامر الاعضاء •",callback_data="/HelpList6:"..data.sender_user_id_},{text="• اوامر المطورين •",callback_data="/HelpList5:"..data.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_}},{{text="• رجوع •",callback_data="/HelpList:"..data.sender_user_id_}}}
@@ -1555,7 +1763,7 @@ end
 local Help = bot_data:get(XBOT..'MARTEN:Help4')
 local Text = [[
 ⌯︙اوامر المنشئين ↫ ⤈
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+●○━━━ -𝐗- ━━━○●
 ⌯︙تنزيل الكل
 ⌯︙الميديا • امسح
 ⌯︙تعين عدد الحذف
@@ -1572,9 +1780,9 @@ local Text = [[
 ⌯︙تفعيل • تعطيل + الامر ↫ ⤈
 ⌯︙نزلني • امسح
 ⌯︙الحظر • الكتم
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+●○━━━ -𝐗- ━━━○●
 ⌯︙اوامر المنشئين الاساسيين ↫ ⤈
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+●○━━━ -𝐗- ━━━○●
 ⌯︙وضع لقب + اللقب
 ⌯︙تفعيل • تعطيل ↫ الرفع
 ⌯︙رفع منشئ • تنزيل منشئ
@@ -1582,15 +1790,15 @@ local Text = [[
 ⌯︙رفع • تنزيل ↫ مشرف
 ⌯︙رفع بكل الصلاحيات
 ⌯︙حذف القوائم
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+●○━━━ -𝐗- ━━━○●
 ⌯︙اوامر المالكين ↫ ⤈
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+●○━━━ -𝐗- ━━━○●
 ⌯︙رفع • تنزيل ↫ منشئ اساسي
 ⌯︙حذف المنشئين الاساسيين 
 ⌯︙المنشئين الاساسيين 
 ⌯︙حذف جميع الرتب
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
-[🖥┇𝐒𝐎𝐔𝐑𝐂𝐄 𝐃𝐑𝐀𝐆𝐎𝐍 .](t.me/SrcDrg)➤
+●○━━━ -𝐗- ━━━○●
+[✗ 𝐬𝐨𝐮𝐫𝐜𝐞 -𝐗- ✗ .](t.me/SrcDrg)➤
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {{{text="• اوامر الادمنيه •",callback_data="/HelpList2:"..data.sender_user_id_},{text="• اوامر الحمايه •",callback_data="/HelpList1:"..data.sender_user_id_}},{{text="• اوامر المدراء •",callback_data="/HelpList3:"..data.sender_user_id_}},{{text="• اوامر الاعضاء •",callback_data="/HelpList6:"..data.sender_user_id_},{text="• اوامر المطورين •",callback_data="/HelpList5:"..data.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_}},{{text="• رجوع •",callback_data="/HelpList:"..data.sender_user_id_}}}
@@ -1608,7 +1816,7 @@ end
 local Help = bot_data:get(XBOT..'MARTEN:Help5')
 local Text = [[
 ⌯︙اوامر المطورين ↫ ⤈
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+●○━━━ -𝐗- ━━━○●
 ⌯︙الكروبات
 ⌯︙المطورين
 ⌯︙المشتركين
@@ -1619,16 +1827,16 @@ local Text = [[
 ⌯︙كشف + -ايدي المجموعه
 ⌯︙رفع مالك • تنزيل مالك
 ⌯︙المالكين • حذف المالكين
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+●○━━━ -𝐗- ━━━○●
 ⌯︙رفع • تنزيل ↫ مدير عام
 ⌯︙حذف • المدراء العامين 
 ⌯︙رفع • تنزيل ↫ ادمن عام
 ⌯︙حذف • الادمنيه العامين 
 ⌯︙رفع • تنزيل ↫ مميز عام
 ⌯︙حذف • المميزين عام 
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+●○━━━ -𝐗- ━━━○●
 ⌯︙اوامر المطور الاساسي ↫ ⤈
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+●○━━━ -𝐗- ━━━○●
 ⌯︙تحديث
 ⌯︙الملفات
 ⌯︙المتجر
@@ -1662,15 +1870,15 @@ local Text = [[
 ⌯︙الثانويين • حذف الثانويين
 ⌯︙تعيين • حذف ↫ كليشة الايدي
 ⌯︙اذاعه للكل بالتوجيه ↫ بالرد
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+●○━━━ -𝐗- ━━━○●
 ⌯︙تفعيل ملف + اسم الملف
 ⌯︙تعطيل ملف + اسم الملف
 ⌯︙تفعيل • تعطيل + الامر ↫ ⤈
 ⌯︙الاذاعه • الاشتراك الاجباري
 ⌯︙ترحيب البوت • المغادره
 ⌯︙البوت الخدمي • التواصل
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
-[🖥┇𝐒𝐎𝐔𝐑𝐂𝐄 𝐃𝐑𝐀𝐆𝐎𝐍 .](t.me/SrcDrg)➤
+●○━━━ -𝐗- ━━━○●
+[✗ 𝐬𝐨𝐮𝐫𝐜𝐞 -𝐗- ✗ .](t.me/SrcDrg)➤
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {{{text="• اوامر الادمنيه •",callback_data="/HelpList2:"..data.sender_user_id_},{text="• اوامر الحمايه •",callback_data="/HelpList1:"..data.sender_user_id_}},{{text="• اوامر المنشئين •",callback_data="/HelpList4:"..data.sender_user_id_},{text="• اوامر المدراء •",callback_data="/HelpList3:"..data.sender_user_id_}},{{text="• اوامر الاعضاء •",callback_data="/HelpList6:"..data.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_}},{{text="• رجوع •",callback_data="/HelpList:"..data.sender_user_id_}}}
@@ -1685,7 +1893,7 @@ if tonumber(S0FI) == tonumber(data.sender_user_id_) then
 local Help = bot_data:get(XBOT..'MARTEN:Help6')
 local Text = [[
 ⌯︙اوامر الاعضاء ↫ ⤈
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+●○━━━ -𝐗- ━━━○●
 ⌯︙السورس • موقعي • رتبتي • معلوماتي 
 ⌯︙رقمي • لقبي • نبذتي • صلاحياتي • غنيلي
 ⌯︙رسائلي • حذف رسائلي • اسمي • معرفي 
@@ -1696,7 +1904,7 @@ local Text = [[
 ⌯︙ايدي المجموعه • معلومات المجموعه 
 ⌯︙نسبه الحب • نسبه الكره • نسبه الغباء 
 ⌯︙نسبه الرجوله • نسبه الانوثه • التفاعل
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+●○━━━ -𝐗- ━━━○●
 ⌯︙لقبه + بالرد
 ⌯︙كول + الكلمه
 ⌯︙زخرفه + اسمك
@@ -1711,8 +1919,8 @@ local Text = [[
 ⌯︙ايدي • كشف  ↫ بالرد • بالمعرف • بالايدي
 ⌯︙تحويل + بالرد ↫ صوره • ملصق • صوت • بصمه
 ⌯︙انطق + الكلام تدعم جميع اللغات مع الترجمه للعربي
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
-[🖥┇𝐒𝐎𝐔𝐑𝐂𝐄 𝐃𝐑𝐀𝐆𝐎𝐍 .](t.me/SrcDrg)➤
+●○━━━ -𝐗- ━━━○●
+[✗ 𝐬𝐨𝐮𝐫𝐜𝐞 -𝐗- ✗ .](t.me/SrcDrg)➤
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {{{text="• اوامر الادمنيه •",callback_data="/HelpList2:"..data.sender_user_id_},{text="• اوامر الحمايه •",callback_data="/HelpList1:"..data.sender_user_id_}},{{text="• اوامر المنشئين •",callback_data="/HelpList4:"..data.sender_user_id_},{text="• اوامر المدراء •",callback_data="/HelpList3:"..data.sender_user_id_}},{{text="• اوامر المطورين •",callback_data="/HelpList5:"..data.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_}},{{text="• رجوع •",callback_data="/HelpList:"..data.sender_user_id_}}}
@@ -1765,7 +1973,7 @@ end
 if Constructor(msg) then
 if text == "الاوامر المضافه" and ChCheck(msg) then
 local List = bot_data:smembers(XBOT.."List:Cmd:Group:New"..msg.chat_id_.."") 
-t = "⌯︙قائمة الاوامر المضافه ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n"
+t = "⌯︙قائمة الاوامر المضافه ↫ ⤈ \n●○━━━ -𝐗- ━━━○●\n"
 for k,v in pairs(List) do
 Cmds = bot_data:get(XBOT.."Set:Cmd:Group:New1"..msg.chat_id_..":"..v)
 if Cmds then 
@@ -1814,7 +2022,7 @@ bot_data:set(XBOT.."Set:Cmd:Group:New1"..msg.chat_id_..":سح","مسح سحكا�
 bot_data:sadd(XBOT.."List:Cmd:Group:New"..msg.chat_id_,"سح")
 bot_data:set(XBOT.."Set:Cmd:Group:New1"..msg.chat_id_..":تغ","تغير الايدي")
 bot_data:sadd(XBOT.."List:Cmd:Group:New"..msg.chat_id_,"تغ")
-local text = "⌯︙ تم ترتيب الاوامر بالشكل التالي :\nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n• ايدي ↫ ا\n• رفع مميز ↫ م\n• رفع ادمن ↫ اد\n• رفع مدير ↫ مد\n• رفع منشئ ↫ من\n• رفع منشئ اساسي ↫ اس\n• تفعيل الايدي بالصوره ↫ تفع\n• تعطيل الايدي بالصوره ↫ تعط\n• تنزيل الكل ↫ تك\n• اضف رد ↫ رد\n• مسح رسائلي ↫ رس\n• مسح سحكاتي ↫ سح\n• تغير الايدي ↫ تغ\nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ"
+local text = "⌯︙ تم ترتيب الاوامر بالشكل التالي :\n●○━━━ -𝐗- ━━━○●\n• ايدي ↫ ا\n• رفع مميز ↫ م\n• رفع ادمن ↫ اد\n• رفع مدير ↫ مد\n• رفع منشئ ↫ من\n• رفع منشئ اساسي ↫ اس\n• تفعيل الايدي بالصوره ↫ تفع\n• تعطيل الايدي بالصوره ↫ تعط\n• تنزيل الكل ↫ تك\n• اضف رد ↫ رد\n• مسح رسائلي ↫ رس\n• مسح سحكاتي ↫ سح\n• تغير الايدي ↫ تغ\n●○━━━ -𝐗- ━━━○●"
 send_X(msg.chat_id_, msg.id_, 1, text, 1, "md")
 end
 --     Source XBOT     --
@@ -1836,7 +2044,7 @@ if #List == 0 then
 send_X(msg.chat_id_, msg.id_, 1, "⌯︙لاتوجد صلاحيات مضافه", 1, 'html')
 return false
 end
-t = "⌯︙قائمة الصلاحيات المضافه ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n"
+t = "⌯︙قائمة الصلاحيات المضافه ↫ ⤈ \n●○━━━ -𝐗- ━━━○●\n"
 for k,v in pairs(List) do
 var = bot_data:get(XBOT.."Comd:New:rt:MARTEN:"..v..msg.chat_id_)
 if var then
@@ -2155,8 +2363,8 @@ if res == 200 then
 local Get_info, res = pcall(JSON.decode,Get_Files);
 vardump(res.plugins_)
 if Get_info then
-local TextS = "\n⌯︙قائمة ملفات متجر سورس اكس\n⌯︙الملفات المتوفره حاليا ↫ ⤈\nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ \n"
-local TextE = "ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ \n⌯︙علامة ↫ (✔) تعني الملف مفعل\n⌯︙علامة ↫ (✖️) تعني الملف معطل\n"
+local TextS = "\n⌯︙قائمة ملفات متجر سورس اكس\n⌯︙الملفات المتوفره حاليا ↫ ⤈\n●○━━━ -𝐗- ━━━○● \n"
+local TextE = "●○━━━ -𝐗- ━━━○● \n⌯︙علامة ↫ (✔) تعني الملف مفعل\n⌯︙علامة ↫ (✖️) تعني الملف معطل\n"
 local NumFile = 0
 for name,Info in pairs(res.plugins_) do
 local CheckFileisFound = io.open("Shop_XBOT/"..name,"r")
@@ -2410,7 +2618,7 @@ local NameChat = NameChat:gsub("*","")
 local NameChat = NameChat:gsub("{","") 
 local NameChat = NameChat:gsub("}","") 
 if not Sudo(msg) and not Bot(msg) then
-SendText(xBoT,"⌯︙تم طرد البوت من المجموعه ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n⌯︙بواسطة ↫ "..Name.."\n⌯︙اسم المجموعه ↫ ["..NameChat.."]\n⌯︙ايدي المجموعه ↫ ⤈ \n❨ `"..msg.chat_id_.."` ❩\nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n⌯︙الوقت ↫ "..os.date("%I:%M%p").."\n⌯︙التاريخ ↫ "..os.date("%Y/%m/%d").."",0,'md')
+SendText(xBoT,"⌯︙تم طرد البوت من المجموعه ↫ ⤈ \n●○━━━ -𝐗- ━━━○●\n⌯︙بواسطة ↫ "..Name.."\n⌯︙اسم المجموعه ↫ ["..NameChat.."]\n⌯︙ايدي المجموعه ↫ ⤈ \n❨ `"..msg.chat_id_.."` ❩\n●○━━━ -??- ━━━○●\n⌯︙الوقت ↫ "..os.date("%I:%M%p").."\n⌯︙التاريخ ↫ "..os.date("%Y/%m/%d").."",0,'md')
 end
 end,nil)
 end,nil)
@@ -2468,11 +2676,11 @@ bot_data:sadd(XBOT..'MARTEN:Admins:'..msg.chat_id_, admins[i].user_id_)
 end
 if MaRTeN.members_[i].status_.ID == "ChatMemberStatusCreator" then
 bot_data:sadd(XBOT.."MARTEN:BasicConstructor:"..msg.chat_id_,admins[i].user_id_)
-bot_data:sadd(XBOT.."MARTEN:MARTENConstructor:"..msg.chat_id_,admins[i].user_id_)
+bot_data:sadd(XBOT.."MARTEN:Owner:"..msg.chat_id_,admins[i].user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = admins[i].user_id_},function(arg,ba) 
 if ba.first_name_ == false then
 bot_data:srem(XBOT.."MARTEN:BasicConstructor:"..msg.chat_id_,admins[i].user_id_)
-bot_data:srem(XBOT.."MARTEN:MARTENConstructor:"..msg.chat_id_,admins[i].user_id_)
+bot_data:srem(XBOT.."MARTEN:Owner:"..msg.chat_id_,admins[i].user_id_)
 end
 end,nil)  
 end 
@@ -2511,7 +2719,7 @@ else
 LinkGroup = 'لا يوجد'
 end
 bot_data:set(XBOT.."MARTEN:Groups:Links"..msg.chat_id_,LinkGroup) 
-SendText(xBoT,"⌯︙تم تفعيل مجموعه جديده ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n⌯︙بواسطة ↫ "..Name.."\n⌯︙موقعه في المجموعه ↫ "..status.."\n⌯︙اسم المجموعه ↫ ["..NameChat.."]\n⌯︙عدد اعضاء المجموعه ↫ ❨ *"..NumMem.."* ❩\n⌯︙ايدي المجموعه ↫ ⤈ \n❨ `"..msg.chat_id_.."` ❩\n⌯︙رابط المجموعه ↫ ⤈\n❨ ["..LinkGroup.."] ❩\nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n⌯︙الوقت ↫ "..os.date("%I:%M%p").."\n⌯︙التاريخ ↫ "..os.date("%Y/%m/%d").."",0,'md')
+SendText(xBoT,"⌯︙تم تفعيل مجموعه جديده ↫ ⤈ \n●○━━━ -𝐗- ━━━○●\n⌯︙بواسطة ↫ "..Name.."\n⌯︙موقعه في المجموعه ↫ "..status.."\n⌯︙اسم المجموعه ↫ ["..NameChat.."]\n⌯︙عدد اعضاء المجموعه ↫ ❨ *"..NumMem.."* ❩\n⌯︙ايدي المجموعه ↫ ⤈ \n❨ `"..msg.chat_id_.."` ❩\n⌯︙رابط المجموعه ↫ ⤈\n❨ ["..LinkGroup.."] ❩\n●○━━━ -𝐗- ━━━○●\n⌯︙الوقت ↫ "..os.date("%I:%M%p").."\n⌯︙التاريخ ↫ "..os.date("%Y/%m/%d").."",0,'md')
 end
 end end
 end,nil)
@@ -3145,7 +3353,7 @@ for i=0,#msg.content_.members_ do
 BotWelcome = msg.content_.members_[i].id_    
 if BotWelcome and BotWelcome == tonumber(XBOT) then 
 if bot_data:sismember(XBOT..'MARTEN:Groups',msg.chat_id_) then BotText = "مفعله في السابق\n⌯︙ارسل ↫ الاوامر واستمتع بالمميزيات" else BotText = "معطله يجب رفعي مشرف\n⌯︙بعد ذلك يرجى ارسال امر ↫ تفعيل\n⌯︙سيتم رفع الادمنيه والمنشئ تلقائيا" end 
-if bot_data:get(XBOT.."MARTEN:Text:BotWelcome") then MARTENText = bot_data:get(XBOT.."MARTEN:Text:BotWelcome") else MARTENText = "⌯︙مرحبا انا بوت اسمي "..NameBot.."\n⌯︙حالة المجموعه ↫ "..BotText.."\nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ" end 
+if bot_data:get(XBOT.."MARTEN:Text:BotWelcome") then MARTENText = bot_data:get(XBOT.."MARTEN:Text:BotWelcome") else MARTENText = "⌯︙مرحبا انا بوت اسمي "..NameBot.."\n⌯︙حالة المجموعه ↫ "..BotText.."\n●○━━━ -𝐗- ━━━○●" end 
 if bot_data:get(XBOT.."MARTEN:Photo:BotWelcome") then MARTENPhoto = bot_data:get(XBOT.."MARTEN:Photo:BotWelcome") elseif MaRTeN.photos_[0] then MARTENPhoto = MaRTeN.photos_[0].sizes_[1].photo_.persistent_id_ else MARTENPhoto = nil end 
 if MARTENPhoto ~= nil then
 sendPhoto(msg.chat_id_,msg.id_,0,1,nil,MARTENPhoto,MARTENText)
@@ -3502,7 +3710,7 @@ st = https.request('https://boyka-api.ml/ImageInfo.php?token='..TokenBot..'&url=
 eker = JSON.decode(st)
 if eker.ok.Info == "Indecent" then
 local list = bot_data:smembers(XBOT.."MARTEN:BasicConstructor:"..msg.chat_id_)
-t = "⌯︙المنشئين الاساسين تعالو مخرب \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n"
+t = "⌯︙المنشئين الاساسين تعالو مخرب \n●○━━━ -𝐗- ━━━○●\n"
 for k,v in pairs(list) do
 local username = bot_data:get(XBOT.."Save:UserName" .. v)
 if username then
@@ -3524,7 +3732,7 @@ Srrt = https.request('https://boyka-api.ml/ImageInfo.php?token='..TokenBot..'&ur
 Sto = JSON.decode(Srrt)
 if Sto.ok.Info == "Indecent" then
 local list = bot_data:smembers(XBOT.."MARTEN:BasicConstructor:"..msg.chat_id_)
-t = "⌯︙  المنشئين الاساسين تعالو مخرب \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n"
+t = "⌯︙  المنشئين الاساسين تعالو مخرب \n●○━━━ -𝐗- ━━━○●\n"
 for k,v in pairs(list) do
 local username = bot_data:get(XBOT.."Save:UserName" .. v)
 if username then
@@ -3625,7 +3833,7 @@ for k,v in pairs(List) do
 LinkGroups = bot_data:get(XBOT.."MARTEN:Groups:Links"..v)
 Welcomes = bot_data:get(XBOT..'MARTEN:Groups:Welcomes'..v) or ''
 Welcomes = Welcomes:gsub('"',"") Welcomes = Welcomes:gsub("'","") Welcomes = Welcomes:gsub(",","") Welcomes = Welcomes:gsub("*","") Welcomes = Welcomes:gsub(";","") Welcomes = Welcomes:gsub("`","") Welcomes = Welcomes:gsub("{","") Welcomes = Welcomes:gsub("}","") 
-MARTENConstructors = bot_data:smembers(XBOT..'MARTEN:MARTENConstructor:'..v)
+Owners = bot_data:smembers(XBOT..'MARTEN:Owner:'..v)
 Constructors = bot_data:smembers(XBOT..'MARTEN:BasicConstructor:'..v)
 BasicConstructors = bot_data:smembers(XBOT..'MARTEN:Constructor:'..v)
 Managers = bot_data:smembers(XBOT..'MARTEN:Managers:'..v)
@@ -3691,9 +3899,9 @@ end
 end   
 GetJson = GetJson..'],'
 end
-if #MARTENConstructors ~= 0 then
-GetJson = GetJson..'"MARTENConstructors":['
-for k,v in pairs(MARTENConstructors) do
+if #Owners ~= 0 then
+GetJson = GetJson..'"Owners":['
+for k,v in pairs(Owners) do
 if k == 1 then
 GetJson =  GetJson..'"'..v..'"'
 else
@@ -3722,7 +3930,7 @@ GetJson = GetJson..'}}'
 local File = io.open('./'..XBOT..'.json', "w")
 File:write(GetJson)
 File:close()
-sendDocument(msg.chat_id_, msg.id_, 0, 1, nil, './'..XBOT..'.json', '⌯︙يحتوي الملف  \n    • على ↫ '..#List..' مجموعه\n    • وايضاَ ↫ '..#Members..' مشتركين\nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ',dl_cb, nil)
+sendDocument(msg.chat_id_, msg.id_, 0, 1, nil, './'..XBOT..'.json', '⌯︙يحتوي الملف  \n    • على ↫ '..#List..' مجموعه\n    • وايضاَ ↫ '..#Members..' مشتركين\n●○━━━ -𝐗- ━━━○●',dl_cb, nil)
 io.popen('rm -rf ./'..XBOT..'.json')
 end
 if text and (text == '+-رفع النسخه' or text == '+-رفع النسخه الاحتياطيه' or text == '+-رفع نسخه الاحتياطيه') and tonumber(msg.reply_to_message_id_) > 0 then   
@@ -3814,14 +4022,14 @@ end
 tdcli_function({ID ="GetChat",chat_id_=msg.chat_id_},function(arg,ta) 
 local link = bot_data:get(XBOT.."MARTEN:Groups:Links"..msg.chat_id_)            
 if link then  
-local textLink = '⌯︙🌐 Group Link ↬ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n• ['..ta.title_..']('..link..')'  
+local textLink = '⌯︙🌐 Group Link ↬ ⤈ \n●○━━━ -𝐗- ━━━○●\n• ['..ta.title_..']('..link..')'  
 local inline = {{{text = '• '..ta.title_..' •',url=''..link}},}
 msg_id =  msg.id_/2097152/0.5
 SendInline(msg.chat_id_,textLink,nil,inline,msg_id) 
 else                
 local linkgpp = json:decode(https.request('https://api.telegram.org/bot'..TokenBot..'/exportChatInviteLink?chat_id='..msg.chat_id_))
 if linkgpp.ok == true then 
-linkgp = '⌯︙🌐 Group Link ↬ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n• ['..ta.title_..']('..linkgpp.result..')'
+linkgp = '⌯︙🌐 Group Link ↬ ⤈ \n●○━━━ -𝐗- ━━━○●\n• ['..ta.title_..']('..linkgpp.result..')'
 local inline = {{{text = '• '..ta.title_..' •',url=''..linkgpp.result}},}
 msg_id =  msg.id_/2097152/0.5
 SendInline(msg.chat_id_,linkgp,nil,inline,msg_id) 
@@ -4528,7 +4736,7 @@ if text == 'خمن' and ChCheck(msg) or text == 'تخمين' and ChCheck(msg) th
 if not bot_data:get(XBOT..'MARTEN:Lock:Games'..msg.chat_id_) then
 Num = math.random(1,20)
 bot_data:set(XBOT.."GAMES:NUM"..msg.chat_id_,Num) 
-send_X(msg.chat_id_, msg.id_, 1,'⌯︙اهلا بك عزيزي في لعبة التخمين ↫ ⤈\n ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n⌯︙سيتم تخمين عدد ما بين الـ1 والـ20 اذا تعتقد انك تستطيع الفوز جرب واللعب الان .\n⌯︙ملاحظه لديك ثلاث محاولات فقط فكر قبل ارسال تخمينك !', 1, 'md')
+send_X(msg.chat_id_, msg.id_, 1,'⌯︙اهلا بك عزيزي في لعبة التخمين ↫ ⤈\n ●○━━━ -𝐗- ━━━○●\n⌯︙سيتم تخمين عدد ما بين الـ1 والـ20 اذا تعتقد انك تستطيع الفوز جرب واللعب الان .\n⌯︙ملاحظه لديك ثلاث محاولات فقط فكر قبل ارسال تخمينك !', 1, 'md')
 bot_data:setex(XBOT.."GAME:TKMEN"..msg.chat_id_.."" .. msg.sender_user_id_, 100, true)  
 return false  
 end
@@ -4602,7 +4810,7 @@ if text and (text == 'الالعاب' or text == 'العاب' or text == 'الل
 if not bot_data:get(XBOT..'MARTEN:Lock:Games'..msg.chat_id_) then
 send_X(msg.chat_id_, msg.id_, 1,[[
 ⌯︙قائمة العاب المجموعه ↫ ⤈
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+●○━━━ -𝐗- ━━━○●
 ⌯︙لعبة التخمين ↫ خمن
 ⌯︙لعبة الامثله ↫ امثله
 ⌯︙لعبة العكس ↫ العكس
@@ -4617,10 +4825,10 @@ send_X(msg.chat_id_, msg.id_, 1,[[
 ⌯︙لعبة المحيبس ↫ المحيبس
 ⌯︙لعبة الرياضيات ↫ رياضيات
 ⌯︙لعبة الانكليزيه ↫ انكليزيه
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+●○━━━ -𝐗- ━━━○●
 ⌯︙نقاطي • بيع نقاطي
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
-[🖥┇𝐒𝐎𝐔𝐑𝐂𝐄 𝐃𝐑𝐀𝐆𝐎𝐍 .](t.me/SrcDrg)➤
+●○━━━ -𝐗- ━━━○●
+[✗ 𝐬𝐨𝐮𝐫𝐜𝐞 -𝐗- ✗ .](t.me/SrcDrg)➤
 ]], 1, 'md')
 else
 send_X(msg.chat_id_, msg.id_, 1, '⌯︙عذرا الالعاب معطله في المجموعه', 1, 'md')
@@ -4685,7 +4893,7 @@ end
 if MaRTeN.members_[i].status_.ID == "ChatMemberStatusCreator" then  
 Manager_id = admins[i].user_id_  
 bot_data:sadd(XBOT..'MARTEN:BasicConstructor:'..msg.chat_id_,Manager_id)  
-bot_data:sadd(XBOT..'MARTEN:MARTENConstructor:'..msg.chat_id_,Manager_id)   
+bot_data:sadd(XBOT..'MARTEN:Owner:'..msg.chat_id_,Manager_id)   
 end  
 end  
 if num == 0 then
@@ -4816,12 +5024,12 @@ if text == "السورس" or text == "سورس" or text == "يا سورس" or te
 local Text =[[
 ⦑ Welcome to Source ⦒
  ⦑ SOURCE DRAGON ⦒ 
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ 
+●○━━━ -𝐗- ━━━○● 
 ⌯︙ [Source Channel](t.me/SrcDrg)
 ⌯︙ [Source Update ](t.me/FIDRG) 
 ⌯︙ [Source developer](t.me/MaRTeN_Vs_WoRLd) 
 ⌯︙ [Source programmer](t.me/mndzr) 
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ 
+●○━━━ -𝐗- ━━━○● 
 𓂅 . [TWS DRAGON](t.me/S0DRGbot) 
 ]]
 keyboard = {} 
@@ -4903,7 +5111,7 @@ if Admin(msg) then
 if text == "تاك للكل" and ChCheck(msg) then
 if not bot_data:get(XBOT..'MARTEN:Lock:TagAll'..msg.chat_id_) then
 function TagAll(dp1,dp2)
-local text = "⌯︙وينكم يالربع \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n"
+local text = "⌯︙وينكم يالربع \n●○━━━ -𝐗- ━━━○●\n"
 i = 0
 for k, v in pairs(dp2.members_) do
 i = i + 1
@@ -4923,7 +5131,7 @@ if text and text:match("^كللهم (.*)$") and ChCheck(msg) then
 local txt = {string.match(text, "^(كللهم) (.*)$")}
 if not bot_data:get(XBOT..'MARTEN:Lock:TagAll'..msg.chat_id_) then
 function TagAll(dp1,dp2)
-local text = "⌯︙"..txt[2].." \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n"
+local text = "⌯︙"..txt[2].." \n●○━━━ -𝐗- ━━━○●\n"
 i = 0
 for k, v in pairs(dp2.members_) do
 i = i + 1
@@ -5044,7 +5252,7 @@ if tonumber(result.id_) == tonumber(xBoT) then
 send_X(msg.chat_id_, msg.id_, 1, 'دي لڪك تريد اهينن تاج راسڪك؟😏🖕🏿', 1, 'md') 
 return false  
 end  
-if bot_data:sismember(XBOT.."MARTEN:MARTENConstructor:"..msg.chat_id_,result.id_) then
+if bot_data:sismember(XBOT.."MARTEN:Owner:"..msg.chat_id_,result.id_) then
 send_X(msg.chat_id_, msg.id_, 1, 'دي لڪك تريد اهينن تاج راسڪك؟😏🖕🏿', 1, 'md')
 return false
 end 
@@ -5079,7 +5287,7 @@ if tonumber(result.sender_user_id_) == tonumber(xBoT) then
 send_X(msg.chat_id_, msg.id_, 1, 'دي لڪك تريد اهينن تاج راسڪك؟😏🖕🏿', 1, 'md')
 return false
 end 
-if bot_data:sismember(XBOT.."MARTEN:MARTENConstructor:"..msg.chat_id_,result.sender_user_id_) then
+if bot_data:sismember(XBOT.."MARTEN:Owner:"..msg.chat_id_,result.sender_user_id_) then
 send_X(msg.chat_id_, msg.id_, 1, 'دي لڪك تريد اهينن تاج راسڪك؟😏🖕🏿', 1, 'md')
 return false
 end 
@@ -5193,7 +5401,7 @@ if bot_data:sismember(XBOT..'MARTEN:AdminAll:',result.sender_user_id_) then
 adminall = 'الادمنيه العامين • ' else adminall = '' end
 if bot_data:sismember(XBOT..'MARTEN:VipAll:',result.sender_user_id_) then
 vpall = 'المميزين العامين • ' else vpall = '' end
-if bot_data:sismember(XBOT..'MARTEN:MARTENConstructor:'..msg.chat_id_, result.sender_user_id_) then
+if bot_data:sismember(XBOT..'MARTEN:Owner:'..msg.chat_id_, result.sender_user_id_) then
 lordConstructor = 'المالكين • ' else lordConstructor = '' end
 if bot_data:sismember(XBOT..'MARTEN:BasicConstructor:'..msg.chat_id_, result.sender_user_id_) then
 basicconstructor = 'المنشئين الاساسيين • ' else basicconstructor = '' end
@@ -5219,7 +5427,7 @@ bot_data:srem(XBOT..'MARTEN:SudoBot:', result.sender_user_id_)
 bot_data:srem(XBOT..'MARTEN:ManagerAll:', result.sender_user_id_)
 bot_data:srem(XBOT..'MARTEN:AdminAll:', result.sender_user_id_)
 bot_data:srem(XBOT..'MARTEN:VipAll:', result.sender_user_id_)
-bot_data:srem(XBOT..'MARTEN:MARTENConstructor:'..msg.chat_id_,result.sender_user_id_)
+bot_data:srem(XBOT..'MARTEN:Owner:'..msg.chat_id_,result.sender_user_id_)
 bot_data:srem(XBOT..'MARTEN:BasicConstructor:'..msg.chat_id_,result.sender_user_id_)
 bot_data:srem(XBOT..'MARTEN:Constructor:'..msg.chat_id_,result.sender_user_id_)
 bot_data:srem(XBOT..'MARTEN:Managers:'..msg.chat_id_, result.sender_user_id_)
@@ -5231,7 +5439,7 @@ bot_data:srem(XBOT..'MARTEN:SudoBot:', result.sender_user_id_)
 bot_data:srem(XBOT..'MARTEN:ManagerAll:', result.sender_user_id_)
 bot_data:srem(XBOT..'MARTEN:AdminAll:', result.sender_user_id_)
 bot_data:srem(XBOT..'MARTEN:VipAll:', result.sender_user_id_)
-bot_data:srem(XBOT..'MARTEN:MARTENConstructor:'..msg.chat_id_,result.sender_user_id_)
+bot_data:srem(XBOT..'MARTEN:Owner:'..msg.chat_id_,result.sender_user_id_)
 bot_data:srem(XBOT..'MARTEN:BasicConstructor:'..msg.chat_id_,result.sender_user_id_)
 bot_data:srem(XBOT..'MARTEN:Constructor:'..msg.chat_id_,result.sender_user_id_)
 bot_data:srem(XBOT..'MARTEN:Managers:'..msg.chat_id_, result.sender_user_id_)
@@ -5246,10 +5454,10 @@ bot_data:srem(XBOT..'MARTEN:Admins:'..msg.chat_id_, result.sender_user_id_)
 bot_data:srem(XBOT..'MARTEN:VipMem:'..msg.chat_id_, result.sender_user_id_)
 bot_data:srem(XBOT..'MARTEN:Managers:'..msg.chat_id_, result.sender_user_id_)
 bot_data:srem(XBOT..'MARTEN:Constructor:'..msg.chat_id_,result.sender_user_id_)
-bot_data:srem(XBOT..'MARTEN:MARTENConstructor:'..msg.chat_id_,result.sender_user_id_)
+bot_data:srem(XBOT..'MARTEN:Owner:'..msg.chat_id_,result.sender_user_id_)
 bot_data:srem(XBOT..'MARTEN:BasicConstructor:'..msg.chat_id_,result.sender_user_id_)
 bot_data:srem(XBOT..'MARTEN:Cleaner:'..msg.chat_id_, result.sender_user_id_)
-elseif MARTENDelAll(msg.sender_user_id_,msg.chat_id_) == 'MARTENconstructor' then
+elseif MARTENDelAll(msg.sender_user_id_,msg.chat_id_) == 'Owner' then
 bot_data:srem(XBOT..'MARTEN:Admins:'..msg.chat_id_, result.sender_user_id_)
 bot_data:srem(XBOT..'MARTEN:VipMem:'..msg.chat_id_, result.sender_user_id_)
 bot_data:srem(XBOT..'MARTEN:Managers:'..msg.chat_id_, result.sender_user_id_)
@@ -5292,7 +5500,7 @@ if bot_data:sismember(XBOT..'MARTEN:AdminAll:',result.id_) then
 adminall = 'الادمنيه العامين • ' else adminall = '' end
 if bot_data:sismember(XBOT..'MARTEN:VipAll:',result.id_) then
 vpall = 'المميزين العامين • ' else vpall = '' end
-if bot_data:sismember(XBOT..'MARTEN:MARTENConstructor:'..msg.chat_id_, result.id_) then
+if bot_data:sismember(XBOT..'MARTEN:Owner:'..msg.chat_id_, result.id_) then
 lordConstructor = 'المالكين • ' else lordConstructor = '' end
 if bot_data:sismember(XBOT..'MARTEN:BasicConstructor:'..msg.chat_id_, result.id_) then
 basicconstructor = 'المنشئين الاساسيين • ' else basicconstructor = '' end
@@ -5318,7 +5526,7 @@ bot_data:srem(XBOT..'MARTEN:SudoBot:', result.id_)
 bot_data:srem(XBOT..'MARTEN:ManagerAll:', result.id_)
 bot_data:srem(XBOT..'MARTEN:AdminAll:', result.id_)
 bot_data:srem(XBOT..'MARTEN:VipAll:', result.id_)
-bot_data:srem(XBOT..'MARTEN:MARTENConstructor:'..msg.chat_id_,result.id_)
+bot_data:srem(XBOT..'MARTEN:Owner:'..msg.chat_id_,result.id_)
 bot_data:srem(XBOT..'MARTEN:BasicConstructor:'..msg.chat_id_,result.id_)
 bot_data:srem(XBOT..'MARTEN:Constructor:'..msg.chat_id_,result.id_)
 bot_data:srem(XBOT..'MARTEN:Managers:'..msg.chat_id_, result.id_)
@@ -5330,7 +5538,7 @@ bot_data:srem(XBOT..'MARTEN:SudoBot:', result.id_)
 bot_data:srem(XBOT..'MARTEN:ManagerAll:', result.id_)
 bot_data:srem(XBOT..'MARTEN:AdminAll:', result.id_)
 bot_data:srem(XBOT..'MARTEN:VipAll:', result.id_)
-bot_data:srem(XBOT..'MARTEN:MARTENConstructor:'..msg.chat_id_,result.id_)
+bot_data:srem(XBOT..'MARTEN:Owner:'..msg.chat_id_,result.id_)
 bot_data:srem(XBOT..'MARTEN:BasicConstructor:'..msg.chat_id_,result.id_)
 bot_data:srem(XBOT..'MARTEN:Constructor:'..msg.chat_id_,result.id_)
 bot_data:srem(XBOT..'MARTEN:Managers:'..msg.chat_id_, result.id_)
@@ -5345,10 +5553,10 @@ bot_data:srem(XBOT..'MARTEN:Admins:'..msg.chat_id_, result.id_)
 bot_data:srem(XBOT..'MARTEN:VipMem:'..msg.chat_id_, result.id_)
 bot_data:srem(XBOT..'MARTEN:Managers:'..msg.chat_id_, result.id_)
 bot_data:srem(XBOT..'MARTEN:Constructor:'..msg.chat_id_,result.id_)
-bot_data:srem(XBOT..'MARTEN:MARTENConstructor:'..msg.chat_id_,result.id_)
+bot_data:srem(XBOT..'MARTEN:Owner:'..msg.chat_id_,result.id_)
 bot_data:srem(XBOT..'MARTEN:BasicConstructor:'..msg.chat_id_,result.id_)
 bot_data:srem(XBOT..'MARTEN:Cleaner:'..msg.chat_id_, result.id_)
-elseif MARTENDelAll(msg.sender_user_id_,msg.chat_id_) == 'MARTENconstructor' then
+elseif MARTENDelAll(msg.sender_user_id_,msg.chat_id_) == 'Owner' then
 bot_data:srem(XBOT..'MARTEN:Admins:'..msg.chat_id_, result.id_)
 bot_data:srem(XBOT..'MARTEN:VipMem:'..msg.chat_id_, result.id_)
 bot_data:srem(XBOT..'MARTEN:Managers:'..msg.chat_id_, result.id_)
@@ -5641,12 +5849,12 @@ bot_data:srem(XBOT..'MARTEN:VipAll:',user)
 ReplyStatus(msg,user,"Reply","⌯︙تم تنزيله من قائمة المميزين العام")  
 end end
 --     Source XBOT     --
---   Set MARTENConstructor   --
+--   Set Owner   --
 if ChatType == 'sp' or ChatType == 'gp'  then
 if SudoBot(msg) then
 if text ==('رفع مالك') and ChCheck(msg) then
 function raf_reply(extra, result, success)
-bot_data:sadd(XBOT..'MARTEN:MARTENConstructor:'..msg.chat_id_,result.sender_user_id_)
+bot_data:sadd(XBOT..'MARTEN:Owner:'..msg.chat_id_,result.sender_user_id_)
 ReplyStatus(msg,result.sender_user_id_,"Reply","⌯︙تم رفعه مالك\n✓")  
 end 
 if tonumber(tonumber(msg.reply_to_message_id_)) > 0 then
@@ -5656,7 +5864,7 @@ if text and text:match('^رفع مالك @(.*)') and ChCheck(msg) then
 local username = text:match('^رفع مالك @(.*)')
 function promreply(extra,result,success)
 if result.id_ then
-bot_data:sadd(XBOT..'MARTEN:MARTENConstructor:'..msg.chat_id_,result.id_)
+bot_data:sadd(XBOT..'MARTEN:Owner:'..msg.chat_id_,result.id_)
 ReplyStatus(msg,result.id_,"Reply","⌯︙تم رفعه مالك\n✓")  
 else 
 send_X(msg.chat_id_, msg.id_, 1, '⌯︙*المعرف غير صحيح*', 1, 'md')
@@ -5665,11 +5873,11 @@ resolve_username(username,promreply)
 end
 if text and text:match('^رفع مالك (%d+)') and ChCheck(msg) then
 local user = text:match('رفع مالك (%d+)')
-bot_data:sadd(XBOT..'MARTEN:MARTENConstructor:'..msg.chat_id_,user)
+bot_data:sadd(XBOT..'MARTEN:Owner:'..msg.chat_id_,user)
 ReplyStatus(msg,user,"Reply","⌯︙تم رفعه مالك\n✓")  
 end
 --     Source XBOT     --
---   Rem MARTENConstructor   --
+--   Rem Owner   --
 if text ==('تنزيل مالك') and ChCheck(msg) then
 function prom_reply(extra, result, success)
 tdcli_function ({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub("-100",""),filter_ = {ID = "ChannelMembersAdministrators"},offset_ = 0,limit_ = 100},function(arg,data) 
@@ -5679,7 +5887,7 @@ if data.members_[i].status_.ID == "ChatMemberStatusCreator" then
 if tonumber(result.sender_user_id_) == tonumber(admins[i].user_id_) then  
 send_X(msg.chat_id_, msg.id_, 1, '⌯︙لا يمكن تنزيل المالك الاساسي', 1, 'md')
 else
-bot_data:srem(XBOT..'MARTEN:MARTENConstructor:'..msg.chat_id_,result.sender_user_id_)
+bot_data:srem(XBOT..'MARTEN:Owner:'..msg.chat_id_,result.sender_user_id_)
 ReplyStatus(msg,result.sender_user_id_,"Reply","⌯︙تم تنزيله من المالكين\n✓")  
 end end end
 end,nil)
@@ -5699,7 +5907,7 @@ if data.members_[i].status_.ID == "ChatMemberStatusCreator" then
 if tonumber(result.id_) == tonumber(admins[i].user_id_) then  
 send_X(msg.chat_id_, msg.id_, 1, '⌯︙لا يمكن تنزيل المالك الاساسي', 1, 'md')
 else
-bot_data:srem(XBOT..'MARTEN:MARTENConstructor:'..msg.chat_id_,result.id_)
+bot_data:srem(XBOT..'MARTEN:Owner:'..msg.chat_id_,result.id_)
 ReplyStatus(msg,result.id_,"Reply","⌯︙تم تنزيله من المالكين")  
 end end end
 end,nil)
@@ -5717,14 +5925,14 @@ if data.members_[i].status_.ID == "ChatMemberStatusCreator" then
 if tonumber(user) == tonumber(admins[i].user_id_) then  
 send_X(msg.chat_id_, msg.id_, 1, '⌯︙لا يمكن تنزيل المالك الاساسي', 1, 'md')
 else
-bot_data:srem(XBOT..'MARTEN:MARTENConstructor:'..msg.chat_id_,user)
+bot_data:srem(XBOT..'MARTEN:Owner:'..msg.chat_id_,user)
 ReplyStatus(msg,user,"Reply","⌯︙تم تنزيله من المالكين")  
 end end end
 end,nil)
 end end
 --     Source XBOT     --
 --  Set BasicConstructor  --
-if MARTENConstructor(msg) then
+if Owner(msg) then
 if text ==('رفع منشئ اساسي') and ChCheck(msg) then
 function raf_reply(extra, result, success)
 bot_data:sadd(XBOT..'MARTEN:BasicConstructor:'..msg.chat_id_,result.sender_user_id_)
@@ -5775,7 +5983,7 @@ local user = text:match('تنزيل منشئ اساسي (%d+)')
 bot_data:srem(XBOT..'MARTEN:BasicConstructor:'..msg.chat_id_,user)
 ReplyStatus(msg,user,"Reply","⌯︙تم تنزيله منشئ اساسي")  
 end end
-if text ==('رفع منشئ اساسي') and not MARTENConstructor(msg) then
+if text ==('رفع منشئ اساسي') and not Owner(msg) then
 send_X(msg.chat_id_, msg.id_, 1, '⌯︙هذا الامر للمالكين والمطورين فقط', 1, 'md')
 end
 --     Source XBOT     --
@@ -6078,12 +6286,12 @@ return false
 end
 local Text = ' ⌯︙قم باستعمال الازرار لرفع العضو ↫ ⤈\n⌯︙العضو ↫ ['..dp.first_name_..'](t.me/'..(dp.username_ or 'SrcDrg')..')\n✓'
 if Sudo(msg) then
-inline = {{{text="رفع مميز",callback_data=msg.sender_user_id_..":SetMem:"..result.sender_user_id_},{text="رفع ادمن",callback_data=msg.sender_user_id_..":SetAdmin:"..result.sender_user_id_}},{{text="رفع منشئ",callback_data=msg.sender_user_id_..":SetConstructor:"..result.sender_user_id_},{text="رفع مدير",callback_data=msg.sender_user_id_..":SetManager:"..result.sender_user_id_}},{{text="رفع منظف",callback_data=msg.sender_user_id_..":SetCleaner:"..result.sender_user_id_},{text="رفع منشئ اساسي",callback_data=msg.sender_user_id_..":SetBasicConstructor:"..result.sender_user_id_}},{{text="رفع مالك",callback_data=msg.sender_user_id_..":SetMARTENConstructor:"..result.sender_user_id_},{text="رفع مطور",callback_data=msg.sender_user_id_..":SetSudoBot:"..result.sender_user_id_}},{{text="رفع مطور ثانوي",callback_data=msg.sender_user_id_..":SetSecondSudo:"..result.sender_user_id_}},{{text = '• سـوࢪس دࢪاڪـون •',url="t.me/SrcDrg"}}}
+inline = {{{text="رفع مميز",callback_data=msg.sender_user_id_..":SetMem:"..result.sender_user_id_},{text="رفع ادمن",callback_data=msg.sender_user_id_..":SetAdmin:"..result.sender_user_id_}},{{text="رفع منشئ",callback_data=msg.sender_user_id_..":SetConstructor:"..result.sender_user_id_},{text="رفع مدير",callback_data=msg.sender_user_id_..":SetManager:"..result.sender_user_id_}},{{text="رفع منظف",callback_data=msg.sender_user_id_..":SetCleaner:"..result.sender_user_id_},{text="رفع منشئ اساسي",callback_data=msg.sender_user_id_..":SetBasicConstructor:"..result.sender_user_id_}},{{text="رفع مالك",callback_data=msg.sender_user_id_..":SetOwner:"..result.sender_user_id_},{text="رفع مطور",callback_data=msg.sender_user_id_..":SetSudoBot:"..result.sender_user_id_}},{{text="رفع مطور ثانوي",callback_data=msg.sender_user_id_..":SetSecondSudo:"..result.sender_user_id_}},{{text = '• سـوࢪس دࢪاڪـون •',url="t.me/SrcDrg"}}}
 elseif SecondSudo(msg) then
-inline = {{{text="رفع مميز",callback_data=msg.sender_user_id_..":SetMem:"..result.sender_user_id_},{text="رفع ادمن",callback_data=msg.sender_user_id_..":SetAdmin:"..result.sender_user_id_}},{{text="رفع منشئ",callback_data=msg.sender_user_id_..":SetConstructor:"..result.sender_user_id_},{text="رفع مدير",callback_data=msg.sender_user_id_..":SetManager:"..result.sender_user_id_}},{{text="رفع منظف",callback_data=msg.sender_user_id_..":SetCleaner:"..result.sender_user_id_},{text="رفع منشئ اساسي",callback_data=msg.sender_user_id_..":SetBasicConstructor:"..result.sender_user_id_}},{{text="رفع مالك",callback_data=msg.sender_user_id_..":SetMARTENConstructor:"..result.sender_user_id_},{text="رفع مطور",callback_data=msg.sender_user_id_..":SetSudoBot:"..result.sender_user_id_}},{{text = '• سـوࢪس دࢪاڪـون •',url="t.me/SrcDrg"}}}
+inline = {{{text="رفع مميز",callback_data=msg.sender_user_id_..":SetMem:"..result.sender_user_id_},{text="رفع ادمن",callback_data=msg.sender_user_id_..":SetAdmin:"..result.sender_user_id_}},{{text="رفع منشئ",callback_data=msg.sender_user_id_..":SetConstructor:"..result.sender_user_id_},{text="رفع مدير",callback_data=msg.sender_user_id_..":SetManager:"..result.sender_user_id_}},{{text="رفع منظف",callback_data=msg.sender_user_id_..":SetCleaner:"..result.sender_user_id_},{text="رفع منشئ اساسي",callback_data=msg.sender_user_id_..":SetBasicConstructor:"..result.sender_user_id_}},{{text="رفع مالك",callback_data=msg.sender_user_id_..":SetOwner:"..result.sender_user_id_},{text="رفع مطور",callback_data=msg.sender_user_id_..":SetSudoBot:"..result.sender_user_id_}},{{text = '• سـوࢪس دࢪاڪـون •',url="t.me/SrcDrg"}}}
 elseif SudoBot(msg) then
-inline = {{{text="رفع مميز",callback_data=msg.sender_user_id_..":SetMem:"..result.sender_user_id_},{text="رفع ادمن",callback_data=msg.sender_user_id_..":SetAdmin:"..result.sender_user_id_}},{{text="رفع منشئ",callback_data=msg.sender_user_id_..":SetConstructor:"..result.sender_user_id_},{text="رفع مدير",callback_data=msg.sender_user_id_..":SetManager:"..result.sender_user_id_}},{{text="رفع منظف",callback_data=msg.sender_user_id_..":SetCleaner:"..result.sender_user_id_},{text="رفع منشئ اساسي",callback_data=msg.sender_user_id_..":SetBasicConstructor:"..result.sender_user_id_}},{{text="رفع مالك",callback_data=msg.sender_user_id_..":SetMARTENConstructor:"..result.sender_user_id_}},{{text = '• سـوࢪس دࢪاڪـون •',url="t.me/SrcDrg"}}}
-elseif MARTENConstructor(msg) then
+inline = {{{text="رفع مميز",callback_data=msg.sender_user_id_..":SetMem:"..result.sender_user_id_},{text="رفع ادمن",callback_data=msg.sender_user_id_..":SetAdmin:"..result.sender_user_id_}},{{text="رفع منشئ",callback_data=msg.sender_user_id_..":SetConstructor:"..result.sender_user_id_},{text="رفع مدير",callback_data=msg.sender_user_id_..":SetManager:"..result.sender_user_id_}},{{text="رفع منظف",callback_data=msg.sender_user_id_..":SetCleaner:"..result.sender_user_id_},{text="رفع منشئ اساسي",callback_data=msg.sender_user_id_..":SetBasicConstructor:"..result.sender_user_id_}},{{text="رفع مالك",callback_data=msg.sender_user_id_..":SetOwner:"..result.sender_user_id_}},{{text = '• سـوࢪس دࢪاڪـون •',url="t.me/SrcDrg"}}}
+elseif Owner(msg) then
 inline = {{{text="رفع مميز",callback_data=msg.sender_user_id_..":SetMem:"..result.sender_user_id_},{text="رفع ادمن",callback_data=msg.sender_user_id_..":SetAdmin:"..result.sender_user_id_}},{{text="رفع منشئ",callback_data=msg.sender_user_id_..":SetConstructor:"..result.sender_user_id_},{text="رفع مدير",callback_data=msg.sender_user_id_..":SetManager:"..result.sender_user_id_}},{{text="رفع منظف",callback_data=msg.sender_user_id_..":SetCleaner:"..result.sender_user_id_},{text="رفع منشئ اساسي",callback_data=msg.sender_user_id_..":SetBasicConstructor:"..result.sender_user_id_}},{{text = '• سـوࢪس دࢪاڪـون •',url="t.me/SrcDrg"}}}
 elseif BasicConstructor(msg) then
 inline = {{{text="رفع مميز",callback_data=msg.sender_user_id_..":SetMem:"..result.sender_user_id_},{text="رفع ادمن",callback_data=msg.sender_user_id_..":SetAdmin:"..result.sender_user_id_}},{{text="رفع منشئ",callback_data=msg.sender_user_id_..":SetConstructor:"..result.sender_user_id_},{text="رفع مدير",callback_data=msg.sender_user_id_..":SetManager:"..result.sender_user_id_}},{{text="رفع منظف",callback_data=msg.sender_user_id_..":SetCleaner:"..result.sender_user_id_}},{{text = '• سـوࢪس دࢪاڪـون •',url="t.me/SrcDrg"}}}
@@ -6112,12 +6320,12 @@ return false
 end
 local Text = ' ⌯︙قم باستعمال الازرار لتنزيل العضو ↫ ⤈\n⌯︙العضو ↫ ['..dp.first_name_..'](t.me/'..(dp.username_ or 'SrcDrg')..')\n✓'
 if Sudo(msg) then
-inline = {{{text="تنزيل مميز",callback_data=msg.sender_user_id_..":RemMem:"..result.sender_user_id_},{text="تنزيل ادمن",callback_data=msg.sender_user_id_..":RemAdmin:"..result.sender_user_id_}},{{text="تنزيل منشئ",callback_data=msg.sender_user_id_..":RemConstructor:"..result.sender_user_id_},{text="تنزيل مدير",callback_data=msg.sender_user_id_..":RemManager:"..result.sender_user_id_}},{{text="تنزيل منظف",callback_data=msg.sender_user_id_..":RemCleaner:"..result.sender_user_id_},{text="تنزيل منشئ اساسي",callback_data=msg.sender_user_id_..":RemBasicConstructor:"..result.sender_user_id_}},{{text="تنزيل مالك",callback_data=msg.sender_user_id_..":RemMARTENConstructor:"..result.sender_user_id_},{text="تنزيل مطور",callback_data=msg.sender_user_id_..":RemSudoBot:"..result.sender_user_id_}},{{text="تنزيل مطور ثانوي",callback_data=msg.sender_user_id_..":RemSecondSudo:"..result.sender_user_id_}},{{text = '• سـوࢪس دࢪاڪـون •',url="t.me/SrcDrg"}}}
+inline = {{{text="تنزيل مميز",callback_data=msg.sender_user_id_..":RemMem:"..result.sender_user_id_},{text="تنزيل ادمن",callback_data=msg.sender_user_id_..":RemAdmin:"..result.sender_user_id_}},{{text="تنزيل منشئ",callback_data=msg.sender_user_id_..":RemConstructor:"..result.sender_user_id_},{text="تنزيل مدير",callback_data=msg.sender_user_id_..":RemManager:"..result.sender_user_id_}},{{text="تنزيل منظف",callback_data=msg.sender_user_id_..":RemCleaner:"..result.sender_user_id_},{text="تنزيل منشئ اساسي",callback_data=msg.sender_user_id_..":RemBasicConstructor:"..result.sender_user_id_}},{{text="تنزيل مالك",callback_data=msg.sender_user_id_..":RemOwner:"..result.sender_user_id_},{text="تنزيل مطور",callback_data=msg.sender_user_id_..":RemSudoBot:"..result.sender_user_id_}},{{text="تنزيل مطور ثانوي",callback_data=msg.sender_user_id_..":RemSecondSudo:"..result.sender_user_id_}},{{text = '• سـوࢪس دࢪاڪـون •',url="t.me/SrcDrg"}}}
 elseif SecondSudo(msg) then
-inline = {{{text="تنزيل مميز",callback_data=msg.sender_user_id_..":RemMem:"..result.sender_user_id_},{text="تنزيل ادمن",callback_data=msg.sender_user_id_..":RemAdmin:"..result.sender_user_id_}},{{text="تنزيل منشئ",callback_data=msg.sender_user_id_..":RemConstructor:"..result.sender_user_id_},{text="تنزيل مدير",callback_data=msg.sender_user_id_..":RemManager:"..result.sender_user_id_}},{{text="تنزيل منظف",callback_data=msg.sender_user_id_..":RemCleaner:"..result.sender_user_id_},{text="تنزيل منشئ اساسي",callback_data=msg.sender_user_id_..":RemBasicConstructor:"..result.sender_user_id_}},{{text="تنزيل مالك",callback_data=msg.sender_user_id_..":RemMARTENConstructor:"..result.sender_user_id_},{text="تنزيل مطور",callback_data=msg.sender_user_id_..":RemSudoBot:"..result.sender_user_id_}},{{text = '• سـوࢪس دࢪاڪـون •',url="t.me/SrcDrg"}}}
+inline = {{{text="تنزيل مميز",callback_data=msg.sender_user_id_..":RemMem:"..result.sender_user_id_},{text="تنزيل ادمن",callback_data=msg.sender_user_id_..":RemAdmin:"..result.sender_user_id_}},{{text="تنزيل منشئ",callback_data=msg.sender_user_id_..":RemConstructor:"..result.sender_user_id_},{text="تنزيل مدير",callback_data=msg.sender_user_id_..":RemManager:"..result.sender_user_id_}},{{text="تنزيل منظف",callback_data=msg.sender_user_id_..":RemCleaner:"..result.sender_user_id_},{text="تنزيل منشئ اساسي",callback_data=msg.sender_user_id_..":RemBasicConstructor:"..result.sender_user_id_}},{{text="تنزيل مالك",callback_data=msg.sender_user_id_..":RemOwner:"..result.sender_user_id_},{text="تنزيل مطور",callback_data=msg.sender_user_id_..":RemSudoBot:"..result.sender_user_id_}},{{text = '• سـوࢪس دࢪاڪـون •',url="t.me/SrcDrg"}}}
 elseif SudoBot(msg) then
-inline = {{{text="تنزيل مميز",callback_data=msg.sender_user_id_..":RemMem:"..result.sender_user_id_},{text="تنزيل ادمن",callback_data=msg.sender_user_id_..":RemAdmin:"..result.sender_user_id_}},{{text="تنزيل منشئ",callback_data=msg.sender_user_id_..":RemConstructor:"..result.sender_user_id_},{text="تنزيل مدير",callback_data=msg.sender_user_id_..":RemManager:"..result.sender_user_id_}},{{text="تنزيل منظف",callback_data=msg.sender_user_id_..":RemCleaner:"..result.sender_user_id_},{text="تنزيل منشئ اساسي",callback_data=msg.sender_user_id_..":RemBasicConstructor:"..result.sender_user_id_}},{{text="تنزيل مالك",callback_data=msg.sender_user_id_..":RemMARTENConstructor:"..result.sender_user_id_}},{{text = '• سـوࢪس دࢪاڪـون •',url="t.me/SrcDrg"}}}
-elseif MARTENConstructor(msg) then
+inline = {{{text="تنزيل مميز",callback_data=msg.sender_user_id_..":RemMem:"..result.sender_user_id_},{text="تنزيل ادمن",callback_data=msg.sender_user_id_..":RemAdmin:"..result.sender_user_id_}},{{text="تنزيل منشئ",callback_data=msg.sender_user_id_..":RemConstructor:"..result.sender_user_id_},{text="تنزيل مدير",callback_data=msg.sender_user_id_..":RemManager:"..result.sender_user_id_}},{{text="تنزيل منظف",callback_data=msg.sender_user_id_..":RemCleaner:"..result.sender_user_id_},{text="تنزيل منشئ اساسي",callback_data=msg.sender_user_id_..":RemBasicConstructor:"..result.sender_user_id_}},{{text="تنزيل مالك",callback_data=msg.sender_user_id_..":RemOwner:"..result.sender_user_id_}},{{text = '• سـوࢪس دࢪاڪـون •',url="t.me/SrcDrg"}}}
+elseif Owner(msg) then
 inline = {{{text="تنزيل مميز",callback_data=msg.sender_user_id_..":RemMem:"..result.sender_user_id_},{text="تنزيل ادمن",callback_data=msg.sender_user_id_..":RemAdmin:"..result.sender_user_id_}},{{text="تنزيل منشئ",callback_data=msg.sender_user_id_..":RemConstructor:"..result.sender_user_id_},{text="تنزيل مدير",callback_data=msg.sender_user_id_..":RemManager:"..result.sender_user_id_}},{{text="تنزيل منظف",callback_data=msg.sender_user_id_..":RemCleaner:"..result.sender_user_id_},{text="تنزيل منشئ اساسي",callback_data=msg.sender_user_id_..":RemBasicConstructor:"..result.sender_user_id_}},{{text = '• سـوࢪس دࢪاڪـون •',url="t.me/SrcDrg"}}}
 elseif BasicConstructor(msg) then
 inline = {{{text="تنزيل مميز",callback_data=msg.sender_user_id_..":RemMem:"..result.sender_user_id_},{text="تنزيل ادمن",callback_data=msg.sender_user_id_..":RemAdmin:"..result.sender_user_id_}},{{text="تنزيل منشئ",callback_data=msg.sender_user_id_..":RemConstructor:"..result.sender_user_id_},{text="تنزيل مدير",callback_data=msg.sender_user_id_..":RemManager:"..result.sender_user_id_}},{{text="تنزيل منظف",callback_data=msg.sender_user_id_..":RemCleaner:"..result.sender_user_id_}},{{text = '• سـوࢪس دࢪاڪـون •',url="t.me/SrcDrg"}}}
@@ -7269,7 +7477,7 @@ end
 if Admin(msg) then
 if text == "المميزين" and ChCheck(msg) then 
 local List = bot_data:smembers(XBOT..'MARTEN:VipMem:'..msg.chat_id_)
-text = "⌯︙قائمة المميزين ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n"
+text = "⌯︙قائمة المميزين ↫ ⤈ \n●○━━━ -𝐗- ━━━○●\n"
 for k,v in pairs(List) do
 local username = bot_data:get(XBOT..'Save:UserName'..v)
 if username then
@@ -7287,7 +7495,7 @@ if Manager(msg) then
 if text == "الادمنيه" and ChCheck(msg) or text == "الادمنية" and ChCheck(msg) then 
 local MARTEN =  'MARTEN:Admins:'..msg.chat_id_
 local List = bot_data:smembers(XBOT..MARTEN)
-text = "⌯︙قائمة الادمنيه ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n"
+text = "⌯︙قائمة الادمنيه ↫ ⤈ \n●○━━━ -𝐗- ━━━○●\n"
 for k,v in pairs(List) do
 local username = bot_data:get(XBOT..'Save:UserName'..v)
 if username then
@@ -7304,7 +7512,7 @@ end end
 if Constructor(msg) then
 if text == "المدراء" and ChCheck(msg) or text == "مدراء" and ChCheck(msg) then 
 local List = bot_data:smembers(XBOT..'MARTEN:Managers:'..msg.chat_id_)
-text = "⌯︙قائمة المدراء ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n"
+text = "⌯︙قائمة المدراء ↫ ⤈ \n●○━━━ -𝐗- ━━━○●\n"
 for k,v in pairs(List) do
 local username = bot_data:get(XBOT..'Save:UserName'..v)
 if username then
@@ -7319,7 +7527,7 @@ send_X(msg.chat_id_, msg.id_, 1, text, 1, "md")
 end 
 if text == "المنظفين" and ChCheck(msg) then 
 local List = bot_data:smembers(XBOT..'MARTEN:Cleaner:'..msg.chat_id_)
-text = "⌯︙قائمة المنظفين ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n"
+text = "⌯︙قائمة المنظفين ↫ ⤈ \n●○━━━ -𝐗- ━━━○●\n"
 for k,v in pairs(List) do
 local username = bot_data:get(XBOT..'Save:UserName'..v)
 if username then
@@ -7336,7 +7544,7 @@ end end
 if BasicConstructor(msg) then
 if text == "المنشئين" and ChCheck(msg) then 
 local List = bot_data:smembers(XBOT..'MARTEN:Constructor:'..msg.chat_id_)
-text = "⌯︙قائمة المنشئين ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n"
+text = "⌯︙قائمة المنشئين ↫ ⤈ \n●○━━━ -𝐗- ━━━○●\n"
 for k,v in pairs(List) do
 local username = bot_data:get(XBOT..'Save:UserName'..v)
 if username then
@@ -7350,10 +7558,10 @@ end
 send_X(msg.chat_id_, msg.id_, 1, text, 1, "md")
 end end 
 --     Source XBOT     --
-if MARTENConstructor(msg) then
+if Owner(msg) then
 if text == "المالكين" and ChCheck(msg) then 
-local List = bot_data:smembers(XBOT..'MARTEN:MARTENConstructor:'..msg.chat_id_)
-text = "⌯︙قائمة المالكين ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n"
+local List = bot_data:smembers(XBOT..'MARTEN:Owner:'..msg.chat_id_)
+text = "⌯︙قائمة المالكين ↫ ⤈ \n●○━━━ -𝐗- ━━━○●\n"
 for k,v in pairs(List) do
 local username = bot_data:get(XBOT..'Save:UserName'..v)
 if username then
@@ -7368,7 +7576,7 @@ send_X(msg.chat_id_, msg.id_, 1, text, 1, "md")
 end 
 if text == "المنشئين الاساسيين" and ChCheck(msg) or text == "منشئين اساسيين" and ChCheck(msg) or text == "المنشئين الاساسين" and ChCheck(msg) then 
 local List = bot_data:smembers(XBOT..'MARTEN:BasicConstructor:'..msg.chat_id_)
-text = "⌯︙قائمة المنشئين الاساسيين ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n"
+text = "⌯︙قائمة المنشئين الاساسيين ↫ ⤈ \n●○━━━ -𝐗- ━━━○●\n"
 for k,v in pairs(List) do
 local username = bot_data:get(XBOT..'Save:UserName'..v)
 if username then
@@ -7397,7 +7605,7 @@ tdcli_function ({ID = "GetUserProfilePhotos",user_id_ = dp.id_,offset_ = 0,limit
 if MaRTeN.photos_[0] then
 local bio = GetBio(dp.id_,msg.chat_id_)
 local UserName = (dp.username_ or "SrcDrg")
-local Text = '⌯︙منشئ المجموعه ↫ ['..dp.first_name_..'](T.me/'..UserName..')\n⌯︙'..bio..'\nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ'
+local Text = '⌯︙منشئ المجموعه ↫ ['..dp.first_name_..'](T.me/'..UserName..')\n⌯︙'..bio..'\n●○━━━ -𝐗- ━━━○●'
 keyboard = {} 
 keyboard.inline_keyboard = {{{text='• '..dp.first_name_..' •',url=("t.me/"..dp.username_ or "t.me/SrcDrg")}}}
 local msg_id = msg.id_/2097152/0.5
@@ -7415,7 +7623,7 @@ end
 if Admin(msg) then
 if text == "المكتومين" and ChCheck(msg) then 
 local List = bot_data:smembers(XBOT..'MARTEN:Muted:'..msg.chat_id_)
-text = "⌯︙قائمة المكتومين ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n"
+text = "⌯︙قائمة المكتومين ↫ ⤈ \n●○━━━ -𝐗- ━━━○●\n"
 for k,v in pairs(List) do
 local username = bot_data:get(XBOT..'Save:UserName'..v)
 if username then
@@ -7431,7 +7639,7 @@ end
 --     Source XBOT     --
 if text == "المقيدين" and ChCheck(msg) then 
 local List = bot_data:smembers(XBOT..'MARTEN:Tkeed:'..msg.chat_id_)
-text = "⌯︙قائمة المقيدين ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n"
+text = "⌯︙قائمة المقيدين ↫ ⤈ \n●○━━━ -𝐗- ━━━○●\n"
 for k,v in pairs(List) do
 local username = bot_data:get(XBOT..'Save:UserName'..v)
 if username then
@@ -7447,7 +7655,7 @@ end
 --     Source XBOT     --
 if text == "المحظورين" and ChCheck(msg) or text == "المحضورين" and ChCheck(msg) then 
 local List = bot_data:smembers(XBOT..'MARTEN:Ban:'..msg.chat_id_)
-text = "⌯︙قائمة المحظورين ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n"
+text = "⌯︙قائمة المحظورين ↫ ⤈ \n●○━━━ -𝐗- ━━━○●\n"
 for k,v in pairs(List) do
 local username = bot_data:get(XBOT..'Save:UserName'..v)
 if username then
@@ -7462,7 +7670,7 @@ send_X(msg.chat_id_, msg.id_, 1, text, 1, "md")
 end 
 if text == "قائمه المنع" and ChCheck(msg) then
 local List = bot_data:hkeys(XBOT..'MARTEN:Filters:'..msg.chat_id_)
-text = "⌯︙قائمة المنع ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n"
+text = "⌯︙قائمة المنع ↫ ⤈ \n●○━━━ -𝐗- ━━━○●\n"
 for k, v in pairs(List) do
 text = text..k..'~ ❨ '..v..' ❩\n'
 end
@@ -7475,7 +7683,7 @@ end
 --     Source XBOT     --
 if text == "المطايه" and ChCheck(msg) or text == "المطاية" and ChCheck(msg) then
 local List = bot_data:smembers(XBOT..'User:Donky:'..msg.chat_id_)
-text = "⌯︙قائمة مطاية المجموعه 😹💔 ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n"
+text = "⌯︙قائمة مطاية المجموعه 😹💔 ↫ ⤈ \n●○━━━ -𝐗- ━━━○●\n"
 for k,v in pairs(List) do
 local username = bot_data:get(XBOT..'Save:UserName'..v)
 if username then
@@ -7491,7 +7699,7 @@ end
 --     Source XBOT     --
 if text == "الحاتات" and ChCheck(msg) or text == "حاتات" and ChCheck(msg) then
 local List = bot_data:smembers(XBOT..'User:HaTa:'..msg.chat_id_)
-text = "⌯︙قائمة حاتات المجموعه 😹💔 ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ \n"
+text = "⌯︙قائمة حاتات المجموعه 😹💔 ↫ ⤈ \n●○━━━ -𝐗- ━━━○● \n"
 for k,v in pairs(List) do
 local username = bot_data:get(XBOT..'Save:UserName'..v)
 if username then
@@ -7507,7 +7715,7 @@ end
 --     Source XBOT     --
 if text == "الصاكين" and ChCheck(msg) or text == "صاكين" and ChCheck(msg) then
 local List = bot_data:smembers(XBOT..'User:hlo:'..msg.chat_id_)
-text = "⌯︙قائمة صاكين المجموعه 😹💔 ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ \n"
+text = "⌯︙قائمة صاكين المجموعه 😹💔 ↫ ⤈ \n●○━━━ -𝐗- ━━━○● \n"
 for k,v in pairs(List) do
 local username = bot_data:get(XBOT..'Save:UserName'..v)
 if username then
@@ -7523,7 +7731,7 @@ end
 --     Source XBOT     --
 if text == "الصخوله" and ChCheck(msg) or text == "صخولة" and ChCheck(msg) then
 local List = bot_data:smembers(XBOT..'User:Sakl:'..msg.chat_id_)
-text = "⌯︙قائمة الصخوله المجموعه 😹💔 ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ \n"
+text = "⌯︙قائمة الصخوله المجموعه 😹💔 ↫ ⤈ \n●○━━━ -𝐗- ━━━○● \n"
 for k,v in pairs(List) do
 local username = bot_data:get(XBOT..'Save:UserName'..v)
 if username then
@@ -7539,7 +7747,7 @@ end
 --     Source XBOT     --
 if text == "الجلاب" and ChCheck(msg) or text == "جلاب" and ChCheck(msg) then
 local List = bot_data:smembers(XBOT..'User:Dog:'..msg.chat_id_)
-text = "⌯︙قائمة الجلاب المجموعه 😹💔 ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ \n"
+text = "⌯︙قائمة الجلاب المجموعه 😹💔 ↫ ⤈ \n●○━━━ -𝐗- ━━━○● \n"
 for k,v in pairs(List) do
 local username = bot_data:get(XBOT..'Save:UserName'..v)
 if username then
@@ -7555,7 +7763,7 @@ end
 --     Source XBOT     --
 if text == "القورده" and ChCheck(msg) or text == "قروده" and ChCheck(msg) then
 local List = bot_data:smembers(XBOT..'User:Monkey:'..msg.chat_id_)
-text = "⌯︙قائمة القورده المجموعه 😹💔 ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ \n"
+text = "⌯︙قائمة القورده المجموعه 😹💔 ↫ ⤈ \n●○━━━ -𝐗- ━━━○● \n"
 for k,v in pairs(List) do
 local username = bot_data:get(XBOT..'Save:UserName'..v)
 if username then
@@ -7571,7 +7779,7 @@ end
 --     Source XBOT     --
 if text == "الضلوع" and ChCheck(msg) or text == "ضلوعي" and ChCheck(msg) then
 local List = bot_data:smembers(XBOT..'User:Bro:'..msg.chat_id_)
-text = "⌯︙قائمة الضلوع المجموعه 😹💔 ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ \n"
+text = "⌯︙قائمة الضلوع المجموعه 😹💔 ↫ ⤈ \n●○━━━ -𝐗- ━━━○● \n"
 for k,v in pairs(List) do
 local username = bot_data:get(XBOT..'Save:UserName'..v)
 if username then
@@ -7587,7 +7795,7 @@ end
 --     Source XBOT     --
 if text == "الضلعات" and ChCheck(msg) or text == "ضلعاتي" and ChCheck(msg) then
 local List = bot_data:smembers(XBOT..'User:Bro:Girl'..msg.chat_id_)
-text = "⌯︙قائمة الضلعات المجموعه 😹💔 ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ \n"
+text = "⌯︙قائمة الضلعات المجموعه 😹💔 ↫ ⤈ \n●○━━━ -𝐗- ━━━○● \n"
 for k,v in pairs(List) do
 local username = bot_data:get(XBOT..'Save:UserName'..v)
 if username then
@@ -7603,7 +7811,7 @@ end
 --     Source XBOT     --
 if text == "الهوايش" and ChCheck(msg) or text == "البقرات" and ChCheck(msg) then
 local List = bot_data:smembers(XBOT..'User:Bakra:'..msg.chat_id_)
-text = "⌯︙قائمة البقرات المجموعه 😹💔 ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ \n"
+text = "⌯︙قائمة البقرات المجموعه 😹💔 ↫ ⤈ \n●○━━━ -𝐗- ━━━○● \n"
 for k,v in pairs(List) do
 local username = bot_data:get(XBOT..'Save:UserName'..v)
 if username then
@@ -7619,7 +7827,7 @@ end
 --     Source XBOT     --
 if text == "الطليان" and ChCheck(msg) or text == "طليان" and ChCheck(msg) then
 local List = bot_data:smembers(XBOT..'User:Tale:'..msg.chat_id_)
-text = "⌯︙قائمة طليان المجموعه 😹💔 ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ \n"
+text = "⌯︙قائمة طليان المجموعه 😹💔 ↫ ⤈ \n●○━━━ -𝐗- ━━━○● \n"
 for k,v in pairs(List) do
 local username = bot_data:get(XBOT..'Save:UserName'..v)
 if username then
@@ -7635,7 +7843,7 @@ end
 --     Source XBOT     --
 if text == "الزواحف" and ChCheck(msg) or text == "زواحف" and ChCheck(msg) then
 local List = bot_data:smembers(XBOT..'User:Zahf:'..msg.chat_id_)
-text = "⌯︙قائمة زواحف المجموعه 😹💔 ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ \n"
+text = "⌯︙قائمة زواحف المجموعه 😹💔 ↫ ⤈ \n●○━━━ -𝐗- ━━━○● \n"
 for k,v in pairs(List) do
 local username = bot_data:get(XBOT..'Save:UserName'..v)
 if username then
@@ -7651,7 +7859,7 @@ end
 --     Source XBOT     --
 if text == "الجريذيه" and ChCheck(msg) or text == "جريذيه" and ChCheck(msg) then
 local List = bot_data:smembers(XBOT..'User:Jred:'..msg.chat_id_)
-text = "⌯︙قائمة الجريذيه المجموعه 😹💔 ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ \n"
+text = "⌯︙قائمة الجريذيه المجموعه 😹💔 ↫ ⤈ \n●○━━━ -𝐗- ━━━○● \n"
 for k,v in pairs(List) do
 local username = bot_data:get(XBOT..'Save:UserName'..v)
 if username then
@@ -7667,7 +7875,7 @@ end
 --     Source XBOT     --
 if text == "المطورين الثانويين" and SecondSudo(msg) or text == "الثانويين" and SecondSudo(msg) or text == "↫ الثانويين ⌯" and SecondSudo(msg) then 
 local List = bot_data:smembers(XBOT..'MARTEN:SecondSudo:')
-text = "⌯︙قائمة المطورين الثانويين ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n"
+text = "⌯︙قائمة المطورين الثانويين ↫ ⤈ \n●○━━━ -𝐗- ━━━○●\n"
 for k,v in pairs(List) do
 local username = bot_data:get(XBOT..'Save:UserName'..v)
 if username then
@@ -7686,7 +7894,7 @@ if text == "قائمه العام" and ChCheck(msg) or text == "المحظوري
 local BanAll = bot_data:smembers(XBOT..'MARTEN:BanAll:')
 local MuteAll = bot_data:smembers(XBOT..'MARTEN:MuteAll:')
 if #BanAll ~= 0 then 
-text = "⌯︙قائمة المحظورين عام ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n"
+text = "⌯︙قائمة المحظورين عام ↫ ⤈ \n●○━━━ -𝐗- ━━━○●\n"
 for k,v in pairs(BanAll) do
 local username = bot_data:get(XBOT..'Save:UserName'..v)
 if username then
@@ -7698,7 +7906,7 @@ else
 text = ""
 end
 if #MuteAll ~= 0 then 
-text = text.."⌯︙قائمة المكتومين عام ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n"
+text = text.."⌯︙قائمة المكتومين عام ↫ ⤈ \n●○━━━ -𝐗- ━━━○●\n"
 for k,v in pairs(MuteAll) do
 local username = bot_data:get(XBOT..'Save:UserName'..v)
 if username then
@@ -7719,7 +7927,7 @@ end
 --     Source XBOT     --
 if text == "المطورين" and ChCheck(msg) or text == "↫ المطورين  ⌯" and ChCheck(msg) then 
 local List = bot_data:smembers(XBOT..'MARTEN:SudoBot:')
-text = "⌯︙قائمة المطورين ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n"
+text = "⌯︙قائمة المطورين ↫ ⤈ \n●○━━━ -𝐗- ━━━○●\n"
 for k,v in pairs(List) do
 local sudouser = bot_data:get(XBOT..'MARTEN:Sudos'..v) 
 local username = bot_data:get(XBOT..'Save:UserName'..v)
@@ -7736,7 +7944,7 @@ end
 --     Source XBOT     --
 if text == "المدراء العامين" and ChCheck(msg) then 
 local List = bot_data:smembers(XBOT..'MARTEN:ManagerAll:')
-text = "⌯︙قائمة المدراء العامين ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n"
+text = "⌯︙قائمة المدراء العامين ↫ ⤈ \n●○━━━ -𝐗- ━━━○●\n"
 for k,v in pairs(List) do
 local username = bot_data:get(XBOT..'Save:UserName'..v)
 if username then
@@ -7752,7 +7960,7 @@ end
 --     Source XBOT     --
 if text == "المميزين عام" and ChCheck(msg) or text == "المميزين العامين" and ChCheck(msg) then 
 local List = bot_data:smembers(XBOT..'MARTEN:VipAll:')
-text = "⌯︙قائمة المميزين العام ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n"
+text = "⌯︙قائمة المميزين العام ↫ ⤈ \n●○━━━ -𝐗- ━━━○●\n"
 for k,v in pairs(List) do
 local username = bot_data:get(XBOT..'Save:UserName'..v)
 if username then
@@ -7769,7 +7977,7 @@ end
 if text == "الادمنيه العامين" and ChCheck(msg) then 
 local MARTEN =  'MARTEN:AdminAll:'
 local List = bot_data:smembers(XBOT..MARTEN)
-text = "⌯︙قائمة الادمنيه العامين ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n"
+text = "⌯︙قائمة الادمنيه العامين ↫ ⤈ \n●○━━━ -𝐗- ━━━○●\n"
 for k,v in pairs(List) do
 local username = bot_data:get(XBOT..'Save:UserName'..v)
 if username then
@@ -7798,7 +8006,7 @@ return false
 end
 local UserName = (dp.username_ or "SrcDrg")
 send_X(msg.chat_id_, msg.id_, 1, "⌯︙تم رفع مالك المجموعه ↫ ["..dp.first_name_.."](T.me/"..UserName..")", 1, "md") 
-bot_data:sadd(XBOT.."MARTEN:MARTENConstructor:"..msg.chat_id_,dp.id_)
+bot_data:sadd(XBOT.."MARTEN:Owner:"..msg.chat_id_,dp.id_)
 end,nil)   
 end,nil)   
 end
@@ -8402,7 +8610,7 @@ end
 --     Source XBOT     --
 if SecondSudo(msg) then
 if text and text:match("^تعيين الايدي العام$") or text and text:match("^تعين الايدي العام$") or text and text:match("^تعيين كليشة الايدي$") then
-send_X(msg.chat_id_, msg.id_, 1, '⌯︙رجائا اتبع التعليمات للتعيين \n⌯︙لطبع كليشة الايدي ارسل كليشه تحتوي على النصوص التي باللغه الانجليزيه ادناه ↫ ⤈\nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n `#username` ↬ لطبع المعرف\n `#id` ↬ لطبع الايدي \n `#photos` ↬ لطبع عدد الصور \n `#stast` ↬ لطبع الرتب \n `#msgs` ↬ لطبع عدد الرسائل \n `#msgday` ↬ لطبع الرسائل اليوميه \n `#CustomTitle` ↬ لطبع اللقب \n `#bio` ↬ لطبع البايو \n `#auto` ↬ لطبع التفاعل \n `#game` ↬ لطبع عدد النقاط \n `#cont` ↬ لطبع عدد الجهات \n `#edit` ↬ لطبع عدد السحكات \n `#Description` ↬ لطبع تعليق الصور\nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ', 1, 'md')
+send_X(msg.chat_id_, msg.id_, 1, '⌯︙رجائا اتبع التعليمات للتعيين \n⌯︙لطبع كليشة الايدي ارسل كليشه تحتوي على النصوص التي باللغه الانجليزيه ادناه ↫ ⤈\n●○━━━ -𝐗- ━━━○●\n `#username` ↬ لطبع المعرف\n `#id` ↬ لطبع الايدي \n `#photos` ↬ لطبع عدد الصور \n `#stast` ↬ لطبع الرتب \n `#msgs` ↬ لطبع عدد الرسائل \n `#msgday` ↬ لطبع الرسائل اليوميه \n `#CustomTitle` ↬ لطبع اللقب \n `#bio` ↬ لطبع البايو \n `#auto` ↬ لطبع التفاعل \n `#game` ↬ لطبع عدد النقاط \n `#cont` ↬ لطبع عدد الجهات \n `#edit` ↬ لطبع عدد السحكات \n `#Description` ↬ لطبع تعليق الصور\n●○━━━ -𝐗- ━━━○●', 1, 'md')
 bot_data:set("XBOT:New:id:"..XBOT..msg.sender_user_id_,'XboT')
 return "XboT"
 end
@@ -8424,7 +8632,7 @@ end
 end
 --     Source XBOT     --
 if text and text:match("^تعيين الايدي$") and ChCheck(msg) or text and text:match("^تعين الايدي$") and ChCheck(msg) then
-send_X(msg.chat_id_, msg.id_, 1, '⌯︙رجائا اتبع التعليمات للتعيين \n⌯︙لطبع كليشة الايدي ارسل كليشه تحتوي على النصوص التي باللغه الانجليزيه ادناه ↫ ⤈\nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n `#username` ↬ لطبع المعرف\n `#id` ↬ لطبع الايدي \n `#photos` ↬ لطبع عدد الصور \n `#stast` ↬ لطبع الرتب \n `#msgs` ↬ لطبع عدد الرسائل \n `#msgday` ↬ لطبع الرسائل اليوميه \n `#CustomTitle` ↬ لطبع اللقب \n `#bio` ↬ لطبع البايو \n `#auto` ↬ لطبع التفاعل \n `#game` ↬ لطبع عدد النقاط \n `#cont` ↬ لطبع عدد الجهات \n `#edit` ↬ لطبع عدد السحكات \n `#Description` ↬ لطبع تعليق الصور\nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ', 1, 'md')
+send_X(msg.chat_id_, msg.id_, 1, '⌯︙رجائا اتبع التعليمات للتعيين \n⌯︙لطبع كليشة الايدي ارسل كليشه تحتوي على النصوص التي باللغه الانجليزيه ادناه ↫ ⤈\n●○━━━ -𝐗- ━━━○●\n `#username` ↬ لطبع المعرف\n `#id` ↬ لطبع الايدي \n `#photos` ↬ لطبع عدد الصور \n `#stast` ↬ لطبع الرتب \n `#msgs` ↬ لطبع عدد الرسائل \n `#msgday` ↬ لطبع الرسائل اليوميه \n `#CustomTitle` ↬ لطبع اللقب \n `#bio` ↬ لطبع البايو \n `#auto` ↬ لطبع التفاعل \n `#game` ↬ لطبع عدد النقاط \n `#cont` ↬ لطبع عدد الجهات \n `#edit` ↬ لطبع عدد السحكات \n `#Description` ↬ لطبع تعليق الصور\n●○━━━ -𝐗- ━━━○●', 1, 'md')
 bot_data:set("XBOT:New:id:"..XBOT..msg.chat_id_..msg.sender_user_id_,'XboT')
 return "XboT"
 end
@@ -8480,7 +8688,7 @@ newpicid = newpicid:gsub('#auto',(formsgs(msguser) or 'لا يوجد'))
 newpicid = newpicid:gsub('#stast',(IdRank(msg.sender_user_id_, msg.chat_id_) or 'لا يوجد'))
 newpicid = newpicid:gsub('#Description',(Description or 'لا يوجد'))
 else
-newpicid = "⌯︙"..Description.."\n⌯︙معرفك ↫ ❨ "..username.." ❩\n⌯︙ايديك ↫ ❨ "..msg.sender_user_id_.." ❩\n⌯︙رتبتك ↫ "..IdRank(msg.sender_user_id_, msg.chat_id_).."\n⌯︙رسائلك ↫ ❨ "..user_msgs.." ❩\n⌯︙سحكاتك ↫ ❨ "..edit_msg.." ❩\n⌯︙تفاعلك ↫ "..formsgs(msguser).."\n⌯︙نقاطك ↫ ❨ "..user_nkt.." ❩\nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n"
+newpicid = "⌯︙"..Description.."\n⌯︙معرفك ↫ ❨ "..username.." ❩\n⌯︙ايديك ↫ ❨ "..msg.sender_user_id_.." ❩\n⌯︙رتبتك ↫ "..IdRank(msg.sender_user_id_, msg.chat_id_).."\n⌯︙رسائلك ↫ ❨ "..user_msgs.." ❩\n⌯︙سحكاتك ↫ ❨ "..edit_msg.." ❩\n⌯︙تفاعلك ↫ "..formsgs(msguser).."\n⌯︙نقاطك ↫ ❨ "..user_nkt.." ❩\n●○━━━ -𝐗- ━━━○●\n"
 end 
 if not bot_data:get(XBOT.."MARTEN:GpIds:Text"..msg.chat_id_) then 
 sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, MaRTeN.photos_[0].sizes_[1].photo_.persistent_id_,newpicid,msg.id_,msg.id_.."")
@@ -8560,7 +8768,7 @@ notpicid = notpicid:gsub('#auto',(formsgs(msguser) or 'لا يوجد'))
 notpicid = notpicid:gsub('#stast',(IdRank(msg.sender_user_id_, msg.chat_id_) or 'لا يوجد'))
 notpicid = notpicid:gsub('#Description',(Description or 'لا يوجد'))
 else
-notpicid = "⌯︙لا استطيع عرض صورتك لانك قمت بحظر البوت او انك لاتمتلك صوره في بروفايلك\nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n⌯︙معرفك ↫ ❨ "..username.." ❩\n⌯︙ايديك ↫ ❨ "..msg.sender_user_id_.." ❩\n⌯︙رتبتك ↫ "..IdRank(msg.sender_user_id_, msg.chat_id_).."\n⌯︙رسائلك ↫ ❨ "..user_msgs.." ❩\n⌯︙سحكاتك ↫ ❨ "..edit_msg.." ❩\n⌯︙تفاعلك ↫ "..formsgs(msguser).."\n⌯︙نقاطك ↫ ❨ "..user_nkt.." ❩\nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n"
+notpicid = "⌯︙لا استطيع عرض صورتك لانك قمت بحظر البوت او انك لاتمتلك صوره في بروفايلك\n●○━━━ -𝐗- ━━━○●\n⌯︙معرفك ↫ ❨ "..username.." ❩\n⌯︙ايديك ↫ ❨ "..msg.sender_user_id_.." ❩\n⌯︙رتبتك ↫ "..IdRank(msg.sender_user_id_, msg.chat_id_).."\n⌯︙رسائلك ↫ ❨ "..user_msgs.." ❩\n⌯︙سحكاتك ↫ ❨ "..edit_msg.." ❩\n⌯︙تفاعلك ↫ "..formsgs(msguser).."\n⌯︙نقاطك ↫ ❨ "..user_nkt.." ❩\n●○━━━ -𝐗- ━━━○●\n"
 end 
 if not bot_data:get(XBOT..'MARTEN:Lock:Id'..msg.chat_id_) then
 if not bot_data:get(XBOT..'MARTEN:Lock:Id:Photo'..msg.chat_id_) then
@@ -8961,11 +9169,11 @@ end
 end
 --     Source XBOT     --
 if text and (text == "تفعيل امسح" or text == "تفعيل المسح التلقائي" or text == "تفعيل الحذف التلقائي") and Constructor(msg) and ChCheck(msg) then
-ReplyStatus(msg,msg.sender_user_id_,"EbDsDrg","⌯︙تم تفعيل امسح بنجاح \n⌯︙مع ميزة الحذف التلقائي للميديا\nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ")
+ReplyStatus(msg,msg.sender_user_id_,"EbDsDrg","⌯︙تم تفعيل امسح بنجاح \n⌯︙مع ميزة الحذف التلقائي للميديا\n●○━━━ -𝐗- ━━━○●")
 bot_data:set(XBOT..'MARTEN:Lock:Clean'..msg.chat_id_,true)  
 end
 if text and (text == "تعطيل امسح" or text == "تعطيل المسح التلقائي" or text == "تعطيل الحذف التلقائي") and Constructor(msg) and ChCheck(msg) then
-ReplyStatus(msg,msg.sender_user_id_,"EbDsDrg","⌯︙تم تعطيل امسح بنجاح \n⌯︙مع ميزة الحذف التلقائي للميديا\nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ")
+ReplyStatus(msg,msg.sender_user_id_,"EbDsDrg","⌯︙تم تعطيل امسح بنجاح \n⌯︙مع ميزة الحذف التلقائي للميديا\n●○━━━ -𝐗- ━━━○●")
 bot_data:del(XBOT..'MARTEN:Lock:Clean'..msg.chat_id_) 
 end
 if text and (text:match("^تعين عدد المسح (%d+)$") or text:match("^تعيين عدد المسح (%d+)$") or text:match("^تعين عدد الحذف (%d+)$") or text:match("^تعيين عدد الحذف (%d+)$")) and Constructor(msg) then   
@@ -9572,7 +9780,7 @@ if GetInfo.result.can_invite_users == true then INV = '✔️' else INV = '✖�
 if GetInfo.result.can_pin_messages == true then PIN = '✔️' else PIN = '✖️' end
 if GetInfo.result.can_restrict_members == true then BAN = '✔️' else BAN = '✖️' end
 if GetInfo.result.can_promote_members == true then VIP = '✔️' else VIP = '✖️' end 
-send_X(msg.chat_id_, msg.id_, 1, '⌯︙صلاحيات البوت هي ↫ ⤈\nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n⌯︙حذف الرسائل ↫ '..DEL..'\n⌯︙دعوة المستخدمين ↫ '..INV..'\n⌯︙حظر المستخدمين ↫ '..BAN..'\n⌯︙تثبيت الرسائل ↫ '..PIN..'\n⌯︙تغيير المعلومات ↫ '..EDT..'\n⌯︙اضافة مشرفين ↫ '..VIP..'\nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ', 1, 'md')
+send_X(msg.chat_id_, msg.id_, 1, '⌯︙صلاحيات البوت هي ↫ ⤈\n●○━━━ -𝐗- ━━━○●\n⌯︙حذف الرسائل ↫ '..DEL..'\n⌯︙دعوة المستخدمين ↫ '..INV..'\n⌯︙حظر المستخدمين ↫ '..BAN..'\n⌯︙تثبيت الرسائل ↫ '..PIN..'\n⌯︙تغيير المعلومات ↫ '..EDT..'\n⌯︙اضافة مشرفين ↫ '..VIP..'\n●○━━━ -𝐗- ━━━○●', 1, 'md')
 end end
 if text and text:match("^تغير رد المطور (.*)$") then
 local Text = text:match("^تغير رد المطور (.*)$") 
@@ -9630,7 +9838,7 @@ end
 if text == "كشف البوتات" and ChCheck(msg) then 
 tdcli_function ({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub("-100",""),filter_ = {ID = "ChannelMembersBots"},offset_ = 0,limit_ = 100 },function(extra,result,success)
 local admins = result.members_  
-text = '⌯︙*قائمة البوتات* ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n'
+text = '⌯︙*قائمة البوتات* ↫ ⤈ \n●○━━━ -𝐗- ━━━○●\n'
 local n = 0
 local t = 0
 for i=0 , #admins do 
@@ -9648,7 +9856,7 @@ if #admins == 0 then
 send_X(msg.chat_id_, msg.id_, 1, "⌯︙*لاتوجد بوتات هنا*", 1, 'md')
 return false end
 if #admins == i then 
-local a = 'ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n⌯︙*عدد البوتات هنا* ↫ '..n..'\n'
+local a = '●○━━━ -𝐗- ━━━○●\n⌯︙*عدد البوتات هنا* ↫ '..n..'\n'
 local f = '⌯︙*عدد البوتات المرفوعه* ↫ '..t..'\n⌯︙*ملاحضه علامة الـ*✯ *تعني ان البوت ادمن في هذه المجموعه*'
 send_X(msg.chat_id_, msg.id_, 1, text..a..f, 1, 'md')
 end
@@ -9715,19 +9923,19 @@ ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌯︙تم حذف المدراء 
 bot_data:del(XBOT..'MARTEN:ManagerAll:')
 end
 if txts[2] == 'المالكين' or txtss[2] == 'المالكين' then
-bot_data:del(XBOT..'MARTEN:MARTENConstructor:'..msg.chat_id_)
+bot_data:del(XBOT..'MARTEN:Owner:'..msg.chat_id_)
 tdcli_function ({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub("-100",""),filter_ = {ID = "ChannelMembersAdministrators"},offset_ = 0,limit_ = 100},function(arg,dp) 
 local admins = dp.members_
 for i=0 , #admins do
 if dp.members_[i].status_.ID == "ChatMemberStatusCreator" then
-bot_data:sadd(XBOT.."MARTEN:MARTENConstructor:"..msg.chat_id_,admins[i].user_id_)
+bot_data:sadd(XBOT.."MARTEN:Owner:"..msg.chat_id_,admins[i].user_id_)
 end 
 end  
 end,nil)
 ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌯︙تم حذف المالكين\n✓")  
 end
 end
-if MARTENConstructor(msg) then
+if Owner(msg) then
 if txts[2] == 'المنشئين الاساسيين' or txtss[2] == 'المنشئين الاساسيين' then
 ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌯︙تم حذف المنشئين الاساسيين\n✓")  
 bot_data:del(XBOT..'MARTEN:BasicConstructor:'..msg.chat_id_)
@@ -9869,7 +10077,7 @@ end
 end
 --     Source XBOT     --
 if text and text:match("^حذف جميع الرتب$") and ChCheck(msg) or text and text:match("^مسح جميع الرتب$") and ChCheck(msg) or text and text:match("^تنزيل جميع الرتب$") and ChCheck(msg) then
-if not MARTENConstructor(msg) then
+if not Owner(msg) then
 send_X(msg.chat_id_, msg.id_, 1, '⌯︙للمالكين فقط', 1, 'md')
 else
 local basicconstructor = bot_data:smembers(XBOT..'MARTEN:BasicConstructor:'..msg.chat_id_)
@@ -9999,7 +10207,7 @@ local Flood_Num = bot_data:hget(XBOT.."MARTEN:Spam:Group:User"..msg.chat_id_,"Nu
 local Flood_Num_Time = bot_data:hget(XBOT.."MARTEN:Spam:Group:User"..msg.chat_id_,"Num:Spam:Time") or 5
 local Clean_Num = bot_data:get(XBOT.."MARTEN:CleanNum"..msg.chat_id_,Num) or 200
 --     Source XBOT     --
-local TXTE = "⌯︙اعدادات المجموعه ↫ ⤈\nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ \n"
+local TXTE = "⌯︙اعدادات المجموعه ↫ ⤈\n●○━━━ -𝐗- ━━━○● \n"
 .."⌯︙الروابط ↫ "..mute_links.."\n"
 .."⌯︙المعرف ↫ "..lock_tag.."\n"
 .."⌯︙البوتات ↫ "..lock_bots.."\n"
@@ -10036,8 +10244,8 @@ local TXTE = "⌯︙اعدادات المجموعه ↫ ⤈\nꔹ┉ ┉ ┉ ┉ 
 .."⌯︙عدد التكرار ↫ "..Flood_Num.."\n"
 .."⌯︙زمن التكرار ↫ "..Flood_Num_Time.."\n"
 .."⌯︙عدد السبام ↫ "..spam_c.."\n"
-.."ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ \n"
-local inline = {{{text="🖥┇𝐒𝐎𝐔𝐑𝐂𝐄 𝐃𝐑𝐀𝐆𝐎𝐍 .",url="t.me/SrcDrg"}}}
+.."●○━━━ -𝐗- ━━━○● \n"
+local inline = {{{text="✗ 𝐬𝐨𝐮𝐫𝐜𝐞 -𝐗- ✗ .",url="t.me/SrcDrg"}}}
 fucktele =  msg.id_/2097152/0.5
 SendInline(msg.chat_id_,TXTE,nil,inline,fucktele)
 end
@@ -10123,7 +10331,7 @@ return false
 end 
 UrlZrf = https.request('https://apiabs.ml/zrf.php?MARTEN='..URL.escape(text)) 
 Zrf = JSON.decode(UrlZrf) 
-t = "⌯︙قائمة الزخرفه ↫ ⤈\nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n"
+t = "⌯︙قائمة الزخرفه ↫ ⤈\n●○━━━ -𝐗- ━━━○●\n"
 i = 0
 for k,v in pairs(Zrf.ok) do
 i = i + 1
@@ -10144,7 +10352,7 @@ if text and text:match("^زخرفه (.*)$") and ChCheck(msg) or text and text:ma
 local TextZrf = text:match("^زخرفه (.*)$") or text:match("^زخرف (.*)$") 
 UrlZrf = https.request('https://apiabs.ml/zrf.php?MARTEN='..URL.escape(TextZrf)) 
 Zrf = JSON.decode(UrlZrf) 
-t = "⌯︙قائمة الزخرفه ↫ ⤈\nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n"
+t = "⌯︙قائمة الزخرفه ↫ ⤈\n●○━━━ -𝐗- ━━━○●\n"
 i = 0
 for k,v in pairs(Zrf.ok) do
 i = i + 1
@@ -10167,7 +10375,7 @@ if text and text:match("^برج (.*)$") and ChCheck(msg) or text and text:match(
 local TextBrg = text:match("^برج (.*)$") or text:match("^برجي (.*)$") 
 UrlBrg = https.request('https://apiabs.ml/brg.php?brg='..URL.escape(TextBrg)) 
 Brg = JSON.decode(UrlBrg) 
-t = Brg.ok.abs:gsub( "⌁", "⌯" ):gsub( "┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉", "ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ" )
+t = Brg.ok.abs:gsub( "⌁", "⌯" ):gsub( "┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉", "●○━━━ -𝐗- ━━━○●" )
 send_X(msg.chat_id_, msg.id_, 1, t, 1, 'html')
 end
 end
@@ -10562,7 +10770,7 @@ if text and text:match("^معلومات المجموعه$") and ChCheck(msg) or 
 local Muted = bot_data:scard(XBOT.."MARTEN:Muted:"..msg.chat_id_) or "0"
 tdcli_function({ID ="GetChat",chat_id_=msg.chat_id_},function(arg,dp) 
 tdcli_function({ID="GetChannelFull",channel_id_ = msg.chat_id_:gsub("-100","")},function(arg,data) 
-send_X(msg.chat_id_, msg.id_, 1, '⌯︙المجموعه ↫ ❨ '..dp.title_..' ❩\n⌯︙الايدي ↫ ❨ '..msg.chat_id_..' ❩\n⌯︙عدد الاعضاء ↫ ❨ *'..data.member_count_..'* ❩\n⌯︙عدد الادمنيه ↫ ❨ *'..data.administrator_count_..'* ❩\n⌯︙عدد المطرودين ↫ ❨ *'..data.kicked_count_..'* ❩\n⌯︙عدد المكتومين ↫ ❨ *'..Muted..'* ❩\n⌯︙عدد رسائل المجموعه ↫ ❨ *'..(msg.id_/2097152/0.5)..'* ❩\nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n', 1, 'md') 
+send_X(msg.chat_id_, msg.id_, 1, '⌯︙المجموعه ↫ ❨ '..dp.title_..' ❩\n⌯︙الايدي ↫ ❨ '..msg.chat_id_..' ❩\n⌯︙عدد الاعضاء ↫ ❨ *'..data.member_count_..'* ❩\n⌯︙عدد الادمنيه ↫ ❨ *'..data.administrator_count_..'* ❩\n⌯︙عدد المطرودين ↫ ❨ *'..data.kicked_count_..'* ❩\n⌯︙عدد المكتومين ↫ ❨ *'..Muted..'* ❩\n⌯︙عدد رسائل المجموعه ↫ ❨ *'..(msg.id_/2097152/0.5)..'* ❩\n●○━━━ -𝐗- ━━━○●\n', 1, 'md') 
 end,nil)
 end,nil)
 end
@@ -10701,11 +10909,11 @@ bot_data:sadd(XBOT..'MARTEN:Admins:'..msg.chat_id_, admins[i].user_id_)
 end
 if MaRTeN.members_[i].status_.ID == "ChatMemberStatusCreator" then
 bot_data:sadd(XBOT.."MARTEN:BasicConstructor:"..msg.chat_id_,admins[i].user_id_)
-bot_data:sadd(XBOT.."MARTEN:MARTENConstructor:"..msg.chat_id_,admins[i].user_id_)
+bot_data:sadd(XBOT.."MARTEN:Owner:"..msg.chat_id_,admins[i].user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = admins[i].user_id_},function(arg,ba) 
 if ba.first_name_ == false then
 bot_data:srem(XBOT.."MARTEN:BasicConstructor:"..msg.chat_id_,admins[i].user_id_)
-bot_data:srem(XBOT.."MARTEN:MARTENConstructor:"..msg.chat_id_,admins[i].user_id_)
+bot_data:srem(XBOT.."MARTEN:Owner:"..msg.chat_id_,admins[i].user_id_)
 end
 end,nil)  
 end 
@@ -10744,7 +10952,7 @@ LinkGroup = 'لا يوجد'
 end
 bot_data:set(XBOT.."MARTEN:Groups:Links"..msg.chat_id_,LinkGroup) 
 if not Sudo(msg) then
-SendText(xBoT,"⌯︙تم تفعيل مجموعه جديده ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n⌯︙بواسطة ↫ "..Name.."\n⌯︙اسم المجموعه ↫ ["..NameChat.."]\n⌯︙عدد اعضاء المجموعه ↫ ❨ *"..NumMem.."* ❩\n⌯︙ايدي المجموعه ↫ ⤈ \n❨ `"..msg.chat_id_.."` ❩\n⌯︙رابط المجموعه ↫ ⤈\n❨ ["..LinkGroup.."] ❩\nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n⌯︙الوقت ↫ "..os.date("%I:%M%p").."\n⌯︙التاريخ ↫ "..os.date("%Y/%m/%d").."",0,'md')
+SendText(xBoT,"⌯︙تم تفعيل مجموعه جديده ↫ ⤈ \n●○━━━ -𝐗- ━━━○●\n⌯︙بواسطة ↫ "..Name.."\n⌯︙اسم المجموعه ↫ ["..NameChat.."]\n⌯︙عدد اعضاء المجموعه ↫ ❨ *"..NumMem.."* ❩\n⌯︙ايدي المجموعه ↫ ⤈ \n❨ `"..msg.chat_id_.."` ❩\n⌯︙رابط المجموعه ↫ ⤈\n❨ ["..LinkGroup.."] ❩\n●○━━━ -𝐗- ━━━○●\n⌯︙الوقت ↫ "..os.date("%I:%M%p").."\n⌯︙التاريخ ↫ "..os.date("%Y/%m/%d").."",0,'md')
 end
 end
 end,nil)
@@ -10782,7 +10990,7 @@ LinkGroup = 'لا يوجد'
 end
 bot_data:set(XBOT.."MARTEN:Groups:Links"..msg.chat_id_,LinkGroup) 
 if not Sudo(msg) then
-SendText(xBoT,"⌯︙تم تعطيل مجموعه جديده ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n⌯︙بواسطة ↫ "..Name.."\n⌯︙اسم المجموعه ↫ ["..NameChat.."]\n⌯︙ايدي المجموعه ↫ ⤈ \n❨ `"..msg.chat_id_.."` ❩\n⌯︙رابط المجموعه ↫ ⤈\n❨ ["..LinkGroup.."] ❩\nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n⌯︙الوقت ↫ "..os.date("%I:%M%p").."\n⌯︙التاريخ ↫ "..os.date("%Y/%m/%d").."",0,'md')
+SendText(xBoT,"⌯︙تم تعطيل مجموعه جديده ↫ ⤈ \n●○━━━ -𝐗- ━━━○●\n⌯︙بواسطة ↫ "..Name.."\n⌯︙اسم المجموعه ↫ ["..NameChat.."]\n⌯︙ايدي المجموعه ↫ ⤈ \n❨ `"..msg.chat_id_.."` ❩\n⌯︙رابط المجموعه ↫ ⤈\n❨ ["..LinkGroup.."] ❩\n●○━━━ -𝐗- ━━━○●\n⌯︙الوقت ↫ "..os.date("%I:%M%p").."\n⌯︙التاريخ ↫ "..os.date("%Y/%m/%d").."",0,'md')
 end
 end
 end,nil)
@@ -10816,7 +11024,7 @@ else
 LinkGroup = '⌯︙ليست لدي صلاحية الدعوه لهذه المجموعه !'
 end
 if not Sudo(msg) then
-SendText(xBoT,"⌯︙هناك من بحاجه الى مساعده ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n⌯︙الشخص ↫ "..Name.."\n⌯︙اسم المجموعه ↫ ["..NameChat.."]\n⌯︙ايدي المجموعه ↫ ⤈ \n❨ `"..msg.chat_id_.."` ❩\n"..LinkGroup.."\nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n⌯︙الوقت ↫ "..os.date("%I:%M%p").."\n⌯︙التاريخ ↫ "..os.date("%Y/%m/%d").."",0,'md')
+SendText(xBoT,"⌯︙هناك من بحاجه الى مساعده ↫ ⤈ \n●○━━━ -𝐗- ━━━○●\n⌯︙الشخص ↫ "..Name.."\n⌯︙اسم المجموعه ↫ ["..NameChat.."]\n⌯︙ايدي المجموعه ↫ ⤈ \n❨ `"..msg.chat_id_.."` ❩\n"..LinkGroup.."\n●○━━━ -𝐗- ━━━○●\n⌯︙الوقت ↫ "..os.date("%I:%M%p").."\n⌯︙التاريخ ↫ "..os.date("%Y/%m/%d").."",0,'md')
 end
 end,nil)
 end,nil)
@@ -10864,12 +11072,12 @@ if #List == 0 then
 send_X(msg.chat_id_, msg.id_, 1, '⌯︙لا توجد مجموعات مفعله', 1, 'md')
 else
 send_X(msg.chat_id_, msg.id_, 1, '⌯︙جاري ارسال نسخه تحتوي على ↫ '..#List..' مجموعه', 1, 'md')
-local Text = "⌯︙Source XBOT\n⌯︙File Bot Groups\nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n"
+local Text = "⌯︙Source XBOT\n⌯︙File Bot Groups\n●○━━━ -𝐗- ━━━○●\n"
 for k,v in pairs(List) do
 local GroupsManagers = bot_data:scard(XBOT.."MARTEN:Managers:"..v) or 0
 local GroupsAdmins = bot_data:scard(XBOT.."MARTEN:Admins:"..v) or 0
 local Groupslink = bot_data:get(XBOT.."MARTEN:Groups:Links" ..v)
-Text = Text..k.." ↬ ⤈ \n⌯︙Group ID ↬ "..v.."\n⌯︙Group Link ↬ "..(Groupslink or "Not Found").."\n⌯︙Group Managers ↬ "..GroupsManagers.."\n⌯︙Group Admins ↬ "..GroupsAdmins.."\nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n"
+Text = Text..k.." ↬ ⤈ \n⌯︙Group ID ↬ "..v.."\n⌯︙Group Link ↬ "..(Groupslink or "Not Found").."\n⌯︙Group Managers ↬ "..GroupsManagers.."\n⌯︙Group Admins ↬ "..GroupsAdmins.."\n●○━━━ -𝐗- ━━━○●\n"
 end
 local File = io.open('GroupsBot.txt', 'w')
 File:write(Text)
@@ -11222,7 +11430,7 @@ send_X(msg.chat_id_, msg.id_, 1, "⌯︙تم الغاء الامر" ,  1, "md")
 bot_data:del(XBOT..'MARTEN:Add:GpRed'..msg.sender_user_id_..msg.chat_id_)
 return false
 end
-send_X(msg.chat_id_, msg.id_, 1, "⌯︙ارسل لي الرد سواء كان ↫ ⤈\n❨ ملف • ملصق • متحركه • صوره\n • فيديو • بصمه • صوت • رساله ❩\n⌯︙يمكنك اضافة الى النص ↫ ⤈\nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ \n⌯︙🌐 `#username` ↬ معرف المستخدم\n⌯︙📎 `#name` ↬ اسم المستخدم\n⌯︙🆔 `#id` ↬ ايدي المستخدم\n⌯︙✏️ `#bio` ↬ نبذا المستخدم\n⌯︙🎖 `#stast` ↬ رتبة المستخدم\n⌯︙📨 `#msgs` ↬ عدد الرسائل\n⌯︙📝 `#edit` ↬ عدد السحكات\nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ \n⌯︙للخروج ارسل ↫ ( الغاء )\n ✓" ,  1, "md")
+send_X(msg.chat_id_, msg.id_, 1, "⌯︙ارسل لي الرد سواء كان ↫ ⤈\n❨ ملف • ملصق • متحركه • صوره\n • فيديو • بصمه • صوت • رساله ❩\n⌯︙يمكنك اضافة الى النص ↫ ⤈\n●○━━━ -𝐗- ━━━○● \n⌯︙🌐 `#username` ↬ معرف المستخدم\n⌯︙📎 `#name` ↬ اسم المستخدم\n⌯︙🆔 `#id` ↬ ايدي المستخدم\n⌯︙✏️ `#bio` ↬ نبذا المستخدم\n⌯︙🎖 `#stast` ↬ رتبة المستخدم\n⌯︙📨 `#msgs` ↬ عدد الرسائل\n⌯︙📝 `#edit` ↬ عدد السحكات\n●○━━━ -𝐗- ━━━○● \n⌯︙للخروج ارسل ↫ ( الغاء )\n ✓" ,  1, "md")
 bot_data:set(XBOT..'MARTEN:Add:GpRed'..msg.sender_user_id_..msg.chat_id_,'SaveGpRed')
 bot_data:set(XBOT..'MARTEN:Add:GpText'..msg.sender_user_id_..msg.chat_id_,text)
 bot_data:sadd(XBOT..'MARTEN:Manager:GpRed'..msg.chat_id_,text)
@@ -11253,7 +11461,7 @@ send_X(msg.chat_id_, msg.id_, 1, "⌯︙تم الغاء الامر" ,  1, "md")
 bot_data:del(XBOT..'MARTEN:Add:AllRed'..msg.sender_user_id_)
 return false
 end
-send_X(msg.chat_id_, msg.id_, 1, "⌯︙ارسل لي الرد سواء كان ↫ ⤈\n❨ ملف • ملصق • متحركه • صوره\n • فيديو • بصمه • صوت • رساله ❩\n⌯︙يمكنك اضافة الى النص ↫ ⤈\nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ \n⌯︙🌐 `#username` ↬ معرف المستخدم\n⌯︙📎 `#name` ↬ اسم المستخدم\n⌯︙🆔 `#id` ↬ ايدي المستخدم\n⌯︙✏️ `#bio` ↬ نبذا المستخدم\n⌯︙🎖 `#stast` ↬ رتبة المستخدم\n⌯︙📨 `#msgs` ↬ عدد الرسائل\n⌯︙📝 `#edit` ↬ عدد السحكات\nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ \n⌯︙للخروج ارسل ↫ ( الغاء )\n ✓" ,  1, "md")
+send_X(msg.chat_id_, msg.id_, 1, "⌯︙ارسل لي الرد سواء كان ↫ ⤈\n❨ ملف • ملصق • متحركه • صوره\n • فيديو • بصمه • صوت • رساله ❩\n⌯︙يمكنك اضافة الى النص ↫ ⤈\n●○━━━ -𝐗- ━━━○● \n⌯︙🌐 `#username` ↬ معرف المستخدم\n⌯︙📎 `#name` ↬ اسم المستخدم\n⌯︙🆔 `#id` ↬ ايدي المستخدم\n⌯︙✏️ `#bio` ↬ نبذا المستخدم\n⌯︙🎖 `#stast` ↬ رتبة المستخدم\n⌯︙📨 `#msgs` ↬ عدد الرسائل\n⌯︙📝 `#edit` ↬ عدد السحكات\n●○━━━ -𝐗- ━━━○● \n⌯︙للخروج ارسل ↫ ( الغاء )\n ✓" ,  1, "md")
 bot_data:set(XBOT.."MARTEN:Add:AllRed"..msg.sender_user_id_,'SaveAllRed')
 bot_data:set(XBOT.."MARTEN:Add:AllText"..msg.sender_user_id_, text)
 bot_data:sadd(XBOT.."MARTEN:Sudo:AllRed",text)
@@ -11263,7 +11471,7 @@ end end
 --     Source XBOT     --
 if text == 'الردود المتعدده' and Manager(msg) and ChCheck(msg) then
 local redod = bot_data:smembers(XBOT..'MARTEN:Manager:GpRedod'..msg.chat_id_)
-MsgRep = '⌯︙قائمة الردود المتعدده ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n'
+MsgRep = '⌯︙قائمة الردود المتعدده ↫ ⤈ \n●○━━━ -𝐗- ━━━○●\n'
 for k,v in pairs(redod) do
 MsgRep = MsgRep..k..'~ (`'..v..'`) • {*العدد ↫ '..#bot_data:smembers(XBOT..'MARTEN:Text:GpTexts'..v..msg.chat_id_)..'*}\n' 
 end
@@ -11288,7 +11496,7 @@ end
 --     Source XBOT     --
 if text == 'الردود' and Manager(msg) and ChCheck(msg) or text == 'ردود المدير' and Manager(msg) and ChCheck(msg) then
 local redod = bot_data:smembers(XBOT..'MARTEN:Manager:GpRed'..msg.chat_id_)
-MsgRep = '⌯︙ردود المدير ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n'
+MsgRep = '⌯︙ردود المدير ↫ ⤈ \n●○━━━ -𝐗- ━━━○●\n'
 for k,v in pairs(redod) do
 if bot_data:get(XBOT.."MARTEN:Gif:GpRed"..v..msg.chat_id_) then
 dp = 'متحركه 🎭'
@@ -11337,7 +11545,7 @@ end
 --     Source XBOT     --
 if  text == "ردود المطور" and SecondSudo(msg) or text == "الردود العام" and SecondSudo(msg) or text == "ردود العام" and SecondSudo(msg) or text == "↫ الردود العام ⌯" and SecondSudo(msg) then
 local redod = bot_data:smembers(XBOT.."MARTEN:Sudo:AllRed")
-MsgRep = '⌯︙ردود المطور ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n'
+MsgRep = '⌯︙ردود المطور ↫ ⤈ \n●○━━━ -𝐗- ━━━○●\n'
 for k,v in pairs(redod) do
 if bot_data:get(XBOT.."MARTEN:Gif:AllRed"..v) then
 dp = 'متحركه 🎭'
@@ -11437,7 +11645,7 @@ local Text = [[
 ⌯︙م5 ↫ اوامر المطورين
 ⌯︙م6 ↫ اوامر الاعضاء
 ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ 
-[🖥┇𝐒𝐎𝐔𝐑𝐂𝐄 𝐃𝐑𝐀𝐆𝐎𝐍 .](t.me/SrcDrg)➤
+[✗ 𝐬𝐨𝐮𝐫𝐜𝐞 -𝐗- ✗ .](t.me/SrcDrg)➤
 ]] 
 keyboard = {} 
 keyboard.inline_keyboard = {{{text="• اوامر الادمنيه •",callback_data="/HelpList2:"..msg.sender_user_id_},{text="• اوامر الحمايه •",callback_data="/HelpList1:"..msg.sender_user_id_}},{{text="• اوامر المنشئين •",callback_data="/HelpList4:"..msg.sender_user_id_},{text="• اوامر المدراء •",callback_data="/HelpList3:"..msg.sender_user_id_}},{{text="• اوامر الاعضاء •",callback_data="/HelpList6:"..msg.sender_user_id_},{text="• اوامر المطورين •",callback_data="/HelpList5:"..msg.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..msg.sender_user_id_}}}
@@ -11464,7 +11672,7 @@ else
 local Help = bot_data:get(XBOT..'MARTEN:Help1')
 local Text = [[
 ⌯︙اوامر حماية المجموعه ↫ ⤈
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+●○━━━ -𝐗- ━━━○●
 ⌯︙قفل • فتح ↫ الروابط
 ⌯︙قفل • فتح ↫ المعرفات
 ⌯︙قفل • فتح ↫ البوتات
@@ -11497,9 +11705,9 @@ local Text = [[
 ⌯︙قفل • فتح ↫ الانكليزيه
 ⌯︙قفل • فتح ↫ الفارسيه
 ⌯︙قفل • فتح ↫ التفليش
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+●○━━━ -𝐗- ━━━○●
 ⌯︙اوامر حمايه اخرى ↫ ⤈
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+●○━━━ -𝐗- ━━━○●
 ⌯︙قفل • فتح + الامر ↫ ⤈
 ⌯︙التكرار بالطرد
 ⌯︙التكرار بالكتم
@@ -11507,8 +11715,8 @@ local Text = [[
 ⌯︙الفارسيه بالطرد
 ⌯︙البوتات بالطرد
 ⌯︙البوتات بالتقيد
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
-[🖥┇𝐒𝐎𝐔𝐑𝐂𝐄 𝐃𝐑𝐀𝐆𝐎𝐍 .](t.me/SrcDrg)➤
+●○━━━ -𝐗- ━━━○●
+[✗ 𝐬𝐨𝐮𝐫𝐜𝐞 -𝐗- ✗ .](t.me/SrcDrg)➤
 ]]
 send_X(msg.chat_id_, msg.id_, 1, (Help or Text), 1, 'md')
 end end
@@ -11532,7 +11740,7 @@ else
 local Help = bot_data:get(XBOT..'MARTEN:Help2')
 local Text = [[
 ⌯︙اوامر الادمنيه ↫ ⤈
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+●○━━━ -𝐗- ━━━○●
 ⌯︙الاعدادت
 ⌯︙تاك للكل 
 ⌯︙انشاء رابط
@@ -11551,25 +11759,25 @@ local Text = [[
 ⌯︙ضع • حذف ↫ قوانين
 ⌯︙اضف • حذف ↫ صلاحيه
 ⌯︙الصلاحيات • حذف الصلاحيات
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+●○━━━ -𝐗- ━━━○●
 ⌯︙ضع سبام + العدد
 ⌯︙ضع تكرار + العدد
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+●○━━━ -𝐗- ━━━○●
 ⌯︙رفع مميز • تنزيل مميز
 ⌯︙المميزين • حذف المميزين
 ⌯︙كشف القيود • رفع القيود
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+●○━━━ -𝐗- ━━━○●
 ⌯︙حذف • مسح + بالرد
 ⌯︙منع • الغاء منع
 ⌯︙قائمه المنع
 ⌯︙حذف قائمه المنع
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+●○━━━ -𝐗- ━━━○●
 ⌯︙تفعيل • تعطيل ↫ الرابط
 ⌯︙تفعيل • تعطيل ↫ الالعاب
 ⌯︙تفعيل • تعطيل ↫ الترحيب
 ⌯︙تفعيل • تعطيل ↫ التاك للكل
 ⌯︙تفعيل • تعطيل ↫ كشف الاعدادات
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+●○━━━ -𝐗- ━━━○●
 ⌯︙طرد المحذوفين
 ⌯︙طرد ↫ بالرد • بالمعرف • بالايدي
 ⌯︙كتم • الغاء كتم
@@ -11578,13 +11786,13 @@ local Text = [[
 ⌯︙المكتومين • حذف المكتومين
 ⌯︙المقيدين • حذف المقيدين
 ⌯︙المحظورين • حذف المحظورين
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+●○━━━ -𝐗- ━━━○●
 ⌯︙تقييد دقيقه + عدد الدقائق
 ⌯︙تقييد ساعه + عدد الساعات
 ⌯︙تقييد يوم + عدد الايام
 ⌯︙الغاء تقييد ↫ لالغاء التقييد بالوقت
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
-[🖥┇𝐒𝐎𝐔𝐑𝐂𝐄 𝐃𝐑𝐀𝐆𝐎𝐍 .](t.me/SrcDrg)➤
+●○━━━ -𝐗- ━━━○●
+[✗ 𝐬𝐨𝐮𝐫𝐜𝐞 -𝐗- ✗ .](t.me/SrcDrg)➤
 ]]
 send_X(msg.chat_id_, msg.id_, 1, (Help or Text), 1, 'md')
 end end
@@ -11608,7 +11816,7 @@ else
 local Help = bot_data:get(XBOT..'MARTEN:Help3')
 local Text = [[
 ⌯︙اوامر المدراء ↫ ⤈
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+●○━━━ -𝐗- ━━━○●
 ⌯︙فحص البوت
 ⌯︙ضع اسم + الاسم
 ⌯︙اضف • حذف ↫ رد
@@ -11622,34 +11830,34 @@ local Text = [[
 ⌯︙منع ↫ بالرد على ( ملصق • صوره • متحركه )
 ⌯︙حذف قائمه منع + ↫ ⤈
 ( الصور • المتحركات • الملصقات )
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+●○━━━ -𝐗- ━━━○●
 ⌯︙تنزيل الكل
 ⌯︙رفع ادمن • تنزيل ادمن
 ⌯︙الادمنيه • حذف الادمنيه
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+●○━━━ -𝐗- ━━━○●
 ⌯︙تثبيت
 ⌯︙الغاء التثبيت
 ⌯︙اعاده التثبيت
 ⌯︙الغاء تثبيت الكل
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+●○━━━ -𝐗- ━━━○●
 ⌯︙تغير رد + اسم الرتبه + النص ↫ ⤈
 ⌯︙المطور • منشئ الاساسي
 ⌯︙المنشئ • المدير • الادمن
 ⌯︙المميز • المنظف • العضو
 ⌯︙حذف ردود الرتب
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+●○━━━ -𝐗- ━━━○●
 ⌯︙تغيير الايدي ↫ لتغيير الكليشه
 ⌯︙تعيين الايدي ↫ لتعيين الكليشه
 ⌯︙حذف الايدي ↫ لحذف الكليشه
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+●○━━━ -𝐗- ━━━○●
 ⌯︙تفعيل • تعطيل + الامر ↫ ⤈
 ⌯︙اطردني • الايدي بالصوره • الابراج
 ⌯︙معاني الاسماء • اوامر النسب • انطق
 ⌯︙الايدي • تحويل الصيغ • اوامر التحشيش
 ⌯︙ردود المدير • ردود المطور • التحقق
 ⌯︙ضافني • حساب العمر • الزخرفه • غنيلي
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
-[🖥┇𝐒𝐎𝐔𝐑𝐂𝐄 𝐃𝐑𝐀𝐆𝐎𝐍 .](t.me/SrcDrg)➤
+●○━━━ -𝐗- ━━━○●
+[✗ 𝐬𝐨𝐮𝐫𝐜𝐞 -𝐗- ✗ .](t.me/SrcDrg)➤
 ]]
 send_X(msg.chat_id_, msg.id_, 1, (Help or Text), 1, 'md')
 end end
@@ -11673,7 +11881,7 @@ else
 local Help = bot_data:get(XBOT..'MARTEN:Help4')
 local Text = [[
 ⌯︙اوامر المنشئين ↫ ⤈
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+●○━━━ -𝐗- ━━━○●
 ⌯︙تنزيل الكل
 ⌯︙الميديا • امسح
 ⌯︙تعين عدد الحذف
@@ -11690,9 +11898,9 @@ local Text = [[
 ⌯︙تفعيل • تعطيل + الامر ↫ ⤈
 ⌯︙نزلني • امسح
 ⌯︙الحظر • الكتم
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+●○━━━ -𝐗- ━━━○●
 ⌯︙اوامر المنشئين الاساسيين ↫ ⤈
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+●○━━━ -𝐗- ━━━○●
 ⌯︙وضع لقب + اللقب
 ⌯︙تفعيل • تعطيل ↫ الرفع
 ⌯︙رفع منشئ • تنزيل منشئ
@@ -11700,15 +11908,15 @@ local Text = [[
 ⌯︙رفع • تنزيل ↫ مشرف
 ⌯︙رفع بكل الصلاحيات
 ⌯︙حذف القوائم
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+●○━━━ -𝐗- ━━━○●
 ⌯︙اوامر المالكين ↫ ⤈
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+●○━━━ -𝐗- ━━━○●
 ⌯︙رفع • تنزيل ↫ منشئ اساسي
 ⌯︙حذف المنشئين الاساسيين 
 ⌯︙المنشئين الاساسيين 
 ⌯︙حذف جميع الرتب
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
-[🖥┇𝐒𝐎𝐔𝐑𝐂𝐄 𝐃𝐑𝐀𝐆𝐎𝐍 .](t.me/SrcDrg)➤
+●○━━━ -𝐗- ━━━○●
+[✗ 𝐬𝐨𝐮𝐫𝐜𝐞 -𝐗- ✗ .](t.me/SrcDrg)➤
 ]]
 send_X(msg.chat_id_, msg.id_, 1, (Help or Text), 1, 'md')
 end end
@@ -11732,7 +11940,7 @@ else
 local Help = bot_data:get(XBOT..'MARTEN:Help5')
 local Text = [[
 ⌯︙اوامر المطورين ↫ ⤈
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+●○━━━ -𝐗- ━━━○●
 ⌯︙الكروبات
 ⌯︙المطورين
 ⌯︙المشتركين
@@ -11743,16 +11951,16 @@ local Text = [[
 ⌯︙كشف + -ايدي المجموعه
 ⌯︙رفع مالك • تنزيل مالك
 ⌯︙المالكين • حذف المالكين
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+●○━━━ -𝐗- ━━━○●
 ⌯︙رفع • تنزيل ↫ مدير عام
 ⌯︙حذف • المدراء العامين 
 ⌯︙رفع • تنزيل ↫ ادمن عام
 ⌯︙حذف • الادمنيه العامين 
 ⌯︙رفع • تنزيل ↫ مميز عام
 ⌯︙حذف • المميزين عام 
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+●○━━━ -𝐗- ━━━○●
 ⌯︙اوامر المطور الاساسي ↫ ⤈
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+●○━━━ -𝐗- ━━━○●
 ⌯︙تحديث
 ⌯︙الملفات
 ⌯︙المتجر
@@ -11786,15 +11994,15 @@ local Text = [[
 ⌯︙الثانويين • حذف الثانويين
 ⌯︙تعيين • حذف ↫ كليشة الايدي
 ⌯︙اذاعه للكل بالتوجيه ↫ بالرد
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+●○━━━ -𝐗- ━━━○●
 ⌯︙تفعيل ملف + اسم الملف
 ⌯︙تعطيل ملف + اسم الملف
 ⌯︙تفعيل • تعطيل + الامر ↫ ⤈
 ⌯︙الاذاعه • الاشتراك الاجباري
 ⌯︙ترحيب البوت • المغادره
 ⌯︙البوت الخدمي • التواصل
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
-[🖥┇𝐒𝐎𝐔𝐑𝐂𝐄 𝐃𝐑𝐀𝐆𝐎𝐍 .](t.me/SrcDrg)➤
+●○━━━ -𝐗- ━━━○●
+[✗ 𝐬𝐨𝐮𝐫𝐜𝐞 -𝐗- ✗ .](t.me/SrcDrg)➤
 ]]
 send_X(msg.chat_id_, msg.id_, 1, (Help or Text), 1, 'md')
 end end
@@ -11815,7 +12023,7 @@ if text == "م٦" or text == "م6" or text == "اوامر6" or text == "اوام
 local Help = bot_data:get(XBOT..'MARTEN:Help6')
 local Text = [[
 ⌯︙اوامر الاعضاء ↫ ⤈
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+●○━━━ -𝐗- ━━━○●
 ⌯︙السورس • موقعي • رتبتي • معلوماتي 
 ⌯︙رقمي • لقبي • نبذتي • صلاحياتي • غنيلي
 ⌯︙رسائلي • حذف رسائلي • اسمي • معرفي 
@@ -11826,7 +12034,7 @@ local Text = [[
 ⌯︙ايدي المجموعه • معلومات المجموعه 
 ⌯︙نسبه الحب • نسبه الكره • نسبه الغباء 
 ⌯︙نسبه الرجوله • نسبه الانوثه • التفاعل
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+●○━━━ -𝐗- ━━━○●
 ⌯︙لقبه + بالرد
 ⌯︙كول + الكلمه
 ⌯︙زخرفه + اسمك
@@ -11841,12 +12049,114 @@ local Text = [[
 ⌯︙ايدي • كشف  ↫ بالرد • بالمعرف • بالايدي
 ⌯︙تحويل + بالرد ↫ صوره • ملصق • صوت • بصمه
 ⌯︙انطق + الكلام تدعم جميع اللغات مع الترجمه للعربي
-ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
-[🖥┇𝐒𝐎𝐔𝐑𝐂𝐄 𝐃𝐑𝐀𝐆𝐎𝐍 .](t.me/SrcDrg)➤
+●○━━━ -𝐗- ━━━○●
+[✗ 𝐬𝐨𝐮𝐫𝐜𝐞 -𝐗- ✗ .](t.me/SrcDrg)➤
 ]]
 send_X(msg.chat_id_, msg.id_, 1, (Help or Text), 1, 'md')
 end
 --     Source XBOT     --
+--     Source -𝐗-     --
+if text == "مسح الرتب" and Admin(msg) then
+local Del = bot_data:get(XBOT..'MARTEN:Del')
+local ListSudo = bot_data:scard(XBOT.."MARTEN:MARTENSudo:")
+local ListSecondSudo = bot_data:scard(XBOT.."MARTEN:SecondSudo:")
+local ListSudoBot = bot_data:scard(XBOT.."MARTEN:SudoBot:")
+local ListOwner = bot_data:scard(XBOT.."MARTEN:Owner:"..msg.chat_id_)
+local ListBasicConstructor = bot_data:scard(XBOT.."MARTEN:BasicConstructor:"..msg.chat_id_)
+local ListConstructor = bot_data:scard(XBOT.."MARTEN:Constructor:"..msg.chat_id_)
+local ListManagers = bot_data:scard(XBOT.."MARTEN:Managers:"..msg.chat_id_)
+local ListAdmins = bot_data:scard(XBOT.."MARTEN:Admins:"..msg.chat_id_)
+local ListVipMem = bot_data:scard(XBOT.."MARTEN:VipMem:"..msg.chat_id_)
+local ListCleaner = bot_data:scard(XBOT.."MARTEN:Cleaner:"..msg.chat_id_)
+local Text = [[
+⌯︙اهلاً بك في قائمـة اوامر الرتب ↫ ⤈ 🪜
+ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+⌯︙يمكنك مسح رتب المجموعـة من خلال الازرار اسفل ↫ ⤈ 
+ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
+» [𝐬𝐨𝐮𝐫𝐜𝐞 -𝐗-](https://t.me/SrcX_B0T)➤
+]] 
+keyboard = {} 
+if Sudo(msg) then
+keyboard.inline_keyboard = {
+	{{text="• مسح الاساسيين {"..ListSudo.."} •",callback_data="/DelMARTENSudo:"..msg.sender_user_id_}},
+	{{text="• مسح الثانويين {"..ListSecondSudo.."} •",callback_data="/DelSecondSudo:"..msg.sender_user_id_},{text="• مسح المطورين {"..ListSudoBot.."} •",callback_data="/DelSudoBot:"..msg.sender_user_id_}},
+	{{text="• مسح المنشئين الاساسيين {"..ListBasicConstructor.."} •",callback_data="/DelBasicConstructor:"..msg.sender_user_id_}},
+	{{text="• مسح المالكين {"..ListOwner.."} •",callback_data="/DelOwner:"..msg.sender_user_id_},{text="• مسح المنشئين {"..ListConstructor.."} •",callback_data="/DelConstructor:"..msg.sender_user_id_}},
+	{{text="• مسح المدراء {"..ListManagers.."} •",callback_data="/DelManager:"..msg.sender_user_id_},{text="• مسح الادمنيه {"..ListAdmins.."} •",callback_data="/DelAdmins:"..msg.sender_user_id_}},
+	{{text="• مسح المميزين {"..ListVipMem.."} •",callback_data="/DelVipMem:"..msg.sender_user_id_}},
+	{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..msg.sender_user_id_},{text="• القائمه الرئيسيه •",callback_data="/DelList:"..msg.sender_user_id_}},
+	{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}
+}
+elseif MARTENSudo(msg) then
+keyboard.inline_keyboard = {
+	{{text="• مسح الثانويين {"..ListSecondSudo.."} •",callback_data="/DelSecondSudo:"..msg.sender_user_id_}},
+	{{text="• مسح المطورين {"..ListSudoBot.."} •",callback_data="/DelSudoBot:"..msg.sender_user_id_}},
+	{{text="• مسح المنشئين الاساسيين {"..ListBasicConstructor.."} •",callback_data="/DelBasicConstructor:"..msg.sender_user_id_}},
+	{{text="• مسح المالكين {"..ListOwner.."} •",callback_data="/DelOwner:"..msg.sender_user_id_},{text="• مسح المنشئين {"..ListConstructor.."} •",callback_data="/DelConstructor:"..msg.sender_user_id_}},
+	{{text="• مسح المدراء {"..ListManagers.."} •",callback_data="/DelManager:"..msg.sender_user_id_},{text="• مسح الادمنيه {"..ListAdmins.."} •",callback_data="/DelAdmins:"..msg.sender_user_id_}},
+	{{text="• مسح المميزين {"..ListVipMem.."} •",callback_data="/DelVipMem:"..msg.sender_user_id_}},
+	{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..msg.sender_user_id_},{text="• القائمه الرئيسيه •",callback_data="/DelList:"..msg.sender_user_id_}},
+	{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}
+}
+elseif SecondSudo(msg) then
+keyboard.inline_keyboard = {
+	{{text="• مسح المطورين {"..ListSudoBot.."} •",callback_data="/DelSudoBot:"..msg.sender_user_id_},{text="• مسح المالكين {"..ListOwner.."} •",callback_data="/DelOwner:"..msg.sender_user_id_}},
+	{{text="• مسح المنشئين الاساسيين {"..ListBasicConstructor.."} •",callback_data="/DelBasicConstructor:"..msg.sender_user_id_}},
+	{{text="• مسح المنشئين {"..ListConstructor.."} •",callback_data="/DelConstructor:"..msg.sender_user_id_},{text="• مسح المدراء {"..ListManagers.."} •",callback_data="/DelManager:"..msg.sender_user_id_}},
+	{{text="• مسح الادمنيه {"..ListAdmins.."} •",callback_data="/DelAdmins:"..msg.sender_user_id_},{text="• مسح المميزين {"..ListVipMem.."} •",callback_data="/DelVipMem:"..msg.sender_user_id_}},
+	{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..msg.sender_user_id_},{text="• القائمه الرئيسيه •",callback_data="/DelList:"..msg.sender_user_id_}},
+	{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}
+}
+elseif SudoBot(msg) then
+keyboard.inline_keyboard = {
+	{{text="• مسح المنشئين الاساسيين {"..ListBasicConstructor.."} •",callback_data="/DelBasicConstructor:"..msg.sender_user_id_}},
+	{{text="• مسح المالكين •",callback_data="/DelOwner:"..msg.sender_user_id_},{text="• مسح المنشئين {"..ListConstructor.."} •",callback_data="/DelConstructor:"..msg.sender_user_id_}},
+	{{text="• مسح المدراء {"..ListManagers.."} •",callback_data="/DelManager:"..msg.sender_user_id_},{text="• مسح الادمنيه {"..ListAdmins.."} •",callback_data="/DelAdmins:"..msg.sender_user_id_}},
+	{{text="• مسح المميزين {"..ListVipMem.."} •",callback_data="/DelVipMem:"..msg.sender_user_id_}},
+	{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..msg.sender_user_id_},{text="• القائمه الرئيسيه •",callback_data="/DelList:"..msg.sender_user_id_}},
+	{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}
+}
+elseif Owner(msg) then
+keyboard.inline_keyboard = {
+	{{text="• مسح المنشئين الاساسيين {"..ListBasicConstructor.."} •",callback_data="/DelBasicConstructor:"..msg.sender_user_id_}},
+	{{text="• مسح المنشئين {"..ListConstructor.."} •",callback_data="/DelConstructor:"..msg.sender_user_id_},{text="• مسح المدراء {"..ListManagers.."} •",callback_data="/DelManager:"..msg.sender_user_id_}},
+	{{text="• مسح الادمنيه {"..ListAdmins.."} •",callback_data="/DelAdmins:"..msg.sender_user_id_},{text="• مسح المميزين {"..ListVipMem.."} •",callback_data="/DelVipMem:"..msg.sender_user_id_}},
+	{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..msg.sender_user_id_},{text="• القائمه الرئيسيه •",callback_data="/DelList:"..msg.sender_user_id_}},
+	{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}
+}
+elseif BasicConstructor(msg) then
+keyboard.inline_keyboard = {
+	{{text="• مسح المنشئين {"..ListConstructor.."} •",callback_data="/DelConstructor:"..msg.sender_user_id_}},
+	{{text="• مسح المدراء {"..ListManagers.."} •",callback_data="/DelManager:"..msg.sender_user_id_},{text="• مسح الادمنيه {"..ListAdmins.."} •",callback_data="/DelAdmins:"..msg.sender_user_id_}},
+	{{text="• مسح المميزين {"..ListVipMem.."} •",callback_data="/DelVipMem:"..msg.sender_user_id_}},
+	{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..msg.sender_user_id_},{text="• القائمه الرئيسيه •",callback_data="/DelList:"..msg.sender_user_id_}},
+	{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}
+}
+elseif Constructor(msg) then
+keyboard.inline_keyboard = {
+	{{text="• مسح المدراء {"..ListManagers.."} •",callback_data="/DelManager:"..msg.sender_user_id_},{text="• مسح الادمنيه {"..ListAdmins.."} •",callback_data="/DelAdmins:"..msg.sender_user_id_}},
+	{{text="• مسح المميزين {"..ListVipMem.."} •",callback_data="/DelVipMem:"..msg.sender_user_id_}},
+	{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..msg.sender_user_id_},{text="• القائمه الرئيسيه •",callback_data="/DelList:"..msg.sender_user_id_}},
+	{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}
+}
+elseif Manager(msg) then
+keyboard.inline_keyboard = {
+	{{text="• مسح الادمنيه {"..ListAdmins.."} •",callback_data="/DelAdmins:"..msg.sender_user_id_}},
+	{{text="• مسح المميزين {"..ListVipMem.."} •",callback_data="/DelVipMem:"..msg.sender_user_id_}},
+	{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..msg.sender_user_id_},{text="• القائمه الرئيسيه •",callback_data="/DelList:"..msg.sender_user_id_}},
+	{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}
+}
+elseif Admin(msg) then
+keyboard.inline_keyboard = {
+	{{text="• مسح المميزين {"..ListVipMem.."} •",callback_data="/DelVipMem:"..msg.sender_user_id_}},
+	{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..msg.sender_user_id_},{text="• القائمه الرئيسيه •",callback_data="/DelList:"..msg.sender_user_id_}},
+	{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}
+}
+end
+Msg_id = msg.id_/2097152/0.5
+return https.request("https://api.telegram.org/bot"..TokenBot..'/sendMessage?chat_id='..msg.chat_id_..'&text=' .. URL.escape(Del or Text).."&reply_to_message_id="..Msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+--     source -𝐗-     --
 if SecondSudo(msg) then
 if text == "-تحديث السورس-" or text == "-تحديث سورس-" then 
 send_X(msg.chat_id_, msg.id_, 1, '⌯︙جاري تحديث سورس اكس', 1, 'md') 
@@ -11869,12 +12179,12 @@ if Sudo(msg) then
 local url , res = https.request('https://api.telegram.org/bot'..TokenBot..'/getMe') 
 local data = json:decode(url)
 bot_data:set(Server_XBOT.."Token_username",""..data.result.username)
-ReplyStatus(msg,msg.sender_user_id_,"EbDsDrg","⌯︙تم تحديث او تصحيح اضف في مجموعتك\nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ")
+ReplyStatus(msg,msg.sender_user_id_,"EbDsDrg","⌯︙تم تحديث او تصحيح اضف في مجموعتك\n●○━━━ -𝐗- ━━━○●")
 end
 end
 --     Source XBOT     --
 if text == 'الملفات' then
-Files = '\n⌯︙الملفات المفعله في البوت ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n'
+Files = '\n⌯︙الملفات المفعله في البوت ↫ ⤈ \n●○━━━ -𝐗- ━━━○●\n'
 i = 0
 for v in io.popen('ls Shop_XBOT'):lines() do
 if v:match(".lua$") then
@@ -11893,8 +12203,8 @@ if res == 200 then
 local Get_info, res = pcall(JSON.decode,Get_Files);
 vardump(res.plugins_)
 if Get_info then
-local TextS = "\n⌯︙قائمة ملفات متجر سورس اكس\n⌯︙الملفات المتوفره حاليا ↫ ⤈\nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n"
-local TextE = "ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n⌯︙علامة ↫ (✔) تعني الملف مفعل\n⌯︙علامة ↫ (✖️) تعني الملف معطل\n"
+local TextS = "\n⌯︙قائمة ملفات متجر سورس اكس\n⌯︙الملفات المتوفره حاليا ↫ ⤈\n●○━━━ -𝐗- ━━━○●\n"
+local TextE = "●○━━━ -𝐗- ━━━○●\n⌯︙علامة ↫ (✔) تعني الملف مفعل\n⌯︙علامة ↫ (✖️) تعني الملف معطل\n"
 local NumFile = 0
 for name,Info in pairs(res.plugins_) do
 local CheckFileisFound = io.open("Shop_XBOT/"..name,"r")
@@ -12038,7 +12348,7 @@ send_X(msg.chat_id_, msg.id_, 1, '⌯︙للمطور الاساسي فقط ', 1,
 else
 local chtext = bot_data:get(XBOT.."MARTEN:ChText")
 if chtext then
-send_X(msg.chat_id_, msg.id_, 1, '⌯︙كليشة الاشتراك ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n['..chtext..']', 1, 'md')
+send_X(msg.chat_id_, msg.id_, 1, '⌯︙كليشة الاشتراك ↫ ⤈ \n●○━━━ -𝐗- ━━━○●\n['..chtext..']', 1, 'md')
 else
 if bot_data:get(XBOT.."MARTEN:ChId") then
 local Check = https.request('https://api.telegram.org/bot'..TokenBot..'/getChat?chat_id='..bot_data:get(XBOT.."MARTEN:ChId"))
@@ -12072,11 +12382,11 @@ HardDisk=`df -lh | awk '{if ($6 == "/") { print $3"/"$2" ~ {"$5"}" }}'`
 Percentage=`top -b -n1 | grep "Cpu(s)" | awk '{print $2 + $4}'`
 UpTime=`uptime | awk -F'( |,|:)+' '{if ($7=="min") m=$6; else {if ($7~/^day/) {d=$6;h=$8;m=$9} else {h=$6;m=$7}}} {print d+0,"days,",h+0,"hours,",m+0,"minutes"}'`
 echo '⌯︙نظام التشغيل ↫ ⤈\n`'"$LinuxVersion"'`' 
-echo 'ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n⌯︙الذاكره العشوائيه ↫ ⤈\n`'"$MemoryUsage"'`'
-echo 'ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n⌯︙وحدة التخزين ↫ ⤈\n`'"$HardDisk"'`'
-echo 'ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n⌯︙المعالج ↫ ⤈\n`'"`grep -c processor /proc/cpuinfo`""Core ~ {$Percentage%} "'`'
-echo 'ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n⌯︙الدخول ↫ ⤈\n`'`whoami`'`'
-echo 'ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n⌯︙مدة تشغيل السيرفر ↫ ⤈\n`'"$UpTime"'`'
+echo '●○━━━ -𝐗- ━━━○●\n⌯︙الذاكره العشوائيه ↫ ⤈\n`'"$MemoryUsage"'`'
+echo '●○━━━ -𝐗- ━━━○●\n⌯︙وحدة التخزين ↫ ⤈\n`'"$HardDisk"'`'
+echo '●○━━━ -𝐗- ━━━○●\n⌯︙المعالج ↫ ⤈\n`'"`grep -c processor /proc/cpuinfo`""Core ~ {$Percentage%} "'`'
+echo '●○━━━ -𝐗- ━━━○●\n⌯︙الدخول ↫ ⤈\n`'`whoami`'`'
+echo '●○━━━ -𝐗- ━━━○●\n⌯︙مدة تشغيل السيرفر ↫ ⤈\n`'"$UpTime"'`'
 ]]):read('*a'), 1, 'md')
 end
 end
@@ -12103,10 +12413,10 @@ tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,
 local MARTENname = '⌯︙العضو ↫ ['..dp.first_name_..'](tg://user?id='..dp.id_..')'
 local MARTENid = '⌯︙ايديه ↫ `'..dp.id_..'`'
 local MARTENtext = '⌯︙قام بالتعديل على '..Media
-local MARTENtxt = 'ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n⌯︙تعالو يامشرفين اكو مخرب'
+local MARTENtxt = '●○━━━ -𝐗- ━━━○●\n⌯︙تعالو يامشرفين اكو مخرب'
 tdcli_function ({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub("-100",""),filter_ = {ID = "ChannelMembersAdministrators"},offset_ = 0,limit_ = 100},function(arg,MaRTeN) 
 local admins = MaRTeN.members_  
-text = '\nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n'
+text = '\n●○━━━ -𝐗- ━━━○●\n'
 for i=0 , #admins do 
 if not MaRTeN.members_[i].bot_info_ then
 tdcli_function ({ID = "GetUser",user_id_ = admins[i].user_id_},function(arg,data) 
