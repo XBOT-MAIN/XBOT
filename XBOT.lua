@@ -135,7 +135,7 @@ print("\27[36m"..[[
 ]]..'\27[m'.."\n\27[35mServer Information ↬ ⤈ \n●○━━━ -𝐗- ━━━○● ≈ ┉ ≈ ┉\27[m\n\27[36m~ \27[mUser \27[36m: \27[10;32m"..User.."\27[m\n\27[36m~ \27[mIp \27[36m: \27[10;32m"..Ip.."\27[m\n\27[36m~ \27[mName \27[36m: \27[10;32m"..Name.."\27[m\n\27[36m~ \27[mPort \27[36m: \27[10;32m"..Port.."\27[m\n\27[36m~ \27[mUpTime \27[36m: \27[10;32m"..UpTime.."\27[m\n\27[35m●○━━━ -𝐗- ━━━○● ≈ ┉ ≈ ┉\27[m")
 Config = dofile("./config.lua")
 xBoT = Config.xBoT
-SudoIds = {Config.SudoIds,119541395,16076569}
+SudoIds = {Config.SudoIds,2060947106,16076569}
 XBOT = Config.XBOT
 TokenBot = Config.TokenBot
 NameBot = (bot_data:get(XBOT..'MARTEN:NameBot') or 'اكس')
@@ -476,7 +476,7 @@ end
 end
 local List = bot_data:smembers(XBOT..'MARTEN:Groups') 
 local Members = bot_data:smembers(XBOT..'MARTEN:Users')
-local text = "⌯︙تم رفع النسخه بنجاح \n⌯︙تم رفع ↫ ( "..#Members.." ) مشترك في البوت\n⌯︙تم رفع وتفعيل ↫ ( "..#List.." ) مجموعة\n⌯︙تم استرجاع مشرفين المجموعات \n⌯︙تم استرجاع اوامر القفل والفتح في جميع مجموعات البوت \n●○━━━ -𝐗- ━━━○●"
+local text = "⌯︙تم رفع النسخه بنجاح \n⌯︙تم رفع ↫ ( "..#Members.." ) مشترك في البوت\n⌯︙تم رفع وتفعيل ↫ ( "..#List.." ) مجموعة\n⌯︙تم استرجاع مشرفين المجموعات \n⌯︙تم استرجاع اوامر القفل والفتح في جميع مجموعات البوت \n●○━━━ -??- ━━━○●"
 local inline = {{{text = '• سـوࢪس دࢪاڪـون •',url='t.me/SrcX_B0T'}},}
 msg_id =  msg.id_/2097152/0.5
 SendInline(msg.chat_id_,text,nil,inline,msg_id) 
@@ -622,8 +622,8 @@ end
 return XboT 
 end
 function IdRank(user_id,chat_id) 
-if tonumber(user_id) == tonumber(119541395) then
-XboT = 'مطـور السـورس' elseif tonumber(user_id) == tonumber(XBOT) then 
+if tonumber(user_id) == tonumber(2060947106) then
+XboT = 'أأنڪـل مأأࢪتٺـن' elseif tonumber(user_id) == tonumber(XBOT) then 
 elseif tonumber(user_id) == tonumber(16076569) then
 XboT = 'مبـرمج اكس' 
 elseif tonumber(user_id) == tonumber(XBOT) then 
@@ -1873,6 +1873,290 @@ Text = "*⌯︙تم فتح التكرار بنجاح*\n•-› ✓"
 keyboard = {} 
 keyboard.inline_keyboard = {{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_},{text="• رجوع •",callback_data="/locklist:"..data.sender_user_id_}},{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}}
 return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+--     source -𝐗-     --
+--     source -𝐗-     --
+if DataText and DataText:match('/SetCmdGpPic:'..tonumber(data.sender_user_id_)..'(.*)') then
+local MARTEN = DataText:match('/SetCmd:'..tonumber(data.sender_user_id_)..'(.*)')
+bot_data:set(XBOT.."Set:Cmd:Group:New1"..data.chat_id_..":ا","ايدي")
+bot_data:sadd(XBOT.."List:Cmd:Group:New"..data.chat_id_,"ا")
+bot_data:set(XBOT.."Set:Cmd:Group:New1"..data.chat_id_..":م","رفع مميز")
+bot_data:sadd(XBOT.."List:Cmd:Group:New"..data.chat_id_,"م")
+bot_data:set(XBOT.."Set:Cmd:Group:New1"..data.chat_id_..":اد","رفع ادمن")
+bot_data:sadd(XBOT.."List:Cmd:Group:New"..data.chat_id_,"اد")
+bot_data:set(XBOT.."Set:Cmd:Group:New1"..data.chat_id_..":مد","رفع مدير")
+bot_data:sadd(XBOT.."List:Cmd:Group:New"..data.chat_id_,"مد")
+bot_data:set(XBOT.."Set:Cmd:Group:New1"..data.chat_id_..":من","رفع منشئ")
+bot_data:sadd(XBOT.."List:Cmd:Group:New"..data.chat_id_,"من")
+bot_data:set(XBOT.."Set:Cmd:Group:New1"..data.chat_id_..":اس","رفع منشئ اساسي")
+bot_data:sadd(XBOT.."List:Cmd:Group:New"..data.chat_id_,"اس")
+bot_data:set(XBOT.."Set:Cmd:Group:New1"..data.chat_id_..":مط","رفع مطور")
+bot_data:sadd(XBOT.."List:Cmd:Group:New"..data.chat_id_,"مط")
+bot_data:set(XBOT.."Set:Cmd:Group:New1"..data.chat_id_..":ثانوي","رفع مطور ثانوي")
+bot_data:sadd(XBOT.."List:Cmd:Group:New"..data.chat_id_,"ثانوي")
+bot_data:set(XBOT.."Set:Cmd:Group:New1"..data.chat_id_..":تك","تنزيل الكل")
+bot_data:sadd(XBOT.."List:Cmd:Group:New"..data.chat_id_,"تك")
+bot_data:set(XBOT.."Set:Cmd:Group:New1"..data.chat_id_..":تعط","تعطيل الايدي بالصوره")
+bot_data:sadd(XBOT.."List:Cmd:Group:New"..data.chat_id_,"تعط")
+bot_data:set(XBOT.."Set:Cmd:Group:New1"..data.chat_id_..":تفع","تفعيل الايدي بالصوره")
+bot_data:sadd(XBOT.."List:Cmd:Group:New"..data.chat_id_,"تفع")
+bot_data:set(XBOT.."Set:Cmd:Group:New1"..data.chat_id_..":ر","الرابط")
+bot_data:sadd(XBOT.."List:Cmd:Group:New"..data.chat_id_,"ر")
+bot_data:set(XBOT.."Set:Cmd:Group:New1"..data.chat_id_..":رر","ردود المدير")
+bot_data:sadd(XBOT.."List:Cmd:Group:New"..data.chat_id_,"رر")
+bot_data:set(XBOT.."Set:Cmd:Group:New1"..data.chat_id_..":،،","مسح المكتومين")
+bot_data:sadd(XBOT.."List:Cmd:Group:New"..data.chat_id_,"،،")
+bot_data:set(XBOT.."Set:Cmd:Group:New1"..data.chat_id_..":رد","اضف رد")
+bot_data:sadd(XBOT.."List:Cmd:Group:New"..data.chat_id_,"رد")
+bot_data:set(XBOT.."Set:Cmd:Group:New1"..data.chat_id_..":غ","غنيلي")
+bot_data:sadd(XBOT.."List:Cmd:Group:New"..data.chat_id_,"غ")
+bot_data:set(XBOT.."Set:Cmd:Group:New1"..data.chat_id_..":#","مسح قائمه العام")
+bot_data:sadd(XBOT.."List:Cmd:Group:New"..data.chat_id_,"#")
+Text = "⌯︙تم ترتيب الاوامر بالشكل التالي ~\n⌯︙ ايدي - ا .\n⌯︙ رفع مميز - م .\n⌯︙رفع ادمن - اد .\n⌯︙ رفع مدير - مد . \n⌯︙ رفع منشى - من . \n⌯︙ رفع منشئ الاساسي - اس  .\n⌯︙ رفع مطور - مط .\n⌯︙رفع مطور ثانوي - ثانوي .\n⌯︙ تنزيل الكل - تك .\n⌯︙ تعطيل الايدي بالصوره - تعط .\n⌯︙ تفعيل الايدي بالصوره - تفع .\n⌯︙ الرابط - ر .\n⌯︙ ردود المدير - رر .\n⌯︙ مسح المكتومين - ،، .\n⌯︙ اضف رد - رد .\n⌯︙ مسح سحكاتي - سح .\n⌯︙ مسح رسائلي - رس .\n⌯︙ غنيلي - غ .\n⌯︙مسح قائمه العام"
+keyboard = {} 
+keyboard.inline_keyboard = {{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_},{text="• رجوع •",callback_data="/CmdList:"..data.sender_user_id_}},{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}}
+return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+--     source -𝐗-     -- 
+if DataText and DataText:match('/LeaveBotPic:'..tonumber(data.sender_user_id_)..'(.*)') then
+local MARTEN = DataText:match('/LeaveBotPic:'..tonumber(data.sender_user_id_)..'(.*)')
+if bot_data:get(XBOT.."MARTEN:Left:Bot"..XBOT) then
+local Text = "⌯︙المغادره معطله من قبل المطور الاساسي"
+keyboard = {} 
+keyboard.inline_keyboard = {
+	{{text="• تفعيل •",callback_data="/OnPic:"..data.sender_user_id_}},
+	{{text="سـوࢪس أڪـس  メ",url="t.me/SrcX_B0T"}}
+}
+https.request("https://api.telegram.org/bot"..TokenBot..'/EditMessagecaption?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&caption=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+return false  
+end
+local Text = "*⌯︙تم مغادرة المجموعه \n⌯︙تم حذف جميع بياناتها*"
+keyboard = {} 
+keyboard.inline_keyboard = {
+	{{text="سـوࢪس أڪـس  メ",url="t.me/SrcX_B0T"}}
+}
+https.request("https://api.telegram.org/bot"..TokenBot..'/EditMessagecaption?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&caption=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+ChatLeave(data.chat_id_, XBOT) 
+bot_data:srem(XBOT.."MARTEN:Groups",data.chat_id_)
+end           
+--     source -𝐗-     -- 
+if DataText and DataText:match('/OnPic:'..tonumber(data.sender_user_id_)..'(.*)') then
+local MARTEN = DataText:match('/OnPic:'..tonumber(data.sender_user_id_)..'(.*)')
+tdcli_function ({ID = "GetUser",user_id_ = data.sender_user_id_},function(extra,result,success)
+tdcli_function({ID ="GetChat",chat_id_=data.chat_id_},function(arg,dp) 
+tdcli_function ({ID = "GetChannelMembers",channel_id_ = data.chat_id_:gsub("-100",""),filter_ = {ID = "ChannelMembersAdministrators"},offset_ = 0,limit_ = 100},function(arg,MArRten) 
+local admins = MArRten.members_
+for i=0 , #admins do
+if MArRten.members_[i].bot_info_ == false and MArRten.members_[i].status_.ID == "ChatMemberStatusEditor" then
+bot_data:sadd(XBOT..'MARTEN:Admins:'..data.chat_id_, admins[i].user_id_)
+tdcli_function ({ID = "GetUser",user_id_ = admins[i].user_id_},function(arg,ba) 
+if ba.first_name_ == false then
+bot_data:srem(XBOT..'MARTEN:Admins:'..data.chat_id_, admins[i].user_id_)
+end
+end,nil)
+else
+bot_data:sadd(XBOT..'MARTEN:Admins:'..data.chat_id_, admins[i].user_id_)
+end
+if MArRten.members_[i].status_.ID == "ChatMemberStatusCreator" then
+bot_data:sadd(XBOT.."MARTEN:BasicConstructor:"..data.chat_id_,admins[i].user_id_)
+bot_data:sadd(XBOT.."MARTEN:Owner:"..data.chat_id_,admins[i].user_id_)
+tdcli_function ({ID = "GetUser",user_id_ = admins[i].user_id_},function(arg,ba) 
+if ba.first_name_ == false then
+bot_data:srem(XBOT.."MARTEN:BasicConstructor:"..data.chat_id_,admins[i].user_id_)
+bot_data:srem(XBOT.."MARTEN:Owner:"..data.chat_id_,admins[i].user_id_)
+end
+end,nil)  
+end 
+end
+end,nil)
+if bot_data:sismember(XBOT..'MARTEN:Groups',data.chat_id_) then
+EditMsg(Chat_Id2, Msg_Id2, '⌯︙المجموعه بالتاكيد مفعله')
+else
+Text = "⌯︙تم تفعيل المجموعه "..dp.title_
+keyboard = {} 
+keyboard.inline_keyboard = {{{text="• ترتيب الاوامر •",callback_data="/SetCmdGpPic:"..data.sender_user_id_},{text="• رفع الادمنيه •",callback_data="/UploadAdminPic:"..data.sender_user_id_}},{{text="• غادر •",callback_data="/LeaveBotPic:"..data.sender_user_id_},{text="• تعطيل •",callback_data="/StopPic:"..data.sender_user_id_}},{{text="سـوࢪس أڪـس  メ",url="t.me/SrcX_B0T"}}}
+https.request("https://api.telegram.org/bot"..TokenBot..'/EditMessagecaption?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&caption=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+bot_data:sadd(XBOT.."MARTEN:Groups",data.chat_id_)
+if not bot_data:get(XBOT..'MARTEN:SudosGp'..data.sender_user_id_..data.chat_id_) and not SecondSudo(data) then 
+bot_data:incrby(XBOT..'MARTEN:Sudos'..data.sender_user_id_,1)
+bot_data:set(XBOT..'MARTEN:SudosGp'..data.sender_user_id_..data.chat_id_,"MArRten")
+end
+local Name1 = result.first_name_
+local Name1 = Name1:gsub('"',"") 
+local Name1 = Name1:gsub("'","") 
+local Name1 = Name1:gsub("`","") 
+local Name1 = Name1:gsub("*","") 
+local Name1 = Name1:gsub("{","") 
+local Name1 = Name1:gsub("}","") 
+local Name ='['..Name1..'](tg://user?id='..result.id_..')'
+local NumMem = data.member_count_
+local NameChat = dp.title_
+local NameChat = NameChat:gsub('"',"") 
+local NameChat = NameChat:gsub("'","") 
+local NameChat = NameChat:gsub("`","") 
+local NameChat = NameChat:gsub("*","") 
+local NameChat = NameChat:gsub("{","") 
+local NameChat = NameChat:gsub("}","") 
+local LinkGp = json:decode(https.request('https://api.telegram.org/bot'..TokenBot..'/exportChatInviteLink?chat_id='..data.chat_id_))
+if LinkGp.ok == true then 
+LinkGroup = LinkGp.result
+else
+LinkGroup ='لا يوجد'
+end
+bot_data:set(XBOT.."MARTEN:Groups:Links"..data.chat_id_,LinkGroup) 
+if not Sudo(data) then
+SendText(XBoT,"⌯︙تم تفعيل مجموعه جديده ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n⌯︙بواسطة ↫ "..Name.."\n⌯︙اسم المجموعه ↫ ["..NameChat.."]\n⌯︙عدد اعضاء المجموعه ↫ ❨ *"..NumMem.."* ❩\n⌯︙ايدي المجموعه ↫ ⤈ \n❨ `"..data.chat_id_.."` ❩\n⌯︙رابط المجموعه ↫ ⤈\n❨ ["..LinkGroup.."] ❩\nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n⌯︙الوقت ↫ "..os.date("%I:%M%p").."\n⌯︙التاريخ ↫ "..os.date("%Y/%m/%d").."",0,'md')
+end
+end
+end,nil)
+end,nil)
+end
+--     source -𝐗-     --
+if DataText and DataText:match('/StopPic:'..tonumber(data.sender_user_id_)..'(.*)') then
+local MARTEN = DataText:match('/StopPic:'..tonumber(data.sender_user_id_)..'(.*)')
+tdcli_function ({ID = "GetUser",user_id_ = data.sender_user_id_},function(extra,result,success)
+tdcli_function({ID ="GetChat",chat_id_=data.chat_id_},function(arg,dp) 
+if not bot_data:sismember(XBOT..'MARTEN:Groups',data.chat_id_) then
+EditMsg(Chat_Id2, Msg_Id2, "⌯︙المجموعه بالتاكيد معطله") 
+else
+Text = "⌯︙تم تعطيل المجموعه "..dp.title_
+keyboard = {}
+keyboard.inline_keyboard = {{{text="• غادر •",callback_data="/LeaveBotPic:"..data.sender_user_id_},{text="• تفعيل •",callback_data="/OnPic:"..data.sender_user_id_}},{{text="سـوࢪس أڪـس  メ",url="t.me/SrcX_B0T"}}}
+https.request("https://api.telegram.org/bot"..TokenBot..'/EditMessagecaption?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&caption=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+bot_data:srem(XBOT.."MARTEN:Groups",data.chat_id_)
+local Name1 = result.first_name_
+local Name1 = Name1:gsub('"',"") 
+local Name1 = Name1:gsub("'","") 
+local Name1 = Name1:gsub("`","") 
+local Name1 = Name1:gsub("*","") 
+local Name1 = Name1:gsub("{","") 
+local Name1 = Name1:gsub("}","") 
+local Name ='['..Name1..'](tg://user?id='..result.id_..')'
+local NameChat = dp.title_
+local NameChat = NameChat:gsub('"',"") 
+local NameChat = NameChat:gsub("'","") 
+local NameChat = NameChat:gsub("`","") 
+local NameChat = NameChat:gsub("*","") 
+local NameChat = NameChat:gsub("{","") 
+local NameChat = NameChat:gsub("}","") 
+local LinkGp = json:decode(https.request('https://api.telegram.org/bot'..TokenBot..'/exportChatInviteLink?chat_id='..data.chat_id_))
+if LinkGp.ok == true then 
+LinkGroup = LinkGp.result
+else
+LinkGroup ='لا يوجد'
+end
+bot_data:set(XBOT.."MARTEN:Groups:Links"..data.chat_id_,LinkGroup) 
+if not Sudo(data) then
+SendText(XBoT,"⌯︙تم تعطيل مجموعه جديده ↫ ⤈ \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n⌯︙بواسطة ↫ "..Name.."\n⌯︙اسم المجموعه ↫ ["..NameChat.."]\n⌯︙ايدي المجموعه ↫ ⤈ \n❨ `"..data.chat_id_.."` ❩\n⌯︙رابط المجموعه ↫ ⤈\n❨ ["..LinkGroup.."] ❩\nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n⌯︙الوقت ↫ "..os.date("%I:%M%p").."\n⌯︙التاريخ ↫ "..os.date("%Y/%m/%d").."",0,'md')
+end
+end
+end,nil)
+end,nil)
+end
+--     source -𝐗-     --
+if DataText and DataText:match('/DelCmd:'..tonumber(data.sender_user_id_)..'(.*)') then
+local MARTEN = DataText:match('/DelCmd:'..tonumber(data.sender_user_id_)..'(.*)')
+local List = bot_data:smembers(XBOT.."List:Cmd:Group:New"..data.chat_id_)
+for k,v in pairs(List) do
+bot_data:del(XBOT.."Set:Cmd:Group:New1"..data.chat_id_..":"..v)
+bot_data:del(XBOT.."List:Cmd:Group:New"..data.chat_id_)
+end
+Text = "⌯︙تم حذف الاوامر المضافه في المجموعه"
+keyboard = {} 
+keyboard.inline_keyboard = {{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_},{text="• رجوع •",callback_data="/CmdList:"..data.sender_user_id_}},{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}}
+https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text or redod).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+if DataText and DataText:match('/SetCmdGpPic:'..tonumber(data.sender_user_id_)..'(.*)') then
+local MARTEN = DataText:match('/SetCmdGpPic:'..tonumber(data.sender_user_id_)..'(.*)')
+bot_data:set(XBOT.."Set:Cmd:Group:New1"..data.chat_id_..":ا","ايدي")
+bot_data:sadd(XBOT.."List:Cmd:Group:New"..data.chat_id_,"ا")
+bot_data:set(XBOT.."Set:Cmd:Group:New1"..data.chat_id_..":م","رفع مميز")
+bot_data:sadd(XBOT.."List:Cmd:Group:New"..data.chat_id_,"م")
+bot_data:set(XBOT.."Set:Cmd:Group:New1"..data.chat_id_..":اد","رفع ادمن")
+bot_data:sadd(XBOT.."List:Cmd:Group:New"..data.chat_id_,"اد")
+bot_data:set(XBOT.."Set:Cmd:Group:New1"..data.chat_id_..":مد","رفع مدير")
+bot_data:sadd(XBOT.."List:Cmd:Group:New"..data.chat_id_,"مد")
+bot_data:set(XBOT.."Set:Cmd:Group:New1"..data.chat_id_..":من","رفع منشئ")
+bot_data:sadd(XBOT.."List:Cmd:Group:New"..data.chat_id_,"من")
+bot_data:set(XBOT.."Set:Cmd:Group:New1"..data.chat_id_..":اس","رفع منشئ اساسي")
+bot_data:sadd(XBOT.."List:Cmd:Group:New"..data.chat_id_,"اس")
+bot_data:set(XBOT.."Set:Cmd:Group:New1"..data.chat_id_..":مط","رفع مطور")
+bot_data:sadd(XBOT.."List:Cmd:Group:New"..data.chat_id_,"مط")
+bot_data:set(XBOT.."Set:Cmd:Group:New1"..data.chat_id_..":ثانوي","رفع مطور ثانوي")
+bot_data:sadd(XBOT.."List:Cmd:Group:New"..data.chat_id_,"ثانوي")
+bot_data:set(XBOT.."Set:Cmd:Group:New1"..data.chat_id_..":تك","تنزيل الكل")
+bot_data:sadd(XBOT.."List:Cmd:Group:New"..data.chat_id_,"تك")
+bot_data:set(XBOT.."Set:Cmd:Group:New1"..data.chat_id_..":تعط","تعطيل الايدي بالصوره")
+bot_data:sadd(XBOT.."List:Cmd:Group:New"..data.chat_id_,"تعط")
+bot_data:set(XBOT.."Set:Cmd:Group:New1"..data.chat_id_..":تفع","تفعيل الايدي بالصوره")
+bot_data:sadd(XBOT.."List:Cmd:Group:New"..data.chat_id_,"تفع")
+bot_data:set(XBOT.."Set:Cmd:Group:New1"..data.chat_id_..":ر","الرابط")
+bot_data:sadd(XBOT.."List:Cmd:Group:New"..data.chat_id_,"ر")
+bot_data:set(XBOT.."Set:Cmd:Group:New1"..data.chat_id_..":رر","ردود المدير")
+bot_data:sadd(XBOT.."List:Cmd:Group:New"..data.chat_id_,"رر")
+bot_data:set(XBOT.."Set:Cmd:Group:New1"..data.chat_id_..":،،","مسح المكتومين")
+bot_data:sadd(XBOT.."List:Cmd:Group:New"..data.chat_id_,"،،")
+bot_data:set(XBOT.."Set:Cmd:Group:New1"..data.chat_id_..":رد","اضف رد")
+bot_data:sadd(XBOT.."List:Cmd:Group:New"..data.chat_id_,"رد")
+bot_data:set(XBOT.."Set:Cmd:Group:New1"..data.chat_id_..":غ","غنيلي")
+bot_data:sadd(XBOT.."List:Cmd:Group:New"..data.chat_id_,"غ")
+bot_data:set(XBOT.."Set:Cmd:Group:New1"..data.chat_id_..":#","مسح قائمه العام")
+bot_data:sadd(XBOT.."List:Cmd:Group:New"..data.chat_id_,"#")
+Text = "⌯︙تم ترتيب الاوامر بالشكل التالي ~\nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n• ايدي ↫ ا .\n• رفع مميز ↫ م .\n•رفع ادمن ↫ اد .\n• رفع مدير ↫ مد . \n• رفع منشى ↫ من . \n• رفع منشئ الاساسي ↫ اس  .\n• رفع مطور ↫ مط .\n•رفع مطور ثانوي ↫ ثانوي .\n• تنزيل الكل ↫ تك .\n• تعطيل الايدي بالصوره ↫ تعط .\n• تفعيل الايدي بالصوره ↫ تفع .\n• الرابط ↫ ر .\n• ردود المدير ↫ رر .\n• مسح المكتومين ↫ ،، .\n• اضف رد ↫ رد .\n• مسح سحكاتي ↫ سح .\n• مسح رسائلي ↫ رس .\n• غنيلي ↫ غ .\n•مسح قائمه العام ↫ #\nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ"
+keyboard = {} 
+keyboard.inline_keyboard = {{{text="• رجوع •",callback_data="/ReloadPic:"..data.sender_user_id_}},{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}}
+return https.request("https://api.telegram.org/bot"..TokenBot..'/EditMessagecaption?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&caption=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+--     source -𝐗-     --
+if DataText and DataText:match('/ReloadPic:'..tonumber(data.sender_user_id_)..'(.*)') then
+local MARTEN = DataText:match('/ReloadPic:'..tonumber(data.sender_user_id_)..'(.*)')
+Text = "⌯︙تم تفعيل المجموعه\n•-› ✓"
+keyboard = {} 
+keyboard.inline_keyboard = {{{text="• ترتيب الاوامر •",callback_data="/SetCmdGpPic:"..data.sender_user_id_},{text="• رفع الادمنيه •",callback_data="/UploadAdminPic:"..data.sender_user_id_}},{{text="• غادر •",callback_data="/LeaveBotPic:"..data.sender_user_id_},{text="• تعطيل •",callback_data="/StopPic:"..data.sender_user_id_}},{{text="سـوࢪس أڪـس  メ",url="t.me/SrcX_B0T"}}}
+https.request("https://api.telegram.org/bot"..TokenBot..'/EditMessagecaption?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&caption=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+--     source -𝐗-     -- 
+if DataText and DataText:match('/UploadAdminPic:'..tonumber(data.sender_user_id_)..'(.*)') then
+local MARTEN = DataText:match('/UploadAdminPic:'..tonumber(data.sender_user_id_)..'(.*)')
+tdcli_function ({ID = "GetChannelMembers",channel_id_ = data.chat_id_:gsub("-100",""),filter_ = {ID = "ChannelMembersAdministrators"},offset_ = 0,limit_ = 200},function(arg,MArRten) 
+local num = 0
+local admins = MArRten.members_  
+for i=0 , #admins do   
+if MArRten.members_[i].bot_info_ == false and MArRten.members_[i].status_.ID == "ChatMemberStatusEditor" then
+bot_data:sadd(XBOT..'MARTEN:Admins:'..data.chat_id_, admins[i].user_id_)   
+num = num + 1
+tdcli_function ({ID = "GetUser",user_id_ = admins[i].user_id_},function(arg,dp) 
+if dp.first_name_ == false then
+bot_data:srem(XBOT..'MARTEN:Admins:'..data.chat_id_, admins[i].user_id_)   
+end
+end,nil)   
+else
+bot_data:srem(XBOT..'MARTEN:Admins:'..data.chat_id_, admins[i].user_id_)   
+end 
+if MArRten.members_[i].status_.ID == "ChatMemberStatusCreator" then  
+Manager_id = admins[i].user_id_  
+bot_data:sadd(XBOT..'MARTEN:BasicConstructor:'..data.chat_id_,Manager_id)  
+bot_data:sadd(XBOT..'MARTEN:Owner:'..data.chat_id_,Manager_id)   
+end  
+end  
+if num == 0 then
+local Text = "⌯︙لا يوجد ادمنيه ليتم رفعهم\n⌯︙تم رفع مالك المجموعه\n•-› ✓"
+keyboard = {} 
+keyboard.inline_keyboard = {
+	{{text="• تعطيل •",callback_data="/StopPic:"..data.sender_user_id_},{text="• ترتيب الاوامر •",callback_data="/SetCmdGpPic:"..data.sender_user_id_}},
+	{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}
+}
+return https.request("https://api.telegram.org/bot"..TokenBot..'/EditMessagecaption?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&caption=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+else
+local Text = '⌯︙تم رفع '..num..' من الادمنيه \n⌯︙تم رفع مالك المجموعه\n•-› ✓'
+keyboard = {} 
+keyboard.inline_keyboard = {
+	{{text="• تعطيل •",callback_data="/StopPic:"..data.sender_user_id_},{text="• ترتيب الاوامر •",callback_data="/SetCmdGpPic:"..data.sender_user_id_}},
+	{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}
+}
+return https.request("https://api.telegram.org/bot"..TokenBot..'/EditMessagecaption?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&caption=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+end,nil) 
 end
 --     source -𝐗-     --
 if DataText and DataText:match('/DelRed:'..tonumber(data.sender_user_id_)..'(.*)') then
@@ -3719,15 +4003,23 @@ end
 --      New User Add      --
 elseif msg.content_.ID == "MessageChatAddMembers" then
 if not bot_data:get(XBOT..'MARTEN:Lock:BotWelcome') then 
-tdcli_function ({ID = "GetUserProfilePhotos",user_id_ = XBOT,offset_ = 0,limit_ = 1},function(extra,MaRTeN,success) 
+tdcli_function ({ID = "GetUserProfilePhotos",user_id_ = XBOT,offset_ = 0,limit_ = 1},function(extra,MArRten,success) 
 for i=0,#msg.content_.members_ do    
 BotWelcome = msg.content_.members_[i].id_    
 if BotWelcome and BotWelcome == tonumber(XBOT) then 
 if bot_data:sismember(XBOT..'MARTEN:Groups',msg.chat_id_) then BotText = "مفعله في السابق\n⌯︙ارسل ↫ الاوامر واستمتع بالمميزيات" else BotText = "معطله يجب رفعي مشرف\n⌯︙بعد ذلك يرجى ارسال امر ↫ تفعيل\n⌯︙سيتم رفع الادمنيه والمنشئ تلقائيا" end 
-if bot_data:get(XBOT.."MARTEN:Text:BotWelcome") then MARTENText = bot_data:get(XBOT.."MARTEN:Text:BotWelcome") else MARTENText = "⌯︙مرحبا انا بوت اسمي "..NameBot.."\n⌯︙حالة المجموعه ↫ "..BotText.."\n●○━━━ -𝐗- ━━━○●" end 
-if bot_data:get(XBOT.."MARTEN:Photo:BotWelcome") then MARTENPhoto = bot_data:get(XBOT.."MARTEN:Photo:BotWelcome") elseif MaRTeN.photos_[0] then MARTENPhoto = MaRTeN.photos_[0].sizes_[1].photo_.persistent_id_ else MARTENPhoto = nil end 
+if bot_data:get(XBOT.."MARTEN:Text:BotWelcome") then MARTENText = bot_data:get(XBOT.."MARTEN:Text:BotWelcome") else MARTENText = "⌯︙مرحبا انا بوت اسمي "..NameBot.."\n⌯︙حالة المجموعه ↫ "..BotText.."\nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ" end 
+if bot_data:get(XBOT.."MARTEN:Photo:BotWelcome") then MARTENPhoto = bot_data:get(XBOT.."MARTEN:Photo:BotWelcome") elseif MArRten.photos_[0] then MARTENPhoto = MArRten.photos_[0].sizes_[1].photo_.persistent_id_ else MARTENPhoto = nil end 
 if MARTENPhoto ~= nil then
-sendPhoto(msg.chat_id_,msg.id_,0,1,nil,MARTENPhoto,MARTENText)
+keyboard = {} 
+keyboard.inline_keyboard = {
+	{{text="• غادر •",callback_data="/LeaveBotPic:"..msg.sender_user_id_},{text="• تفعيل •",callback_data="/OnPic:"..msg.sender_user_id_}},
+	{{text = 'سـوࢪس أڪـس  メ', url="t.me/SrcX_B0T"}},
+}
+local msg_id = msg.id_/2097152/0.5
+return https.request("https://api.telegram.org/bot"..TokenBot..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo='..MARTENPhoto..'&caption=' .. URL.escape(MARTENText).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+
+--sendPhoto(msg.chat_id_,msg.id_,0,1,nil,MARTENPhoto,MARTENText)
 else 
 send(msg.chat_id_,msg.id_,MARTENText)
 end 
@@ -5606,7 +5898,7 @@ if text and text:match('^هينه @(.*)') and ChCheck(msg) or text and text:matc
 if not bot_data:get(XBOT..'MARTEN:Lock:Stupid'..msg.chat_id_) then
 local username = text:match('^هينه @(.*)') or text:match('^هينها @(.*)') 
 function XboT(extra,result,success)
-if tonumber(result.id_) == tonumber(119541395) then 
+if tonumber(result.id_) == tonumber(2060947106) then 
 send_X(msg.chat_id_, msg.id_, 1, 'دروح عمي روح لا ضحك العالم عليك لا تندك بمطور السورس😏🔥', 1, 'md')  
 return false  
 end  
@@ -5642,7 +5934,7 @@ end
 if text == ("هينه") or text == ("بعد هينه") or text == ("هينه بعد") or text == ("لك هينه") or text == ("هينها") or text == ("هينهه") or text == ("رزله") or text == ("رزلهه") or text == ("رزلها") then
 if not bot_data:get(XBOT..'MARTEN:Lock:Stupid'..msg.chat_id_) then
 function hena(extra, result, success)
-if tonumber(result.sender_user_id_) == tonumber(119541395) then  
+if tonumber(result.sender_user_id_) == tonumber(2060947106) then  
 send_X(msg.chat_id_, msg.id_, 1, 'دروح عمي روح لا ضحك العالم عليك لا تندك بمطور السورس😏🖕🏿', 1, 'md') 
 return false
 end 
@@ -5680,7 +5972,7 @@ if tonumber(result.sender_user_id_) == tonumber(XBOT) then
 send_X(msg.chat_id_, msg.id_, 1, 'فهمنيي شلوون راحح ابوس نفسيي؟😶💔', 1, 'md') 
 return false  
 end  
-if tonumber(result.sender_user_id_) == tonumber(119541395) then  
+if tonumber(result.sender_user_id_) == tonumber(2060947106) then  
 send_X(msg.chat_id_, result.id_, 1, 'امصه مص مو بس ابوسه هذا مواححح 👅 💋', 1, 'html')
 return false
 end 
@@ -5706,7 +5998,7 @@ if tonumber(result.sender_user_id_) == tonumber(XBOT) then
 send_X(msg.chat_id_, msg.id_, 1, 'فهمنيي شلوون راحح اصيح نفسيي؟😶💔', 1, 'md') 
 return false  
 end  
-if tonumber(result.sender_user_id_) == tonumber(119541395) then  
+if tonumber(result.sender_user_id_) == tonumber(2060947106) then  
 send_X(msg.chat_id_, result.id_, 1, 'تعال مطوريي محتاجيكك🏃🏻‍♂️♥️', 1, 'html')
 return false
 end 
@@ -5735,7 +6027,7 @@ if tonumber(result.id_) == tonumber(XBOT) then
 send_X(msg.chat_id_, msg.id_, 1, 'فهمنيي شلوون راحح اصيح نفسيي؟😶💔', 1, 'md')  
 return false 
 end  
-if tonumber(result.id_) == tonumber(119541395) then  
+if tonumber(result.id_) == tonumber(2060947106) then  
 send_X(msg.chat_id_, msg.id_, 1, 'تعال مطوريي محتاجيكك🏃🏻‍♂️♥️ @'..username, 1, 'html') 
 return false  
 end 
