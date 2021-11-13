@@ -1618,82 +1618,7 @@ keyboard.inline_keyboard = {
 https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 end
---     source -𝐗-     -- 
-if DataText and DataText:match('/MediaHome:(.*)') then
-local MARTEN = DataText:match('/MediaHome:(.*)')
-if tonumber(MARTEN) == tonumber(data.sender_user_id_) then
-local Media = bot_data:get(XBOT..'MARTEN:Media')
-local Text = [[
-*⌯︙اليك ازرار مسح الميديا*
-]] 
-keyboard = {} 
-keyboard.inline_keyboard = {{{text="• مسح الميديا •",callback_data="/DelMedia:"..data.sender_user_id_},{text="• مسح الاغاني •",callback_data="/DelMusic:"..data.sender_user_id_}},{{text="• مسح الرسائل المعدله •",callback_data="/DelMsgEdit:"..data.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_}}}
-https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
-end
-end
---     source -𝐗-     -- 
-if Cleaner(data) then
-if DataText and DataText:match('/DelMedia:'..tonumber(data.sender_user_id_)..'(.*)') then
-local MARTEN = DataText:match('/DelMedia:'..tonumber(data.sender_user_id_)..'(.*)')
-local List = bot_data:smembers(XBOT.."MARTEN:cleaner"..data.chat_id_)
-local Del = 0
-for k,v in pairs(List) do
-Del = (Del + 1)
-local Message = v
-DeleteMessage(data.chat_id_,{[0]=Message})
-end
-if Del ~= 0 then
-send(data.chat_id_, data.id_, 1, "⌯︙تم حذف "..Del.." من الميديا", 1, 'md') 
-bot_data:del(XBOT.."MARTEN:cleaner"..data.chat_id_)
-else
-Text = "*⌯︙لا توجد ميديا هنا*"
-keyboard = {} 
-keyboard.inline_keyboard = {{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_},{text="• رجوع •",callback_data="/MediaHome:"..data.sender_user_id_}},{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}}
-return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
-end end
-if DataText and DataText:match('/DelMusic:'..tonumber(data.sender_user_id_)..'(.*)') then
-local MARTEN = DataText:match('/DelMusic:'..tonumber(data.sender_user_id_)..'(.*)')
-local List = bot_data:smembers(XBOT.."MARTEN:cleanermusic"..data.chat_id_)
-local Del = 0
-for k,v in pairs(List) do
-Del = (Del + 1)
-local Message = v
-DeleteMessage(data.chat_id_,{[0]=Message})
-end
-if Del ~= 0 then
-send(data.chat_id_, data.id_, 1, "⌯︙تم حذف "..Del.." من الاغاني", 1, 'md') 
-bot_data:del(XBOT.."MARTEN:cleanermusic"..data.chat_id_)
-else
-Text = "*⌯︙لا توجد اغاني هنا*"
-keyboard = {} 
-keyboard.inline_keyboard = {{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_},{text="• رجوع •",callback_data="/MediaHome:"..data.sender_user_id_}},{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}}
-return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
-end end end
-if DataText and DataText:match('/DelMsgEdit:'..tonumber(data.sender_user_id_)..'(.*)') then
-local MARTEN = DataText:match('/DelMsgEdit:'..tonumber(data.sender_user_id_)..'(.*)')
-MARTEN_Del = {[0]= data.id_}
-local Message = data.id_
-for i=1,100 do
-Message = Message - 1048576
-MARTEN_Del[i] = Message
-end
-tdcli_function({ID = "GetMessages",chat_id_ = data.chat_id_,message_ids_ = MARTEN_Del},function(arg,data)
-new = 0
-MARTEN_Del2 = {}
-for i=0 ,data.total_count_ do
-if data.messages_[i] and (not data.messages_[i].edit_date_ or data.messages_[i].edit_date_ ~= 0) then
-MARTEN_Del2[new] = data.messages_[i].id_
-new = new + 1
-end
-end
-DeleteMessage(data.chat_id_,MARTEN_Del2)
-end,nil)  
-Text = "*⌯︙تم تنظيف الرسائل المعدله*"
-keyboard = {} 
-keyboard.inline_keyboard = {{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_},{text="• رجوع •",callback_data="/MediaHome:"..data.sender_user_id_}},{{text='سـوࢪس أڪـس  メ',url="t.me/SrcX_B0T"}}}
-return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
-end
---     source -𝐗-     -- 
+--     source -𝐗-     --
 if DataText and DataText:match('/LockBotList:(.*)') then
 local MARTEN = DataText:match('/LockBotList:(.*)')
 if tonumber(MARTEN) == tonumber(data.sender_user_id_) then
@@ -12038,6 +11963,24 @@ end,nil)
 end 
 end
 --     Source -X-     --
+if text and text:match("^غادر (-%d+)$")  then
+local Text = { string.match(text, "^(غادر) (-%d+)$")}
+if not SecondSudo(msg) then
+send_X(msg.chat_id_, msg.id_, 1, '⌯︙للمطور الاساسي فقط', 1, 'md')
+else 
+tdcli_function({ID ="GetChat",chat_id_=Text[2]},function(arg,dp) 
+if dp.id_ then
+send_X(msg.chat_id_, msg.id_, 1, "⌯︙المجموعه ↫ ["..dp.title_.."]\n⌯︙تمت المغادره منها بنجاح", 1, "md")
+send_X(Text[2], 0, 1, "⌯︙بامر المطور تم مغادرة هذه المجموعه ", 1, "md")  
+ChatLeave(dp.id_, XBOT)
+bot_data:srem(XBOT.."MARTEN:Groups", dp.id_)
+else
+send_X(msg.chat_id_, msg.id_, 1, "⌯︙لم تتم اضافتي بها لاقوم بمغادرتها", 1, "md")
+end 
+end,nil)
+end 
+end
+--     Source -X-     --
 if text and text:match("^تعين عدد الاعضاء (%d+)$") and SecondSudo(msg) or text and text:match("^تعيين عدد الاعضاء (%d+)$") and SecondSudo(msg) then
 local Num = text:match("تعين عدد الاعضاء (%d+)$") or text:match("تعيين عدد الاعضاء (%d+)$")
 bot_data:set(XBOT..'MARTEN:Num:Add:Bot',Num) 
@@ -13423,26 +13366,6 @@ local inline = {
 }
 SendInline(msg.chat_id_,Text,nil,inline,msg.id_/2097152/0.5)
 end end
---     source -𝐗-     --
-if Cleaner(msg) then
-if text == "امسح" then
-if bot_data:get(XBOT..'MARTEN:Lock:Clean'..msg.chat_id_) then 
-local Media = bot_data:get(XBOT..'MARTEN:Media')
-local Text = [[
-*⌯︙اليك ازرار مسح الميديا*
-]] 
-local inline = {{{text="• مسح الميديا •",callback_data="/DelMedia:"..msg.sender_user_id_},{text="• مسح الاغاني •",callback_data="/DelMusic:"..msg.sender_user_id_}},{{text="• مسح الرسائل المعدله •",callback_data="/DelMsgEdit:"..msg.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..msg.sender_user_id_}}}
-SendInline(msg.chat_id_,Text,nil,inline,msg.id_/2097152/0.5)
-end end end
---     source -𝐗-     --
-if text == "غادر" and SudoBot(msg) then
-local Leave = bot_data:get(XBOT..'MARTEN:Leave')
-local Text = [[
-*⌯︙هل انت متأكد من طرد البوت ؟*
-]] 
-local inline = {{{text="• نعم •",callback_data="/LeaveBot:"..msg.sender_user_id_},{text="• لا •",callback_data="/NoLeaveBot:"..msg.sender_user_id_}}}
-SendInline(msg.chat_id_,Text,nil,inline,msg.id_/2097152/0.5)
-end
 --     source -𝐗-     --
 if SecondSudo(msg) then
 if text == "-تحديث السورس-" or text == "-تحديث سورس-" then 
